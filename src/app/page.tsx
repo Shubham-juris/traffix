@@ -17,10 +17,10 @@ const Section = ({ children, className }: { children: React.ReactNode, className
 export default function Home() {
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center text-center">
-        <div className="absolute inset-0 bg-black/50 z-10" />
+      <section className="relative h-screen flex items-center justify-center text-center bg-black">
+        <div className="absolute inset-0 bg-black/60 z-10" />
         <Image
-          src="https://placehold.co/1920x1080/1A1A1A/A30000"
+          src="https://placehold.co/1920x1080/000000/FFC700"
           alt="Background video placeholder"
           data-ai-hint="abstract technology"
           fill
@@ -45,10 +45,10 @@ export default function Home() {
           </Reveal>
           <Reveal delay={0.3}>
             <div className="mt-10 flex justify-center gap-4">
-              <Button asChild size="lg">
+              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
                 <Link href="/services">Our Services</Link>
               </Button>
-              <Button asChild size="lg" variant="outline">
+              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
                 <Link href="/contact">Contact Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
               </Button>
             </div>
@@ -91,7 +91,7 @@ export default function Home() {
           <div className="text-center">
             <h2 className="text-3xl sm:text-4xl font-bold">Ready to start a project?</h2>
             <p className="mt-4 text-lg text-muted-foreground">Let's build something amazing together.</p>
-            <Button asChild size="lg" className="mt-8">
+            <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
               <Link href="/contact">Get In Touch</Link>
             </Button>
           </div>
