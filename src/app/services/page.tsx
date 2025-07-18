@@ -43,7 +43,7 @@ const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
                     data-ai-hint={solution.imageHint}
                     width={600}
                     height={400}
-                    className="w-full object-cover filter grayscale"
+                    className="w-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
                 />
                 <div className="absolute top-4 right-4 bg-black bg-opacity-70 rounded-full p-2 border border-gray-600">
                     <Icon className="w-6 h-6 text-primary" />
@@ -52,17 +52,17 @@ const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
             <CardContent className={cn(
                 "p-6 flex flex-col flex-grow transition-colors duration-300", 
                 solution.highlight 
-                    ? "bg-primary text-primary-foreground" 
-                    : "bg-black text-white group-hover:bg-primary group-hover:text-primary-foreground"
+                    ? "bg-primary text-primary-foreground hover:bg-primary hover:text-black" 
+                    : "bg-black text-white hover:bg-primary hover:text-black"
             )}>
                 <h3 className="text-xl font-bold mb-4 flex-grow">{solution.title}</h3>
                 <p className={cn(
                     "mb-6 flex-grow", 
-                    solution.highlight ? "" : "text-gray-400 group-hover:text-primary-foreground"
+                    solution.highlight ? "text-primary-foreground" : "text-gray-400 group-hover:text-black"
                 )}>
                     {solution.description}
                 </p>
-                <div className={cn("border-t", solution.highlight ? "border-black" : "border-gray-700 group-hover:border-primary-foreground")}></div>
+                <div className={cn("border-t", solution.highlight ? "border-black" : "border-gray-700 group-hover:border-black")}></div>
                 <Link href="#" className="flex justify-between items-center pt-4 font-semibold text-sm hover:underline">
                     READ MORE
                     <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
