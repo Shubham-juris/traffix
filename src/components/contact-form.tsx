@@ -1,8 +1,8 @@
 
 "use client";
 
-import { useFormState, useFormStatus } from "react-dom";
-import { useEffect, useRef, useState } from "react";
+import { useFormStatus } from "react-dom";
+import { useActionState, useEffect, useRef, useState } from "react";
 import { submitCarrierForm, type State } from "@/actions/contact";
 import { useToast } from "@/hooks/use-toast";
 import { Button } from "@/components/ui/button";
@@ -31,8 +31,7 @@ const FormInput = ({ name, label, type = "text", required = true, error, placeho
 
 export function CarrierForm() {
   const formRef = useRef<HTMLFormElement>(null);
-  const initialState: State = { message: null, errors: {}, success: false };
-  const [state, dispatch] = useFormState(submitCarrierForm, null);
+  const [state, dispatch] = useActionState(submitCarrierForm, null);
   const { toast } = useToast();
   const [country, setCountry] = useState("USA");
 
