@@ -1,5 +1,5 @@
 import React from 'react';
-import { ArrowRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, Plane, Ship, Train, Map, Globe, ChevronRight } from 'lucide-react';
+import { ArrowRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, Plane, Ship, Train, Map, Globe, ChevronRight, Check } from 'lucide-react';
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
@@ -18,6 +18,60 @@ const modes = [
   { name: 'Canada-US Cross-Border', icon: Map },
   { name: 'Mexico Cross-Border', icon: Globe },
 ];
+
+const whyHaulReasons = [
+  {
+    title: 'Partners in Business',
+    description: 'TRAFFIX can seamlessly integrate with your business. Leverage our sales team to maximize the use of your available capacity on your preferred lanes.',
+  },
+  {
+    title: 'Expert Team',
+    description: "When challenges arise on the road, it's reassuring to have an expert team on your side. At TRAFFIX, we employ industry professionals with a minimum of 5 years of experience.",
+  },
+  {
+    title: 'Available 24/7-365',
+    description: 'Our expert team is available around the clock to answer your call when you are on the road.',
+  },
+  {
+    title: 'Tracking Technology',
+    description: 'Avoid excessive tracking calls by leveraging a comprehensive set of tech-tracking tools, so you can focus on the road and we can focus on the client.',
+  },
+  {
+    title: 'Delivering Integrity',
+    description: 'At TRAFFIX, we view our carriers as business partners. Our goal is to establish long-term relationships founded on trust, communication, fair business practices, and mutual respect.',
+  },
+  {
+    title: 'Preferred Lane Volume',
+    description: "TRAFFIX' preferred lane program guarantees high volumes in specific areas. Benefit from our steady inbound and outbound traffic to keep your trucks moving continuously.",
+  },
+]
+
+function WhyHaulSection() {
+  return (
+    <section className="bg-black text-white py-20 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
+          WHY HAUL WITH TRAFFIX?
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
+          {whyHaulReasons.map((reason) => (
+            <div key={reason.title} className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                  <Check className="h-5 w-5 text-black" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-white">{reason.title}</h3>
+                <p className="mt-2 text-gray-400">{reason.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 function FinancialResilienceSection() {
   return (
@@ -188,6 +242,7 @@ export default function TraffixHeroSection() {
       <ModesSection />
       <CarrierPaymentSection />
       <FinancialResilienceSection />
+      <WhyHaulSection />
     </>
   );
 }
