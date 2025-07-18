@@ -1,48 +1,34 @@
-import { Reveal } from '@/components/animations/reveal';
-import { ContactForm } from '@/components/contact-form';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import { CarrierForm } from '@/components/contact-form';
 
 export default function ContactPage() {
   return (
-    <div className="pt-20">
-      <section className="py-20 sm:py-32 bg-card">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Reveal>
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary">Contact Us</h1>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              Have a question or a project in mind? We'd love to hear from you.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-20 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid md:grid-cols-2 gap-16">
-            <Reveal>
-              <h2 className="text-3xl font-bold mb-6">Get in Touch</h2>
-              <ContactForm />
-            </Reveal>
-            <Reveal>
-              <h2 className="text-3xl font-bold mb-6">Our Information</h2>
-              <div className="space-y-6 text-lg">
-                <div className="flex items-start">
-                  <MapPin className="h-6 w-6 text-primary mt-1 mr-4 flex-shrink-0" />
-                  <span className="text-muted-foreground">123 Digital Avenue, Web City, WC 12345</span>
-                </div>
-                <div className="flex items-center">
-                  <Mail className="h-6 w-6 text-primary mr-4 flex-shrink-0" />
-                  <a href="mailto:hello@traffix.dev" className="text-muted-foreground hover:text-primary">hello@traffix.dev</a>
-                </div>
-                <div className="flex items-center">
-                  <Phone className="h-6 w-6 text-primary mr-4 flex-shrink-0" />
-                  <a href="tel:+1234567890" className="text-muted-foreground hover:text-primary">(123) 456-7890</a>
-                </div>
-              </div>
-            </Reveal>
+    <div className="bg-black text-white min-h-screen pt-28 pb-16">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <header className="max-w-4xl mx-auto mb-16">
+          <h1 className="text-5xl md:text-6xl font-black tracking-tight uppercase">
+            Become a <span className="text-primary">Carrier</span>
+          </h1>
+          <p className="mt-8 text-xl text-gray-300">How can we help you?</p>
+          <div className="mt-4 flex flex-wrap gap-4">
+            <button className="px-4 py-2 text-sm font-bold border border-primary text-primary hover:bg-primary hover:text-black transition-colors rounded-md">
+              START HAULING WITH TRAFFIX
+            </button>
+            <button className="px-4 py-2 text-sm font-bold border border-gray-600 text-gray-300 hover:border-primary hover:text-primary transition-colors rounded-md">
+              CARRIER PAYMENT APP SUPPORT
+            </button>
+            <button className="px-4 py-2 text-sm font-bold border border-gray-600 text-gray-300 hover:border-primary hover:text-primary transition-colors rounded-md">
+              OTHER
+            </button>
           </div>
-        </div>
-      </section>
+        </header>
+
+        <main className="max-w-4xl mx-auto">
+           <h2 className="text-2xl font-bold mb-6 text-gray-200">
+             Provide your details so we can contact you
+           </h2>
+          <CarrierForm />
+        </main>
+      </div>
     </div>
   );
 }
