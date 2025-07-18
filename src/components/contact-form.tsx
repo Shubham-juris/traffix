@@ -32,12 +32,12 @@ const FormInput = ({ name, label, type = "text", required = true, error, placeho
 export function CarrierForm() {
   const formRef = useRef<HTMLFormElement>(null);
   const initialState: State = { message: null, errors: {}, success: false };
-  const [state, dispatch] = useFormState(submitCarrierForm, initialState);
+  const [state, dispatch] = useFormState(submitCarrierForm, null);
   const { toast } = useToast();
   const [country, setCountry] = useState("USA");
 
   useEffect(() => {
-    if (state.message) {
+    if (state?.message) {
       if (state.success) {
         toast({
           title: "Success!",
@@ -59,16 +59,16 @@ export function CarrierForm() {
   return (
     <form ref={formRef} action={dispatch} className="space-y-6">
       <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <FormInput name="firstName" label="First Name" error={state.errors?.firstName} />
-        <FormInput name="lastName" label="Last Name" error={state.errors?.lastName} />
+        <FormInput name="firstName" label="First Name" error={state?.errors?.firstName} />
+        <FormInput name="lastName" label="Last Name" error={state?.errors?.lastName} />
       </div>
-      <FormInput name="position" label="Position" error={state.errors?.position} />
-      <FormInput name="email" label="Email" type="email" error={state.errors?.email} />
-      <FormInput name="confirmEmail" label="Confirm Email" type="email" error={state.errors?.confirmEmail} />
-      <FormInput name="companyName" label="Company Name" error={state.errors?.companyName} />
-      <FormInput name="companyPhone" label="Company Phone" type="tel" error={state.errors?.companyPhone} />
-      <FormInput name="companyAddress" label="Company Address" error={state.errors?.companyAddress} />
-      <FormInput name="companyWebsite" label="Company Website" required={false} error={state.errors?.companyWebsite} />
+      <FormInput name="position" label="Position" error={state?.errors?.position} />
+      <FormInput name="email" label="Email" type="email" error={state?.errors?.email} />
+      <FormInput name="confirmEmail" label="Confirm Email" type="email" error={state?.errors?.confirmEmail} />
+      <FormInput name="companyName" label="Company Name" error={state?.errors?.companyName} />
+      <FormInput name="companyPhone" label="Company Phone" type="tel" error={state?.errors?.companyPhone} />
+      <FormInput name="companyAddress" label="Company Address" error={state?.errors?.companyAddress} />
+      <FormInput name="companyWebsite" label="Company Website" required={false} error={state?.errors?.companyWebsite} />
       
       <div className="space-y-2">
         <Label htmlFor="country" className="font-bold text-gray-300">Country*</Label>
@@ -82,14 +82,14 @@ export function CarrierForm() {
             <SelectItem value="Mexico">Mexico</SelectItem>
           </SelectContent>
         </Select>
-        {state.errors?.country && <p className="text-destructive text-sm mt-1">{state.errors.country[0]}</p>}
+        {state?.errors?.country && <p className="text-destructive text-sm mt-1">{state.errors.country[0]}</p>}
       </div>
 
       {country === 'USA' && (
         <div className="space-y-6">
           <h3 className="text-lg font-bold text-gray-200 mt-4">USA</h3>
-          <FormInput name="mcNumber" label="MC #" required={false} error={state.errors?.mcNumber} />
-          <FormInput name="usDotNumber" label="US DOT #" required={false} error={state.errors?.usDotNumber} />
+          <FormInput name="mcNumber" label="MC #" required={false} error={state?.errors?.mcNumber} />
+          <FormInput name="usDotNumber" label="US DOT #" required={false} error={state?.errors?.usDotNumber} />
         </div>
       )}
 
@@ -107,7 +107,7 @@ export function CarrierForm() {
       <div className="space-y-2">
         <Label htmlFor="comments" className="font-bold text-gray-300">Comments</Label>
         <Textarea id="comments" name="comments" rows={5} className="bg-gray-200 text-black border-none rounded-md py-3 px-4 focus:ring-2 focus:ring-primary" />
-        {state.errors?.comments && <p className="text-destructive text-sm mt-1">{state.errors.comments[0]}</p>}
+        {state?.errors?.comments && <p className="text-destructive text-sm mt-1">{state.errors.comments[0]}</p>}
       </div>
 
       <div className="space-y-4">
@@ -116,7 +116,7 @@ export function CarrierForm() {
             <Checkbox id="consent" name="consent" required className="mt-1 border-gray-300" />
             <Label htmlFor="consent" className="text-sm text-gray-400">By checking this box, I agree to receive marketing emails from TRAFFIX about their latest products, services, and offers. I understand that I can unsubscribe at any time by following the instructions in the emails.*</Label>
         </div>
-        {state.errors?.consent && <p className="text-destructive text-sm mt-1">{state.errors.consent[0]}</p>}
+        {state?.errors?.consent && <p className="text-destructive text-sm mt-1">{state.errors.consent[0]}</p>}
       </div>
       
       <SubmitButton />

@@ -51,7 +51,7 @@ export type State = {
 };
 
 
-export async function submitCarrierForm(prevState: State, formData: FormData): Promise<State> {
+export async function submitCarrierForm(prevState: State | null, formData: FormData): Promise<State> {
   const rawFormData = Object.fromEntries(formData.entries());
 
   const validatedFields = contactSchema.safeParse(rawFormData);
