@@ -18,19 +18,22 @@ const modes = [
 
 function ModesSection() {
   return (
-    <section className="py-20 sm:py-24 bg-background">
+    <section className="py-20 sm:py-24 bg-white text-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
           <h2 className="text-5xl font-black tracking-tight">MODES</h2>
-          <p className="text-lg text-muted-foreground">
+          <p className="text-lg text-gray-600">
             Moving 330,000+ shipments across North America annually; haul your next load with TRAFFIX today.
           </p>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
           {modes.map((mode) => (
-            <div key={mode.name} className="border border-border rounded-lg p-6 flex items-center gap-4 hover:border-primary hover:shadow-lg transition-all duration-300">
-              <mode.icon className="w-8 h-8 text-primary" />
-              <span className="font-semibold text-foreground">{mode.name}</span>
+            <div 
+              key={mode.name} 
+              className="border border-gray-200 rounded-lg p-6 flex items-center gap-4 hover:bg-primary hover:text-primary-foreground group transition-all duration-300 cursor-pointer"
+            >
+              <mode.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+              <span className="font-semibold">{mode.name}</span>
             </div>
           ))}
         </div>
