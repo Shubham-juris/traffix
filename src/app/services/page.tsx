@@ -35,7 +35,7 @@ const solutions = [
 const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
     const Icon = solution.icon;
     return (
-        <Card className={cn("border border-gray-700 rounded-lg overflow-hidden flex flex-col bg-transparent group transition-all duration-300", solution.highlight ? "" : "hover:border-primary")}>
+        <Card className={cn("border border-gray-700 rounded-lg overflow-hidden flex flex-col bg-transparent group transition-all duration-300", solution.highlight ? "" : "hover:bg-primary")}>
             <div className="relative">
                 <Image
                     src={solution.image}
@@ -49,10 +49,10 @@ const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
                     <Icon className="w-6 h-6 text-primary" />
                 </div>
             </div>
-            <CardContent className={cn("p-6 flex flex-col flex-grow", solution.highlight ? "bg-primary text-primary-foreground" : "bg-black text-white")}>
+            <CardContent className={cn("p-6 flex flex-col flex-grow", solution.highlight ? "bg-primary text-primary-foreground" : "bg-black text-white", "group-hover:text-primary-foreground")}>
                 <h3 className="text-xl font-bold mb-4 flex-grow">{solution.title}</h3>
-                <p className={cn("mb-6 flex-grow", solution.highlight ? "" : "text-gray-400")}>{solution.description}</p>
-                <div className={cn("border-t", solution.highlight ? "border-black" : "border-gray-700")}></div>
+                <p className={cn("mb-6 flex-grow", solution.highlight ? "" : "text-gray-400", "group-hover:text-primary-foreground")}>{solution.description}</p>
+                <div className={cn("border-t", solution.highlight ? "border-black" : "border-gray-700", "group-hover:border-primary-foreground")}></div>
                 <Link href="#" className="flex justify-between items-center pt-4 font-semibold text-sm hover:underline">
                     READ MORE
                     <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
