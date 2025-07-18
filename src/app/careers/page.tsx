@@ -19,6 +19,43 @@ const modes = [
   { name: 'Mexico Cross-Border', icon: Globe },
 ];
 
+function FinancialResilienceSection() {
+  return (
+    <section className="bg-black text-white py-20 sm:py-24">
+       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <Image 
+              src="https://placehold.co/800x600" 
+              alt="Financial Resilience"
+              data-ai-hint="financial growth"
+              width={800}
+              height={600}
+              className="rounded-lg shadow-2xl"
+            />
+          </div>
+          <div className="max-w-lg">
+            <p className="text-lg text-gray-400">Leveraging factors and brokers to gain</p>
+            <h2 className="text-5xl font-black tracking-tight mt-2">
+              FINANCIAL <br/>
+              <span className="text-primary">RESILIENCE</span>
+            </h2>
+            <p className="mt-6 text-lg text-gray-300">
+              Learn how working with non-recourse factors and reliable brokers can help you create a financially resilient business.
+            </p>
+            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold">
+              <Link href="#">
+                READ MORE <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+        <div className="mt-20 border-t border-primary"></div>
+      </div>
+    </section>
+  )
+}
+
 function CarrierPaymentSection() {
   return (
     <section className="bg-black text-white py-20 sm:py-24">
@@ -31,7 +68,7 @@ function CarrierPaymentSection() {
               CARRIER <br />
               <span className="text-primary">PAYMENT APP</span>
             </h2>
-            <p className="mt-6 text-lg text-gray-300">
+            <p className="mt-6 text-xl text-gray-300">
               TRAFFIX' Carrier Payment app provides access to complete billing visibility at your fingertips, 24/7-365. To learn more <Link href="/contact" className="text-primary hover:underline">contact</Link> our app support team today.
             </p>
           </div>
@@ -150,6 +187,7 @@ export default function TraffixHeroSection() {
       </div>
       <ModesSection />
       <CarrierPaymentSection />
+      <FinancialResilienceSection />
     </>
   );
 }
