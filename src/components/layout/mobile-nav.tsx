@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { X, ChevronDown } from 'lucide-react';
+import { X, ChevronDown, Truck, Boxes, Warehouse, Plane, Ship, Train, Globe, Cpu, ShoppingBasket, Thermometer, Map } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
@@ -16,6 +16,21 @@ interface MobileNavProps {
   onClose: () => void;
   navLinks: { href: string; label: string, hasDropdown?: boolean }[];
 }
+
+const shipperSolutions = [
+  { href: '#', label: 'Full Truckload (FTL)', icon: Truck },
+  { href: '#', label: 'Less-than-Truckload (LTL)', icon: Boxes },
+  { href: '#', label: 'Flatbed', icon: Truck },
+  { href: '#', label: 'Temperature Controlled', icon: Thermometer },
+  { href: '#', label: 'Produce', icon: ShoppingBasket },
+  { href: '#', label: 'Managed Transportation', icon: Cpu },
+  { href: '#', label: 'Warehousing', icon: Warehouse },
+  { href: '#', label: 'Expedited', icon: Plane },
+  { href: '#', label: 'Drayage', icon: Ship },
+  { href: '#', label: 'Intermodal', icon: Train },
+  { href: '#', label: 'Canada-US Cross-Border', icon: Map },
+  { href: '#', label: 'Mexico Cross-Border', icon: Globe },
+];
 
 function TraffixLogo() {
     return (
@@ -60,9 +75,13 @@ export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
                   <AccordionTrigger className="py-3 text-lg hover:no-underline hover:text-primary">
                     {link.label}
                   </AccordionTrigger>
-                  <AccordionContent className="pl-4">
-                    <Link href="#" onClick={onClose} className="block text-base text-muted-foreground hover:text-primary transition-colors py-2">Sub-item 1</Link>
-                    <Link href="#" onClick={onClose} className="block text-base text-muted-foreground hover:text-primary transition-colors py-2">Sub-item 2</Link>
+                  <AccordionContent className="pl-4 space-y-2">
+                    {shipperSolutions.map(solution => (
+                        <Link key={solution.label} href={solution.href} onClick={onClose} className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors py-2">
+                          <solution.icon className="h-5 w-5 text-primary" />
+                          <span>{solution.label}</span>
+                        </Link>
+                    ))}
                   </AccordionContent>
                 </AccordionItem>
               ) : (
@@ -74,11 +93,8 @@ export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
           </Accordion>
 
           <div className="border-t border-border pt-4 space-y-4">
-            <Button asChild variant="link" className="w-full justify-start text-lg p-0" onClick={onClose}>
-              <Link href="#">Login</Link>
-            </Button>
             <Button asChild variant="link" className="w-full justify-start text-primary text-lg p-0" onClick={onClose}>
-              <Link href="#">Ask an Expert</Link>
+              <Link href="/contact">Ask an Expert</Link>
             </Button>
             <Button variant="outline" className="w-full" onClick={onClose}>
               Language: En
