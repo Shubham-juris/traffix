@@ -31,12 +31,9 @@ function CarrierPaymentSection() {
               CARRIER <br />
               <span className="text-primary">PAYMENT APP</span>
             </h2>
-            <p className="mt-6 text-gray-300">
+            <p className="mt-6 text-lg text-gray-300">
               TRAFFIX' Carrier Payment app provides access to complete billing visibility at your fingertips, 24/7-365. To learn more <Link href="/contact" className="text-primary hover:underline">contact</Link> our app support team today.
             </p>
-            <Button asChild variant="secondary" className="mt-8 rounded-full bg-white text-black hover:bg-gray-200 px-6 py-3 font-bold group">
-               <Link href="#">LOGIN <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></Link>
-            </Button>
           </div>
           <div className="relative">
              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-primary rounded-b-lg"></div>
