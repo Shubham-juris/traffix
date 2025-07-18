@@ -63,7 +63,7 @@ function WhyHaulSection() {
               </div>
               <div>
                 <h3 className="text-lg font-bold text-white">{reason.title}</h3>
-                <p className="mt-2 text-gray-400">{reason.description}</p>
+                <p className="mt-2 text-gray-400 text-base">{reason.description}</p>
               </div>
             </div>
           ))}
