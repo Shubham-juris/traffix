@@ -8,23 +8,38 @@ const socialLinks = [
   { icon: Instagram, href: '#', name: 'Instagram' },
 ];
 
+const footerNavLinks = [
+    { href: '#', label: 'Shippers' },
+    { href: '/careers', label: 'Carriers' },
+    { href: '/services', label: 'Solutions' },
+    { href: '/about', label: 'Company' },
+    { href: '/news', label: 'Resources' },
+    { href: '/contact', label: 'Contact' },
+  ];
+
+function TraffixLogo() {
+    return (
+        <div className="text-3xl font-black tracking-wider text-white">
+            TRAFFI<span className="text-primary">X</span>
+        </div>
+    )
+}
+
 export function Footer() {
   return (
     <footer className="bg-background border-t border-border">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8">
           <div>
-            <h3 className="text-xl font-bold text-primary mb-4">Traffix.</h3>
-            <p className="text-muted-foreground">Reimagining digital experiences.</p>
+            <TraffixLogo />
+            <p className="text-muted-foreground mt-4">Reimagining digital experiences.</p>
           </div>
           <div>
             <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
             <ul className="space-y-2">
-              <li><Link href="/about" className="text-muted-foreground hover:text-primary">About</Link></li>
-              <li><Link href="/services" className="text-muted-foreground hover:text-primary">Services</Link></li>
-              <li><Link href="/careers" className="text-muted-foreground hover:text-primary">Careers</Link></li>
-              <li><Link href="/news" className="text-muted-foreground hover:text-primary">News</Link></li>
-              <li><Link href="/contact" className="text-muted-foreground hover:text-primary">Contact</Link></li>
+              {footerNavLinks.map(link => (
+                 <li><Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link></li>
+              ))}
             </ul>
           </div>
           <div>
