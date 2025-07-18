@@ -38,7 +38,7 @@ export function Footer() {
             <h4 className="font-semibold text-foreground mb-4">Navigation</h4>
             <ul className="space-y-2">
               {footerNavLinks.map(link => (
-                 <li><Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link></li>
+                 <li key={link.label}><Link href={link.href} className="text-muted-foreground hover:text-primary">{link.label}</Link></li>
               ))}
             </ul>
           </div>
