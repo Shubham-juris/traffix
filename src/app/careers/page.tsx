@@ -1,50 +1,52 @@
 import { Reveal } from '@/components/animations/reveal';
 import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+import { ArrowRight } from 'lucide-react';
+import Image from 'next/image';
 import Link from 'next/link';
 
-const openPositions = [
-    { title: 'Senior Frontend Developer', location: 'Remote', type: 'Full-time' },
-    { title: 'UX/UI Designer', location: 'Web City, WC', type: 'Full-time' },
-    { title: 'Digital Marketing Specialist', location: 'Remote', type: 'Part-time' },
+const stats = [
+    { value: '449K+', label: 'Loads per Year' },
+    { value: '46+', label: 'Years in Business' },
+    { value: 'Spanning', label: 'North America' },
 ];
 
 export default function CareersPage() {
   return (
     <div className="pt-20">
-      <section className="py-20 sm:py-32 bg-card">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <Reveal>
-            <h1 className="text-4xl sm:text-5xl font-bold text-primary">Join Our Team</h1>
-            <p className="mt-4 max-w-3xl mx-auto text-lg text-muted-foreground">
-              We're looking for talented individuals to help us build the future of digital.
-            </p>
-          </Reveal>
-        </div>
-      </section>
-
-      <section className="py-20 sm:py-32">
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <Reveal>
-                <h2 className="text-3xl sm:text-4xl font-bold text-center">Open Positions</h2>
-            </Reveal>
-            <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {openPositions.map(pos => (
-                    <Reveal key={pos.title}>
-                        <Card className="flex flex-col h-full">
-                            <CardHeader>
-                                <CardTitle>{pos.title}</CardTitle>
-                                <CardDescription>{pos.location} &middot; {pos.type}</CardDescription>
-                            </CardHeader>
-                            <CardContent className="flex-grow">
-                                <p className="text-muted-foreground">We're seeking a passionate {pos.title} to join our dynamic team. If you love challenges and innovation, this is the place for you.</p>
-                            </CardContent>
-                            <CardFooter>
-                                <Button asChild>
-                                    <Link href="/contact">Apply Now</Link>
-                                </Button>
-                            </CardFooter>
-                        </Card>
+      <section className="relative bg-black text-white py-40 sm:py-52 flex items-center">
+        <Image 
+            src="https://placehold.co/1920x1080"
+            alt="Truck driver smiling"
+            data-ai-hint="truck driver"
+            fill
+            className="object-cover opacity-30"
+        />
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div className="max-w-3xl">
+                <Reveal>
+                    <h1 className="text-5xl md:text-7xl font-extrabold tracking-tighter">
+                        WHY HAUL <br/>
+                        <span className="text-primary">FOR TRAFFIX</span>
+                    </h1>
+                </Reveal>
+                <Reveal delay={0.1}>
+                    <p className="mt-6 text-lg text-neutral-300">
+                        Join our elite network of carriers. Let's be partners in business.
+                    </p>
+                </Reveal>
+                <Reveal delay={0.2}>
+                    <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
+                        <Link href="/contact">Haul With Us <ArrowRight className="ml-2 h-5 w-5"/></Link>
+                    </Button>
+                </Reveal>
+            </div>
+            <div className="mt-24 grid grid-cols-1 md:grid-cols-3 gap-8 text-center md:text-left">
+                {stats.map((stat, index) => (
+                    <Reveal key={stat.label} delay={0.3 + index * 0.1}>
+                        <div>
+                            <p className="text-4xl lg:text-5xl font-bold text-primary">{stat.value}</p>
+                            <p className="mt-2 text-lg text-neutral-300">{stat.label}</p>
+                        </div>
                     </Reveal>
                 ))}
             </div>
