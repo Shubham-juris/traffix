@@ -1,5 +1,8 @@
 import React from 'react';
-import { ArrowRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, Plane, Ship, Train, Map, Globe } from 'lucide-react';
+import { ArrowRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, Plane, Ship, Train, Map, Globe, ChevronRight } from 'lucide-react';
+import Image from 'next/image';
+import { Button } from '@/components/ui/button';
+import Link from 'next/link';
 
 const modes = [
   { name: 'Full Truckload (FTL)', icon: Truck },
@@ -16,6 +19,45 @@ const modes = [
   { name: 'Mexico Cross-Border', icon: Globe },
 ];
 
+function CarrierPaymentSection() {
+  return (
+    <section className="bg-black text-white py-20 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-16 items-center">
+          <div className="max-w-md">
+            <p className="text-lg text-gray-400 mb-2">Transparent billing with the</p>
+            <h2 className="text-5xl font-black tracking-tight leading-tight">
+              TRAFFIX' <br />
+              CARRIER <br />
+              <span className="text-primary">PAYMENT APP</span>
+            </h2>
+            <p className="mt-6 text-gray-300">
+              TRAFFIX' Carrier Payment app provides access to complete billing visibility at your fingertips, 24/7-365. To learn more <Link href="/contact" className="text-primary hover:underline">contact</Link> our app support team today.
+            </p>
+            <Button asChild variant="secondary" className="mt-8 rounded-full bg-white text-black hover:bg-gray-200 px-6 py-3 font-bold group">
+               <Link href="#">LOGIN <ChevronRight className="w-5 h-5 ml-2 group-hover:translate-x-1 transition-transform" /></Link>
+            </Button>
+          </div>
+          <div className="relative">
+             <div className="absolute bottom-0 left-0 w-full h-1/2 bg-primary rounded-b-lg"></div>
+             <Image 
+                src="https://placehold.co/800x600"
+                alt="Traffix Carrier Payment App on a laptop"
+                data-ai-hint="laptop dashboard"
+                width={800}
+                height={600}
+                className="relative rounded-lg shadow-2xl"
+             />
+          </div>
+        </div>
+      </div>
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
+        <hr className="border-primary" />
+      </div>
+    </section>
+  )
+}
+
 function ModesSection() {
   return (
     <section className="py-20 sm:py-24 bg-white text-black">
@@ -30,9 +72,9 @@ function ModesSection() {
           {modes.map((mode) => (
             <div 
               key={mode.name} 
-              className="border border-gray-200 rounded-lg p-6 flex items-center gap-4 hover:bg-primary hover:text-primary-foreground group transition-all duration-300 cursor-pointer"
+              className="border border-gray-200 rounded-lg p-6 flex items-center gap-4 hover:bg-primary hover:text-black group transition-all duration-300 cursor-pointer"
             >
-              <mode.icon className="w-8 h-8 text-primary group-hover:text-primary-foreground" />
+              <mode.icon className="w-8 h-8 text-primary group-hover:text-black" />
               <span className="font-semibold">{mode.name}</span>
             </div>
           ))}
@@ -110,6 +152,7 @@ export default function TraffixHeroSection() {
         </div>
       </div>
       <ModesSection />
+      <CarrierPaymentSection />
     </>
   );
 }
