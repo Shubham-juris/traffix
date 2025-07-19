@@ -1,13 +1,99 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
+import { Card, CardContent } from '@/components/ui/card';
 
 const stats = [
     { value: '46+', label: 'Years in Business' },
     { value: '750+', label: 'Expert Professionals' },
     { value: '449K+', label: 'Loads per Year' },
 ];
+
+const timelineEvents = [
+    {
+        year: "2017",
+        title: "OPENS US HEADQUARTERS",
+        description: "In 2017, TRAFFIX, a then $71M company, established its US headquarters in Chicago.",
+        image: "https://placehold.co/600x400",
+        imageHint: "chicago skyline"
+    },
+    {
+        year: "2018",
+        title: "MEXICO EXPANSION",
+        description: "TRAFFIX opened its Mexico operation, expanding its service offering to include Mexico cross border transportation.",
+        image: "https://placehold.co/600x400",
+        imageHint: "truck highway"
+    },
+    {
+        year: "2019",
+        title: "COURIER SERVICE",
+        description: "As part of its LTL offering, TRAFFIX added courier to its suite of services.",
+        image: "https://placehold.co/600x400",
+        imageHint: "delivery courier"
+    }
+];
+
+function TimelineSection() {
+    return (
+        <section className="bg-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Carousel
+                    opts={{
+                        align: "start",
+                        loop: true,
+                    }}
+                    className="w-full"
+                >
+                    <CarouselContent>
+                        {timelineEvents.map((event, index) => (
+                            <CarouselItem key={index} className="md:basis-1/2 lg:basis-1/3">
+                                <div className="p-1">
+                                    <Card className="bg-white text-black rounded-lg overflow-hidden flex flex-col h-full relative pb-10">
+                                        <Image
+                                            src={event.image}
+                                            alt={event.title}
+                                            data-ai-hint={event.imageHint}
+                                            width={600}
+                                            height={400}
+                                            className="w-full object-cover filter grayscale"
+                                        />
+                                        <CardContent className="p-6 flex-grow">
+                                            <h3 className="text-2xl font-black text-black">
+                                                {event.year} &ndash; {event.title}
+                                            </h3>
+                                            <p className="mt-4 text-gray-600">
+                                                {event.description}
+                                            </p>
+                                        </CardContent>
+                                        <div 
+                                            className="absolute bottom-0 right-0 w-0 h-0"
+                                            style={{
+                                                borderBottom: '40px solid white',
+                                                borderLeft: '40px solid transparent',
+                                            }}
+                                        />
+                                        <div 
+                                            className="absolute bottom-0 right-0 w-full h-10 bg-black"
+                                            style={{
+                                                clipPath: 'polygon(calc(100% - 40px) 0, 100% 0, 100% 100%, 100% 100%)'
+                                            }}
+                                        />
+                                    </Card>
+                                </div>
+                            </CarouselItem>
+                        ))}
+                    </CarouselContent>
+                    <div className="absolute top-[-4rem] right-0 flex items-center gap-2">
+                        <CarouselPrevious className="relative -left-0 -top-0 translate-y-0 bg-gray-800 border-primary text-primary hover:bg-primary hover:text-black" />
+                        <CarouselNext className="relative -left-0 -top-0 translate-y-0 bg-gray-800 border-primary text-primary hover:bg-primary hover:text-black" />
+                    </div>
+                </Carousel>
+            </div>
+        </section>
+    );
+}
 
 export default function AboutPage() {
     return (
@@ -68,6 +154,7 @@ export default function AboutPage() {
                     </p>
                 </div>
             </section>
+            <TimelineSection />
         </>
     );
 }
