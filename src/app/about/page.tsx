@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronLeft, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronLeft, ChevronRight, ChevronsRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
@@ -34,6 +34,67 @@ const timelineEvents = [
         imageHint: "delivery courier"
     }
 ];
+
+const ctaCards = [
+    {
+        title: "SOLUTIONS FOR SHIPPERS",
+        description: "Custom Solutions for complex supply chains.",
+        image: "https://placehold.co/600x400",
+        imageHint: "warehouse workers",
+        href: "/services"
+    },
+    {
+        title: "WHY HAUL WITH TRAFFIX",
+        description: "Join our elite network of carriers. Let's be partners in business.",
+        image: "https://placehold.co/600x400",
+        imageHint: "truck driver",
+        href: "/careers"
+    },
+    {
+        title: "WHY JOIN OUR TEAM",
+        description: "Join our team where transportation experts cultivate high-performance careers.",
+        image: "https://placehold.co/600x400",
+        imageHint: "customer service",
+        href: "/careers"
+    }
+];
+
+function CtaSection() {
+    return (
+        <section className="bg-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+                    {ctaCards.map((card) => (
+                        <Link href={card.href} key={card.title} className="group">
+                            <Card className="bg-black border border-gray-800 rounded-lg overflow-hidden flex flex-col h-full hover:border-primary transition-colors duration-300">
+                                <div className="relative overflow-hidden">
+                                    <Image
+                                        src={card.image}
+                                        alt={card.title}
+                                        data-ai-hint={card.imageHint}
+                                        width={600}
+                                        height={400}
+                                        className="w-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300 transform group-hover:scale-105"
+                                    />
+                                </div>
+                                <CardContent className="p-6 flex-grow flex flex-col">
+                                    <h3 className="text-xl font-black text-white flex items-center">
+                                        {card.title}
+                                        <ChevronsRight className="ml-2 h-6 w-6 text-primary transition-transform group-hover:translate-x-1" />
+                                    </h3>
+                                    <p className="mt-4 text-gray-400 flex-grow">
+                                        {card.description}
+                                    </p>
+                                </CardContent>
+                            </Card>
+                        </Link>
+                    ))}
+                </div>
+            </div>
+        </section>
+    );
+}
+
 
 function TimelineSection() {
     return (
@@ -155,6 +216,7 @@ export default function AboutPage() {
                 </div>
             </section>
             <TimelineSection />
+            <CtaSection />
         </>
     );
 }
