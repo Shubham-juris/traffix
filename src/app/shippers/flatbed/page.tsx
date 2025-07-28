@@ -65,6 +65,43 @@ function WhatsIncludedSection() {
     )
 }
 
+function ExperienceMattersSection() {
+    return (
+      <section className="bg-black text-white py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-400">Why does experience matter in</p>
+              <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                Flatbed<br />
+                <span className="text-primary">Shipping?</span>
+              </h2>
+              <p className="mt-6 text-lg text-gray-300 max-w-md">
+                Each member of TRAFFIX' flatbed team boasts a minimum of 10 years of experience, equipping them with the depth of knowledge and expertise required to optimize your flatbed shipments.
+              </p>
+              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                <Link href="#">
+                  READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+            <div>
+              <Image
+                src="https://placehold.co/800x600"
+                alt="Yellow flatbed truck on a road"
+                data-ai-hint="yellow truck"
+                width={800}
+                height={600}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+          <div className="mt-20 border-t border-primary"></div>
+        </div>
+      </section>
+    );
+  }
+
 export default function FlatbedPage() {
   return (
     <>
@@ -96,6 +133,7 @@ export default function FlatbedPage() {
         </div>
       </div>
       <WhatsIncludedSection />
+      <ExperienceMattersSection />
     </>
   );
 }
