@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -61,7 +61,7 @@ function WhatsIncludedSection() {
             <div key={item.title} className="flex gap-4">
               <div className="flex-shrink-0">
                 <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
-                  <Check className="h-5 w-5 text-black" />
+                  <ArrowRight className="h-5 w-5 text-black" />
                 </div>
               </div>
               <div>
@@ -74,6 +74,42 @@ function WhatsIncludedSection() {
       </div>
     </section>
   )
+}
+
+function TransformingLogisticsSection() {
+    return (
+        <section className="bg-black text-white py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <div>
+                        <p className="text-lg text-gray-400">Transforming logistics with</p>
+                        <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                            Managed<br />
+                            <span className="text-primary">Transportation</span>
+                        </h2>
+                        <p className="mt-6 text-lg text-gray-300 max-w-md">
+                            We align our mission with your business needs and partnership goals to deliver value and solutions that maximize efficiency, reduce risk, and save costs, driving high-performance results.
+                        </p>
+                        <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                            <Link href="#">
+                                READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                            </Link>
+                        </Button>
+                    </div>
+                    <div>
+                        <Image
+                            src="https://placehold.co/800x600"
+                            alt="Logistics worker with a futuristic data interface"
+                            data-ai-hint="logistics worker dashboard"
+                            width={800}
+                            height={600}
+                            className="rounded-lg shadow-2xl"
+                        />
+                    </div>
+                </div>
+            </div>
+        </section>
+    );
 }
 
 export default function ManagedTransportationPage() {
@@ -107,6 +143,7 @@ export default function ManagedTransportationPage() {
         </div>
       </div>
       <WhatsIncludedSection />
+      <TransformingLogisticsSection />
     </>
   );
 }
