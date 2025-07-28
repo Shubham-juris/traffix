@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Truck } from 'lucide-react';
+import { ArrowRight, Check, Truck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -10,6 +10,60 @@ const FlatbedIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M15 10h4.5"></path>
     </svg>
 )
+
+const includedItems = [
+    {
+        title: 'Right-Sized Shipments',
+        description: 'New clients often request the wrong equipment for their flatbed freight, resulting in limited capacity and higher rates. Our team ensures your flatbed truckload or LTL shipments are loaded on the appropriate equipment.',
+    },
+    {
+        title: 'Guide to Legal Loads',
+        description: 'Shipping heavy or oversized loads demands a thorough understanding of legal weight and dimensional limits across various regions and jurisdictions. We serve as your guide to ensure your flatbed freight complies with all regulations.',
+    },
+    {
+        title: 'Precision Timing',
+        description: 'Our team specializes in meticulously planning and managing flatbed delivery schedules to ensure your project runs smoothly, preventing any delays caused by late drivers or out-of-sequence deliveries.',
+    },
+    {
+        title: 'Communication',
+        description: "Our dedicated team provides up-to-date flatbed shipment tracking and clear, detailed communication at every stage of your freight's journey, from pickup to delivery.",
+    },
+    {
+        title: 'Shipment Accuracy',
+        description: "When mistakes are made in flatbed shipping, they can have costly consequences. That's why our team asks thorough questions about each load to ensure no details are overlooked.",
+    },
+    {
+        title: 'Experience Delivering',
+        description: 'Whether your freight is headed to a steel mill or a major project site, our experienced team knows what it takes to ensure successful flatbed delivery, regardless of the destination.',
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+      <section className="bg-white text-black py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+            What's Included
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+            {includedItems.map((item) => (
+              <div key={item.title} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                    <Check className="h-5 w-5 text-black" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                  <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+}
 
 export default function FlatbedPage() {
   return (
@@ -41,6 +95,7 @@ export default function FlatbedPage() {
             </Button>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
