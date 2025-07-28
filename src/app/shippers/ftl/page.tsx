@@ -129,8 +129,8 @@ function FaqSection() {
     return (
         <section className="bg-white text-black py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
-                    FREQUENTLY ASKED QUESTIONS
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
                 </h2>
                 <div className="max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full space-y-4">
@@ -159,8 +159,8 @@ function WhatsIncludedSection() {
   return (
     <section className="bg-white text-black py-20 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
-          WHAT'S INCLUDED
+        <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+          What's Included
         </h2>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
           {includedItems.map((item) => (
@@ -219,9 +219,9 @@ function WhyTraffixSection() {
           </div>
           <div>
             <p className="text-lg text-gray-400">Flexibility to meet your needs</p>
-            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2">
-              WHY TRAFFIX<br />
-              <span className="text-primary">FOR FTL?</span>
+            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+              Why Traffix<br />
+              <span className="text-primary">for FTL?</span>
             </h2>
             <p className="mt-6 text-lg text-gray-300">
               The ability to adapt quickly to changing supply chain demands can make the difference between success or failure.

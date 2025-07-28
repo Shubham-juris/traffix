@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Truck } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ArrowRight, Check, ChevronDown, Truck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -107,6 +108,70 @@ const benefits = [
         description: "We're not focused on quick, one-time transactions. Our goal is to establish lasting partnerships built on trust, reliability, transparent communication, expert advice, and a dedication to delivering high-performance results through customized flatbed solutions."
     },
 ]
+
+const faqItems = [
+    {
+        question: "What equipment is right for my shipment?",
+        answer: "Selecting the right equipment requires asking the right questions, and our expert team, each with a minimum of 10 years of experience, knows exactly the right questions to ask to determine the best equipment for your needs. For more information, check out our equipment guide or contact our flatbed team today!",
+    },
+    {
+        question: "What types of freight can TRAFFIX ship?",
+        answer: "If you need it shipped, we can handle it! From lumber to auto-haulers loaded with cars, the TRAFFIX flatbed team has you covered. We commonly transport industrial manufacturing equipment and raw materials, steel, rolled aluminum, agricultural machinery, automobiles, construction equipment and supplies, wire, and tires. Don’t see your commodity listed? No problem! With over 10 years of experience each, our dedicated flatbed experts have the knowledge and expertise to manage your shipments. Contact us today to learn more!",
+    },
+    {
+        question: "Will you give me a rate, but not give me a truck?",
+        answer: "Unlike other service providers, TRAFFIX focuses on delivering the right capacity, not the most capacity. To provide you with an optimal rate, we start by asking detailed questions about your shipment, including the shipment date. Once we have all the necessary information, we match you with the best carriers and equipment for your needs and will provide a rate after confirming availability on your shipment date. Keep in mind, our meticulously vetted carriers are in high demand, so while we ensure availability at the time of quoting, we cannot guarantee availability if you wait too long to book! Ready to get a rate? Contact us today!",
+    },
+    {
+        question: "What is an over-dimensional shipment?",
+        answer: "Over-dimensional shipments involve freight that exceeds the legal-size requirements for the area you are shipping in. Since regulations for moving over-dimensional freight vary by state and province, it’s crucial to have a knowledgeable team handling your shipment. Ensuring your freight has the needed permits, escorts, safety equipment, and properly trained drivers for the areas where it will be transported is essential. Knowledge and experience are key to successfully moving over-dimensional shipments, which makes partnering with the TRAFFIX Flatbed team so advantageous for your business. To learn more about over-dimensional shipping, check out our equipment guide or contact our team today to book your consultation!",
+    },
+    {
+        question: "What is a hot shot?",
+        answer: "Hot shots are small, time-sensitive loads transported on medium-duty trucks (Classes 3, 4, or 5) pulling flatbed trailers over distances of 200-800 miles. These loads are typically 3 feet high and 102 inches wide, requiring ground-level loading rather than dock loading. Ideal hot shot loads are up to 15-20 feet long and weigh 5,000 pounds or less, though shipments up to 10,000 pounds can also be accommodated. Some hot shots can handle up to 20,000 pounds, but options for these larger loads are more limited. Hot shot drivers can typically cover 600 miles within 24 hours, making them a great choice for urgent shipments. Do you have a shipment that requires a hot shot? Contact us today for a quote!",
+    },
+    {
+        question: "How will my freight be secured on a flatbed?",
+        answer: "Safety is crucial when transporting flatbed freight, and drivers must follow strict regulations to properly secure loads on open-deck trailers. Freight can be secured either directly or indirectly using chains, straps, or tie-downs, often in combination. Direct tie-downs attach the cargo straight to the trailer deck, while indirect tie-downs loop over the freight, with straps anchored beneath the trailer and secured on the opposite side. The type and number of tie-downs used are determined by the weight and size of the cargo. Additional protection may be needed for some shipments, such as corner guards to prevent strap damage, tarps to shield the load from weather, and dunnage (e.g., wooden blocks or rubber mats) to increase friction and prevent shifting. Headboards or bulkheads may also be installed at the front of the trailer to block forward movement.",
+    },
+    {
+        question: "How are flatbed rates calculated?",
+        answer: "Flatbed shipment rates are typically calculated based on several factors that reflect the complexity and requirements of transporting the freight. Factors that influence flatbed rates include: Distance: The longer the haul, the higher the cost. Rates are often calculated per mile, with long-haul shipments benefiting from lower per-mile rates than shorter hauls. Weight and Dimensions: The size and weight of the freight affect the rate. For example, heavier shipments will burn more fuel in transit, thus will be more expensive to transport. Oversized loads may incur additional fees as they may require permits and escorts. These are factors that must be considered when rating a flatbed shipment. Freight Type: The nature of the cargo can influence your rate. Shipments requiring special handling, such as hazardous materials or fragile items, may be rated higher due to added risks and requirements. Equipment Type and Availability: Rates can vary depending on the type of flatbed equipment needed (e.g., standard flatbed, step-deck, or double-drop trailers). The more specialized the equipment, the higher the rate tends to be as those trailers have lower availability. Seasonal capacity restrictions may also influence your rate. Tarps and Additional Services: If the shipment requires tarping, dunnage, or other additional services, these will add to the cost. Extra charges may apply for securing special loads or using equipment like bulkheads. Location and Accessibility: Flatbed rates fluctuate based on the specific equipment required, whether standard flatbeds, step-decks, or double-drop trailers. Specialized trailers often carry higher rates due to limited availability. Additionally, pickup or delivery locations with restricted access, such as high-security sites requiring TWIC card authorization, can further strain capacity and increase rates. Market Conditions: Supply and demand fluctuations, fuel prices, and seasonal trends can affect flatbed rates, leading to higher prices in periods of high demand. At TRAFFIX, our goal is to match your freight with the right capacity, balancing costs and quality to deliver maximum value. Contact us today to learn more.",
+    },
+    {
+        question: "How can I track my flatbed shipment?",
+        answer: "TRAFFIX offers a range of tracking options to suit your needs, including technology-based tracking through MacroPoint, FourKites, Trucker Tools, and Project44; 24/7-365 email or phone updates from our dedicated tracking team; and GPS-enabled tracking devices attached to your freight. During shipment setup, our team will work with you to determine your preferred update frequency and tracking method, ensuring a tailored communication experience. Contact us today to learn more.",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
+    );
+}
 
 function WhatsIncludedSection() {
     return (
@@ -263,6 +328,7 @@ export default function FlatbedPage() {
       <ExperienceMattersSection />
       <BenefitsSection />
       <ProjectFreightSection />
+      <FaqSection />
     </>
   );
 }
