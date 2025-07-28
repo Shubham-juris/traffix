@@ -252,7 +252,7 @@ function SocSection() {
               <span className="text-primary">Compliant</span>
             </h2>
             <p className="mt-6 text-lg text-gray-300">
-              TRAFFIX is SOC Compliant demonstrating our commitment to high standards for data security, privacy, and operational controls, giving clients confidence that their data is handled safely and responsibly.
+              TRAFFIX is SOC compliant demonstrating our commitment to high standards for data security, privacy, and operational controls, giving clients confidence that their data is handled safely and responsibly.
             </p>
             <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
               <Link href="#">
