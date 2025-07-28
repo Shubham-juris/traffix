@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ArrowRight, Check, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -109,6 +110,62 @@ const includedItems = [
         description: 'Our expert produce team ensures a compliant and efficient crossing by guiding you through the necessary preparations to ensure your produce arrives fresh at its final destination.',
     },
 ];
+
+const faqItems = [
+    {
+        question: "How long have you been moving produce loads?",
+        answer: "TRAFFIX has been moving produce shipments across North America since 1979. In 2009 TRAFFIX merged with Fresh Logistics, a brokerage dedicated exclusively to produce. Today TRAFFIX moves more than 10,000 produce loads a year across Canada, the USA, and Mexico from farms, ports, and wholesalers to grocers and retailers. Contact our team today to book your next produce shipment.",
+    },
+    {
+        question: "What areas does your network cover?",
+        answer: "TRAFFIX offers premium capacity for produce shipments across Canada, the USA, and Mexico. If you are importing produce from Mexico, we encourage you to check out our Mexico Cross Border Produce Transportation solution!",
+    },
+    {
+        question: "Is TRAFFIX CTPAT certified?",
+        answer: "TRAFFIX is a fully insured and bonded broker with CTPAT, PIP, FAST, and Smartway certifications.",
+    },
+    {
+        question: "Is TRAFFIX bonded?",
+        answer: "Yes, TRAFFIX is a fully insured and bonded broker, making us your ideal partner for shipping produce between Canada, the USA, and Mexico! Contact us today to learn more!",
+    },
+    {
+        question: "Does TRAFFIX ship flowers?",
+        answer: "Yes, TRAFFIX works with several flower wholesalers in the USA with shipments destined for Canada. Contact us today to learn more!",
+    },
+    {
+        question: "Do you have cold storage at the border?",
+        answer: "Yes, TRAFFIX offers cold storage at multiple US-Mexico border crossings, making importing produce from Mexico a seamless process. Contact us today to learn more!",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
+    );
+}
 
 function WhatsIncludedSection() {
     return (
@@ -265,6 +322,7 @@ export default function ProducePage() {
       <MitigatingRiskSection />
       <BestPracticesSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
