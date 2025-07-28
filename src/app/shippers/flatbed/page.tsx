@@ -100,7 +100,44 @@ function ExperienceMattersSection() {
         </div>
       </section>
     );
-  }
+}
+
+function ProjectFreightSection() {
+  return (
+    <section className="bg-black text-white py-20 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div>
+            <Image
+              src="https://placehold.co/800x600"
+              alt="Oversize load sign on a large vehicle"
+              data-ai-hint="oversize load"
+              width={800}
+              height={600}
+              className="rounded-lg shadow-2xl"
+            />
+          </div>
+          <div>
+            <p className="text-lg text-gray-400">Your ideal partner in</p>
+            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+              Project<br />
+              <span className="text-primary">Freight</span>
+            </h2>
+            <p className="mt-6 text-lg text-gray-300 max-w-md">
+              Project freight is one of the most intricate types of transportation, and our team's extensive experience and dedication to delivering high-performance results makes TRAFFIX your premier choice for project freight solutions.
+            </p>
+            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold">
+              <Link href="#">
+                READ MORE <ArrowRight className="ml-2 h-4 w-4" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+        <div className="mt-20 border-t border-primary"></div>
+      </div>
+    </section>
+  )
+}
 
 export default function FlatbedPage() {
   return (
@@ -134,6 +171,7 @@ export default function FlatbedPage() {
       </div>
       <WhatsIncludedSection />
       <ExperienceMattersSection />
+      <ProjectFreightSection />
     </>
   );
 }
