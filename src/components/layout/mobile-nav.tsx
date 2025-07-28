@@ -21,7 +21,7 @@ const shipperSolutions = [
   { href: '/shippers/ftl', label: 'Full Truckload (FTL)', icon: Truck },
   { href: '/shippers/ltl', label: 'Less-than-Truckload (LTL)', icon: Boxes },
   { href: '/shippers/flatbed', label: 'Flatbed', icon: Truck },
-  { href: '#', label: 'Temperature Controlled', icon: Thermometer },
+  { href: '/shippers/temperature-controlled', label: 'Temperature Controlled', icon: Thermometer },
   { href: '#', label: 'Produce', icon: ShoppingBasket },
   { href: '#', label: 'Managed Transportation', icon: Cpu },
   { href: '#', label: 'Warehousing', icon: Warehouse },
