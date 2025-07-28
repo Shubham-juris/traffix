@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -12,6 +12,60 @@ const ProduceIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M20 22H4a2 2 0 01-2-2V12.5a2 2 0 012-2h16a2 2 0 012 2V20a2 2 0 01-2 2z"/>
     </svg>
 )
+
+const includedItems = [
+    {
+        title: 'Flexible Capacity',
+        description: 'Produce transportation is subject to fluctuations in supply and demand. You need a partner with the right capacity available when and where you need it.',
+    },
+    {
+        title: 'Ripe with Knowledge',
+        description: 'There is a difference in the way you move asparagus versus watermelons or citrus versus potatoes. Ship with a team that knows your produce.',
+    },
+    {
+        title: 'Produce Drayage',
+        description: 'Importing produce from overseas? TRAFFIX has you covered with our temperature-controlled port drayage solutions.',
+    },
+    {
+        title: 'Cold Cross-Dock',
+        description: 'For produce shipments being imported from Mexico to the USA or Canada, take advantage of our cold cross-dock locations at the border.',
+    },
+    {
+        title: 'Grocer Preferred',
+        description: 'Delivering produce to major grocers and retailers involves strict requirements including deliveries by appointment. Trust your TRAFFIX team and preferred carriers to meet these demanding requirements.',
+    },
+    {
+        title: 'Cross-Border Expertise',
+        description: 'Our expert produce team ensures a compliant and efficient crossing by guiding you through the necessary preparations to ensure your produce arrives fresh at its final destination.',
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+      <section className="bg-white text-black py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+            What's Included
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+            {includedItems.map((item) => (
+              <div key={item.title} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                    <Check className="h-5 w-5 text-black" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                  <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+}
 
 export default function ProducePage() {
   return (
@@ -43,6 +97,7 @@ export default function ProducePage() {
             </Button>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
