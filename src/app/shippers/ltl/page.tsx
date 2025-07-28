@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Boxes, Check } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ArrowRight, Boxes, Check, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -103,6 +104,57 @@ const benefits = [
     },
 ]
 
+const faqItems = [
+    {
+        question: "What areas does your LTL network cover?",
+        answer: "TRAFFIX offers LTL services domestically in Canada and the USA, as well as, cross border between Canada, the USA, and Mexico.",
+    },
+    {
+        question: "Can the TRAFFIX LTL team really save me money?",
+        answer: "At TRAFFIX LTL, we are committed to offering competitive market rates for your LTL shipping lanes. However, our approach goes beyond mere financial savings, emphasizing the importance of adding value. Through our consultative freight analysis, we assess your purchasing strategies to identify potential savings opportunities. Additionally, we provide insights to enhance your operations, including time-saving measures, process optimization, freight claims reduction, improved on-time delivery performance, and strategies to minimize avoidable accessorials. All findings are presented in a comprehensive report for your review. Contact us today to schedule your consultation.",
+    },
+    {
+        question: "I have my own system. Do I need to use the TRAFFIX Shipping App?",
+        answer: "No, TRAFFIX is pleased to offer flexible API and EDI integrations to your TMS or ERP. Contact us today to learn more.",
+    },
+    {
+        question: "How will I access my data and track my shipments?",
+        answer: "The TRAFFIX Shipping App offers comprehensive visibility into your LTL operations. Alongside our Shipping App, qualifying clients will gain access to our cloud-based business intelligence software, featuring a tailored dashboard for one-click access to essential information. Track all your LTL shipments in transit through the TRAFFIX Shipping App, the carrier’s website, or opt for personalized updates from our dedicated tracking team. Contact us to talk to one of our LTL experts today.",
+    },
+    {
+        question: "Does TRAFFIX offer freight bill auditing?",
+        answer: "Certainly! TRAFFIX’ LTL auditors carefully examine each invoice to ensure accurate charges and validate accessorial fees. Our auditing team meticulously verifies reweighs and reclasses, identifying opportunities to enhance operational efficiencies.",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
+    );
+}
 
 function WhatsIncludedSection() {
   return (
@@ -260,6 +312,7 @@ export default function LtlPage() {
       <ChoosingCarrierSection />
       <BenefitsSection />
       <SocSection />
+      <FaqSection />
     </>
   );
 }
