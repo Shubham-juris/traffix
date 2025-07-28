@@ -1,6 +1,7 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -119,6 +120,81 @@ const benefits = [
     },
 ]
 
+const faqItems = [
+    {
+        question: "What are the benefits of a managed transportation solution?",
+        answer: "Partnering with a reputable outsourced logistics provider offers numerous benefits, including cost savings, improved network efficiency, enhanced visibility and analytics, flexibility and scalability, risk mitigation, expert insights, and up-to-date cloud-based technology. If you are interested in getting these benefits for your business, contact us today to book a consultation.",
+    },
+    {
+        question: "What managed transportation services do you offer?",
+        answer: "TRAFFIX MTS encompasses transportation planning and optimization, carrier procurement and management, shipment execution and tracking, performance analytics and reporting, and freight auditing and payment. For more information on our comprehensive services, contact us today!",
+    },
+    {
+        question: "What operating model best fits my business?",
+        answer: (
+            <div>
+                <p>While we don’t believe in one-size-fits-all solutions, here are some general guidelines for determining which operating model is best for your business:</p>
+                <h4 className="font-bold mt-4 mb-2">Full Outsource (4PL)</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>This is a centralized solution that includes technology, an expertly trained dedicated team, and TRAFFIX’ premium capacity.</li>
+                    <li>TRAFFIX industry-leading transportation management system (TMS) will be used for all in-scope modes.</li>
+                    <li>TRAFFIX will execute and manage all in-scope modes of transportation for you through contracted capacity with carriers from our premium network.</li>
+                </ul>
+                <h4 className="font-bold mt-4 mb-2">Managed TMS (4PL)</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>This is a centralized solution that includes technology, an expertly trained dedicated team, and a combination of your capacity and TRAFFIX’ premium capacity.</li>
+                    <li>This is an end-to-end supply chain management solution.</li>
+                    <li>TRAFFIX will manage all in-scope moves on your behalf through contracted carriers.</li>
+                </ul>
+                <h4 className="font-bold mt-4 mb-2">SaaS Solution</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                    <li>This is a technology only solution that gives you access to TRAFFIX’ cloud-based TMS where you can manage all in-scope modes.</li>
+                    <li>Your team is in the driver’s seat, executing and managing shipments within the TMS.</li>
+                    <li>Network capacity is contracted and managed by your team; however, you may also access carriers from TRAFFIX’ premium network.</li>
+                </ul>
+                <p className="mt-4">We encourage you to book a no-obligation consultation to determine which operating model will produce the best results for your business. Book your consultation today!</p>
+            </div>
+        )
+    },
+    {
+        question: "Do managed transportation solutions really deliver cost savings?",
+        answer: "Yes, on average, TRAFFIX has saved its managed transportation clients 18% – 25% overall in the first year of partnership. Book your no-obligation consultation today to learn more about how TRAFFIX’ managed transportation solutions can generate savings for your business!",
+    },
+    {
+        question: "What does the implementation process look like if I am interested?",
+        answer: "You can download our implementation checklist here. For more information, book a no-obligation consultation today!",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 function WhatsIncludedSection() {
   return (
     <section className="bg-white text-black py-20 sm:py-24">
@@ -236,6 +312,7 @@ export default function ManagedTransportationPage() {
       <WhatsIncludedSection />
       <TransformingLogisticsSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
