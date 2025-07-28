@@ -1,6 +1,6 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -21,6 +21,60 @@ const ManagedTransportationIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M3 9a2 2 0 0 1 2-2h2" />
     </svg>
 )
+
+const includedItems = [
+    {
+        title: 'Cloud-Based TMS',
+        description: 'Gain access to our industry-leading cloud-based transportation management system (TMS), built to optimize your network and deliver cost savings and operational efficiencies.',
+    },
+    {
+        title: 'Analytics & Reporting',
+        description: 'Advanced analytics and reporting capabilities provide insights into your supply chain operations, enhancing data-driven decision making.',
+    },
+    {
+        title: 'Network Planning',
+        description: 'TRAFFIX customizes solutions tailored to optimize order management, load planning, transportation costs, efficiency, and transit times.',
+    },
+    {
+        title: 'Flexible Control',
+        description: "We don't believe in one-size-fits-all solutions. We tailor our services to meet the needs of your business.",
+    },
+    {
+        title: 'Intimate Scalability',
+        description: 'TRAFFIX engineers and implements customized systems and processes designed to help your business scale, while our expert team maintains a strong focus on individualized and detailed aspects.',
+    },
+    {
+        title: 'The Right Resources',
+        description: 'TRAFFIX aims to reduce financial and operational costs by leveraging the three pillars of MTS: technology, our team of experts, and the right capacity.',
+    },
+];
+
+function WhatsIncludedSection() {
+  return (
+    <section className="bg-white text-black py-20 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+          What's Included
+        </h2>
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+          {includedItems.map((item) => (
+            <div key={item.title} className="flex gap-4">
+              <div className="flex-shrink-0">
+                <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                  <Check className="h-5 w-5 text-black" />
+                </div>
+              </div>
+              <div>
+                <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </div>
+    </section>
+  )
+}
 
 export default function ManagedTransportationPage() {
   return (
@@ -52,6 +106,7 @@ export default function ManagedTransportationPage() {
             </Button>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
