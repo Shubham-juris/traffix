@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from '@/components/ui/carousel';
 import { Card, CardContent } from '@/components/ui/card';
+import { Reveal } from '@/components/animations/reveal';
 
 const stats = [
     { value: '46+', label: 'Years in Business' },
@@ -64,8 +65,9 @@ function CtaSection() {
         <section className="bg-black py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                    {ctaCards.map((card) => (
-                        <Link href={card.href} key={card.title} className="group">
+                    {ctaCards.map((card, index) => (
+                        <Reveal key={card.title} delay={index * 0.1}>
+                        <Link href={card.href} className="group">
                             <Card className="bg-black border border-gray-800 rounded-lg overflow-hidden flex flex-col h-full hover:border-primary transition-colors duration-300">
                                 <div className="relative overflow-hidden">
                                     <Image
@@ -88,6 +90,7 @@ function CtaSection() {
                                 </CardContent>
                             </Card>
                         </Link>
+                        </Reveal>
                     ))}
                 </div>
             </div>
@@ -100,6 +103,7 @@ function TimelineSection() {
     return (
         <section className="bg-black py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
                 <Carousel
                     opts={{
                         align: "start",
@@ -151,6 +155,7 @@ function TimelineSection() {
                         <CarouselNext className="relative -left-0 -top-0 translate-y-0 bg-gray-800 border-primary text-primary hover:bg-primary hover:text-black" />
                     </div>
                 </Carousel>
+                </Reveal>
             </div>
         </section>
     );
@@ -175,18 +180,24 @@ export default function AboutPage() {
                 {/* Content */}
                 <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-20 mt-20">
                     <div className="max-w-4xl">
+                        <Reveal>
                         <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase">
                             About Our<br />
                             <span className="text-primary">Company</span>
                         </h1>
+                        </Reveal>
+                        <Reveal delay={0.1}>
                         <p className="mt-6 text-lg md:text-xl max-w-xl text-gray-300">
                             Customized, technology-enabled solutions, executed by experts and delivered by the right capacity.
                         </p>
+                        </Reveal>
+                        <Reveal delay={0.2}>
                         <Button asChild className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-6 py-3 font-bold text-base group">
                             <Link href="#">
                                 READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                             </Link>
                         </Button>
+                        </Reveal>
                     </div>
 
                 </div>
@@ -194,8 +205,9 @@ export default function AboutPage() {
                 {/* Stats Section */}
                 <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 py-10">
                     <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl">
-                        {stats.map((stat) => (
-                            <div key={stat.label} className="text-left">
+                        {stats.map((stat, index) => (
+                            <Reveal key={stat.label} delay={index * 0.1}>
+                            <div className="text-left">
                                 <div className="text-5xl md:text-6xl font-black text-primary mb-2">
                                     {stat.value}
                                 </div>
@@ -203,6 +215,7 @@ export default function AboutPage() {
                                     {stat.label}
                                 </div>
                             </div>
+                            </Reveal>
                         ))}
                     </div>
                 </div>
@@ -210,9 +223,11 @@ export default function AboutPage() {
 
             <section className="bg-black text-white py-20">
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                    <Reveal>
                     <p className="max-w-6xl mx-auto text-center text-3xl md:text-4xl font-black tracking-wide leading-tight">
                         SINCE 1979, TRAFFIX' TEAM OF SUPPLY CHAIN EXPERTS HAS BEEN LEVERAGING EXPERIENCE, INDUSTRY-LEADING TECHNOLOGY, AND A TRUSTED CARRIER NETWORK TO TACKLE THE MOST COMPLEX LOGISTICAL CHALLENGES WITH PRECISION AND EXPERTISE.
                     </p>
+                    </Reveal>
                 </div>
             </section>
             <TimelineSection />

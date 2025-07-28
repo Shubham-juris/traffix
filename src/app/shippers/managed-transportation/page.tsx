@@ -1,10 +1,10 @@
-
 import { Button } from '@/components/ui/button';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { ArrowRight, ChevronDown, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
+import { Reveal } from '@/components/animations/reveal';
 
 const ManagedTransportationIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
@@ -170,9 +170,12 @@ function FaqSection() {
     return (
         <section className="bg-white text-black py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
                 <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
                     Frequently Asked Questions
                 </h2>
+                </Reveal>
+                <Reveal>
                 <div className="max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         {faqItems.map((item) => (
@@ -190,6 +193,7 @@ function FaqSection() {
                         ))}
                     </Accordion>
                 </div>
+                </Reveal>
             </div>
         </section>
     );
@@ -199,12 +203,15 @@ function WhatsIncludedSection() {
   return (
     <section className="bg-white text-black py-20 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal>
         <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
           What's Included
         </h2>
+        </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
-          {includedItems.map((item) => (
-            <div key={item.title} className="flex gap-4">
+          {includedItems.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.1}>
+            <div className="flex gap-4">
               <div className="flex-shrink-0">
                 <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
                   <ArrowRight className="h-5 w-5 text-black" />
@@ -215,6 +222,7 @@ function WhatsIncludedSection() {
                 <p className="mt-2 text-gray-600 text-base">{item.description}</p>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -227,14 +235,16 @@ function BenefitsSection() {
         <section className="bg-black text-white py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-7xl mx-auto">
-                    {benefits.map((benefit) => (
-                        <div key={benefit.title}>
+                    {benefits.map((benefit, index) => (
+                        <Reveal key={benefit.title} delay={index * 0.1}>
+                        <div>
                             <div className="flex items-center gap-4">
                                 <benefit.icon className="w-12 h-12 text-primary flex-shrink-0" />
                                 <h3 className="text-xl font-bold text-primary">{benefit.title}</h3>
                             </div>
                             <p className="mt-4 text-gray-400">{benefit.description}</p>
                         </div>
+                        </Reveal>
                     ))}
                 </div>
                 <div className="mt-20 border-t border-primary"></div>
@@ -248,6 +258,7 @@ function TransformingLogisticsSection() {
         <section className="bg-black text-white py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <Reveal>
                     <div>
                         <p className="text-lg text-gray-400">Transforming logistics with</p>
                         <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
@@ -263,6 +274,8 @@ function TransformingLogisticsSection() {
                             </Link>
                         </Button>
                     </div>
+                    </Reveal>
+                    <Reveal>
                     <div>
                         <Image
                             src="https://placehold.co/800x600"
@@ -273,6 +286,7 @@ function TransformingLogisticsSection() {
                             className="rounded-lg shadow-2xl"
                         />
                     </div>
+                    </Reveal>
                 </div>
                  <div className="mt-20 border-t border-primary"></div>
             </div>
@@ -296,18 +310,26 @@ export default function ManagedTransportationPage() {
         </div>
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+            <Reveal>
             <ManagedTransportationIcon className="w-20 h-20 text-primary mb-6" />
+            </Reveal>
+            <Reveal delay={0.1}>
             <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
               Managed <br /> Transportation <br /> Solutions (MTS)
             </h1>
+            </Reveal>
+            <Reveal delay={0.2}>
             <p className="mt-6 text-xl max-w-2xl text-gray-300">
                 Enabling value-added network strategies to maximize efficiency, reduce risk, and save costs.
             </p>
+            </Reveal>
+            <Reveal delay={0.3}>
             <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group">
               <Link href="/contact">
                 SHIP WITH US <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
+            </Reveal>
         </div>
       </div>
       <WhatsIncludedSection />

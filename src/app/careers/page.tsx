@@ -3,6 +3,7 @@ import { ArrowRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, 
 import Image from 'next/image';
 import { Button } from '@/components/ui/button';
 import Link from 'next/link';
+import { Reveal } from '@/components/animations/reveal';
 
 const modes = [
   { name: 'Full Truckload (FTL)', icon: Truck },
@@ -50,12 +51,15 @@ function WhyHaulSection() {
   return (
     <section className="bg-black text-white py-20 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal>
         <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
           WHY HAUL WITH TRAFFIX?
         </h2>
+        </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
-          {whyHaulReasons.map((reason) => (
-            <div key={reason.title} className="flex gap-4">
+          {whyHaulReasons.map((reason, index) => (
+            <Reveal key={reason.title} delay={index * 0.1}>
+            <div className="flex gap-4">
               <div className="flex-shrink-0">
                 <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
                   <Check className="h-5 w-5 text-black" />
@@ -66,6 +70,7 @@ function WhyHaulSection() {
                 <p className="mt-2 text-gray-400 text-base">{reason.description}</p>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -78,6 +83,7 @@ function FinancialResilienceSection() {
     <section className="bg-black text-white py-20 sm:py-24">
        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          <Reveal>
           <div>
             <Image 
               src="https://placehold.co/800x600" 
@@ -88,6 +94,8 @@ function FinancialResilienceSection() {
               className="rounded-lg shadow-2xl"
             />
           </div>
+          </Reveal>
+          <Reveal>
           <div className="max-w-lg">
             <p className="text-lg text-gray-400">Leveraging factors and brokers to gain</p>
             <h2 className="text-5xl font-black tracking-tight mt-2">
@@ -103,6 +111,7 @@ function FinancialResilienceSection() {
               </Link>
             </Button>
           </div>
+          </Reveal>
         </div>
         <div className="mt-20 border-t border-primary"></div>
       </div>
@@ -115,6 +124,7 @@ function CarrierPaymentSection() {
     <section className="bg-black text-white py-20 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-16 items-center">
+          <Reveal>
           <div className="max-w-md">
             <p className="text-lg text-gray-400 mb-2">Transparent billing with the</p>
             <h2 className="text-5xl font-black tracking-tight leading-tight">
@@ -126,6 +136,8 @@ function CarrierPaymentSection() {
               TRAFFIX' Carrier Payment app provides access to complete billing visibility at your fingertips, 24/7-365. To learn more <Link href="/contact" className="text-primary hover:underline">contact</Link> our app support team today.
             </p>
           </div>
+          </Reveal>
+          <Reveal>
           <div className="relative">
              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-primary rounded-b-lg"></div>
              <Image 
@@ -137,6 +149,7 @@ function CarrierPaymentSection() {
                 className="relative rounded-lg shadow-2xl"
              />
           </div>
+          </Reveal>
         </div>
       </div>
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 mt-20">
@@ -151,20 +164,25 @@ function ModesSection() {
     <section className="py-20 sm:py-24 bg-white text-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+          <Reveal>
           <h2 className="text-5xl font-black tracking-tight">MODES</h2>
+          </Reveal>
+          <Reveal>
           <p className="text-lg text-gray-600">
             Moving 330,000+ shipments across North America annually; haul your next load with TRAFFIX today.
           </p>
+          </Reveal>
         </div>
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {modes.map((mode) => (
+          {modes.map((mode, index) => (
+            <Reveal key={mode.name} delay={index * 0.05}>
             <div 
-              key={mode.name} 
               className="border border-gray-200 rounded-lg p-6 flex items-center gap-4 hover:bg-primary hover:text-black group transition-all duration-300 cursor-pointer"
             >
               <mode.icon className="w-8 h-8 text-primary group-hover:text-black" />
               <span className="font-semibold">{mode.name}</span>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -191,25 +209,32 @@ export default function TraffixHeroSection() {
         <div className="relative z-10 container mx-auto px-6 py-20 flex flex-col justify-center min-h-screen">
           <div className="max-w-4xl">
             {/* Main Heading */}
+            <Reveal>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-8">
               WHY HAUL<br/>
               <span className="text-yellow-400">FOR TRAFFIX</span>
             </h1>
+            </Reveal>
 
             {/* Subheading */}
+            <Reveal delay={0.1}>
             <p className="text-xl md:text-2xl text-gray-300 mb-12 max-w-2xl">
               Join our elite network of carriers. Let's be partners in business.
             </p>
+            </Reveal>
 
             {/* CTA Button */}
+            <Reveal delay={0.2}>
             <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-300 transition-colors duration-300 flex items-center gap-2 group">
               HAUL WITH US 
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
+            </Reveal>
           </div>
 
           {/* Stats Section */}
-          <div className="mt-28 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto">
+          <div className="mt-28 grid grid-cols-1 md:grid-cols-3 gap-12 max-w-5xl mx-auto w-full">
+            <Reveal>
             <div className="text-center">
               <div className="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 mb-2">
                 449K+
@@ -218,7 +243,8 @@ export default function TraffixHeroSection() {
                 Loads per Year
               </div>
             </div>
-            
+            </Reveal>
+            <Reveal delay={0.1}>
             <div className="text-center">
               <div className="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 mb-2">
                 46+
@@ -227,7 +253,8 @@ export default function TraffixHeroSection() {
                 Years in Business
               </div>
             </div>
-            
+            </Reveal>
+            <Reveal delay={0.2}>
             <div className="text-center">
               <div className="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 mb-2">
                 SPANNING
@@ -236,6 +263,7 @@ export default function TraffixHeroSection() {
                 North America
               </div>
             </div>
+            </Reveal>
           </div>
         </div>
       </div>

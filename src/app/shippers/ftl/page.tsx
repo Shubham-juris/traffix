@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { Reveal } from '@/components/animations/reveal';
 
 const includedItems = [
   {
@@ -129,9 +130,12 @@ function FaqSection() {
     return (
         <section className="bg-white text-black py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
                 <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
                     Frequently Asked Questions
                 </h2>
+                </Reveal>
+                <Reveal>
                 <div className="max-w-4xl mx-auto">
                     <Accordion type="single" collapsible className="w-full space-y-4">
                         {faqItems.map((item) => (
@@ -149,6 +153,7 @@ function FaqSection() {
                         ))}
                     </Accordion>
                 </div>
+                </Reveal>
             </div>
         </section>
     );
@@ -159,12 +164,15 @@ function WhatsIncludedSection() {
   return (
     <section className="bg-white text-black py-20 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <Reveal>
         <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
           What's Included
         </h2>
+        </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
-          {includedItems.map((item) => (
-            <div key={item.title} className="flex gap-4">
+          {includedItems.map((item, index) => (
+            <Reveal key={item.title} delay={index * 0.1}>
+            <div className="flex gap-4">
               <div className="flex-shrink-0">
                 <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
                   <Check className="h-5 w-5 text-black" />
@@ -175,6 +183,7 @@ function WhatsIncludedSection() {
                 <p className="mt-2 text-gray-600 text-base">{item.description}</p>
               </div>
             </div>
+            </Reveal>
           ))}
         </div>
       </div>
@@ -187,14 +196,16 @@ function BenefitsSection() {
         <section className="bg-black text-white py-20 sm:py-24">
             <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                 <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-7xl mx-auto">
-                    {benefits.map((benefit) => (
-                        <div key={benefit.title}>
+                    {benefits.map((benefit, index) => (
+                        <Reveal key={benefit.title} delay={index * 0.1}>
+                        <div>
                             <div className="flex items-center gap-4">
                                 <benefit.icon className="w-12 h-12 text-primary flex-shrink-0" />
                                 <h3 className="text-xl font-bold text-primary">{benefit.title}</h3>
                             </div>
                             <p className="mt-4 text-gray-400">{benefit.description}</p>
                         </div>
+                        </Reveal>
                     ))}
                 </div>
             </div>
@@ -207,6 +218,7 @@ function WhyTraffixSection() {
     <section className="bg-black text-white py-20 sm:py-24">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid md:grid-cols-2 gap-12 items-center">
+          <Reveal>
           <div>
             <Image
               src="https://placehold.co/800x600"
@@ -217,6 +229,8 @@ function WhyTraffixSection() {
               className="rounded-lg"
             />
           </div>
+          </Reveal>
+          <Reveal>
           <div>
             <p className="text-lg text-gray-400">Flexibility to meet your needs</p>
             <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
@@ -232,6 +246,7 @@ function WhyTraffixSection() {
               </Link>
             </Button>
           </div>
+          </Reveal>
         </div>
         <div className="mt-20 border-t border-primary"></div>
       </div>
@@ -256,18 +271,26 @@ export default function FtlPage() {
         
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 items-center">
           <div className="md:col-start-2 text-left">
+            <Reveal>
             <Truck className="w-20 h-20 text-primary mb-6" />
+            </Reveal>
+            <Reveal delay={0.1}>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
               Full Truckload <br /> (FTL)
             </h1>
+            </Reveal>
+            <Reveal delay={0.2}>
             <p className="mt-6 text-xl max-w-lg text-gray-300">
               Over-the-road (OTR) services customized to meet your transportation needs.
             </p>
+            </Reveal>
+            <Reveal delay={0.3}>
             <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group">
               <Link href="/contact">
                 SHIP WITH US <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
+            </Reveal>
           </div>
         </div>
       </div>
