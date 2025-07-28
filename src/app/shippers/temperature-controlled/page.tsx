@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, Check } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -15,6 +15,60 @@ const TemperatureControlledIcon = (props: SVGProps<SVGSVGElement>) => (
         <circle cx="17" cy="18" r="2" />
     </svg>
 )
+
+const includedItems = [
+    {
+        title: 'Experience',
+        description: 'When it comes to temperature-controlled shipping, success is in the details. Our experts know what questions to ask to ensure no critical detail is overlooked.',
+    },
+    {
+        title: 'Network Capacity',
+        description: 'Our premium carrier network operating top-of-the-line equipment ensures your thermosensitive freight travels at the right temperature from pickup to delivery.',
+    },
+    {
+        title: 'Technology',
+        description: "From temperature tracking to shipment visibility, TRAFFIX' team of experts are backed by industry-leading technology.",
+    },
+    {
+        title: 'Cold Storage',
+        description: 'TRAFFIX streamlines your temperature-controlled shipments between the US and Mexico with our secure cold storage locations at the border.',
+    },
+    {
+        title: 'Responsive Support',
+        description: 'Enjoy peace of mind knowing that our expert support team is available to you around the clock, no matter the day.',
+    },
+    {
+        title: 'Seamless Claims Process',
+        description: 'When the unexpected happens, TRAFFIX has you covered. Our dedicated team makes the claims process quick and hassle-free.',
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+      <section className="bg-white text-black py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+            What's Included
+          </h2>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+            {includedItems.map((item) => (
+              <div key={item.title} className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                    <Check className="h-5 w-5 text-black" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                  <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+}
 
 export default function TemperatureControlledPage() {
   return (
@@ -46,6 +100,7 @@ export default function TemperatureControlledPage() {
             </Button>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
