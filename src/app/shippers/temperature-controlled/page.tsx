@@ -70,6 +70,43 @@ function WhatsIncludedSection() {
     )
 }
 
+function ExperiencedPartnerSection() {
+    return (
+      <section className="bg-black text-white py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <div>
+              <p className="text-lg text-gray-400">A track record of success</p>
+              <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                Your Experienced<br />
+                <span className="text-primary">Partner</span>
+              </h2>
+              <p className="mt-6 text-lg text-gray-300 max-w-md">
+                Experience always matters in transportation, but even more so with temperature-controlled service. Our solutions are backed by 45+ years of experience.
+              </p>
+              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                <Link href="#">
+                  READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+            <div>
+              <Image
+                src="https://placehold.co/800x600"
+                alt="White truck with yellow refrigeration unit"
+                data-ai-hint="white truck"
+                width={800}
+                height={600}
+                className="rounded-lg shadow-2xl"
+              />
+            </div>
+          </div>
+          <div className="mt-20 border-t border-primary"></div>
+        </div>
+      </section>
+    );
+}
+
 export default function TemperatureControlledPage() {
   return (
     <>
@@ -101,6 +138,7 @@ export default function TemperatureControlledPage() {
         </div>
       </div>
       <WhatsIncludedSection />
+      <ExperiencedPartnerSection />
     </>
   );
 }
