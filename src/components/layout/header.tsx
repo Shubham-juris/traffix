@@ -28,7 +28,7 @@ const shipperSolutions = [
   { href: '/shippers/flatbed', label: 'Flatbed', icon: Truck },
   { href: '/shippers/temperature-controlled', label: 'Temperature Controlled', icon: Thermometer },
   { href: '/shippers/produce', label: 'Produce', icon: ShoppingBasket },
-  { href: '#', label: 'Managed Transportation', icon: Cpu },
+  { href: '/shippers/managed-transportation', label: 'Managed Transportation', icon: Cpu },
   { href: '#', label: 'Warehousing', icon: Warehouse },
   { href: '#', label: 'Expedited', icon: Plane },
   { href: '#', label: 'Drayage', icon: Ship },
