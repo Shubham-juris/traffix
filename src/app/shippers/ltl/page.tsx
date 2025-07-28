@@ -96,6 +96,43 @@ function ChoosingCarrierSection() {
   )
 }
 
+function SocSection() {
+  return (
+    <section className="bg-black text-white py-20 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <div className="max-w-lg">
+            <p className="text-lg text-gray-400">Data security and privacy</p>
+            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+              SOC <br />
+              <span className="text-primary">Compliant</span>
+            </h2>
+            <p className="mt-6 text-lg text-gray-300">
+              TRAFFIX is SOC Compliant demonstrating our commitment to high standards for data security, privacy, and operational controls, giving clients confidence that their data is handled safely and responsibly.
+            </p>
+            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+              <Link href="#">
+                LEARN MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+              </Link>
+            </Button>
+          </div>
+          <div>
+            <Image
+              src="https://placehold.co/600x600"
+              alt="AICPA SOC Logo"
+              data-ai-hint="aicpa logo"
+              width={600}
+              height={600}
+              className="rounded-lg"
+            />
+          </div>
+        </div>
+        <div className="mt-20 border-t border-primary"></div>
+      </div>
+    </section>
+  );
+}
+
 
 export default function LtlPage() {
   return (
@@ -129,6 +166,7 @@ export default function LtlPage() {
       </div>
       <WhatsIncludedSection />
       <ChoosingCarrierSection />
+      <SocSection />
     </>
   );
 }
