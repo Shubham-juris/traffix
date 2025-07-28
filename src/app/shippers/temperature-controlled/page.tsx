@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ArrowRight, Check, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
@@ -112,6 +113,70 @@ const benefits = [
         description: "TRAFFIX earns your business through trust, reliability, communication, expert guidance, and a commitment to providing high-quality temperature-controlled shipping solutions at competitive prices."
     },
 ]
+
+const faqItems = [
+    {
+        question: "What types of temperature-controlled freight do you have experience transporting?",
+        answer: "TRAFFIX has experience transporting temperature-controlled freight from fresh fruits and vegetables to pharmaceuticals. We have extensive experience with food (manufacturing, service, grocery, and retail), consumer goods, and even hazardous chemicals. Contact us today to book your next temperature controlled shipment with TRAFFIX.",
+    },
+    {
+        question: "Are you familiar with temperature-controlled delivery to big-box retailers and grocers?",
+        answer: "TRAFFIX’ expert temperature-controlled transportation team understands the precise delivery requirements, appointment systems, and preferred carriers of all major North American retailers and grocers. This specialized knowledge ensures your goods are delivered on-time and in-full, minimizing the risk of fines. Choose TRAFFIX as your partner for temperature-controlled delivery to major retailers and grocers. Contact us today to learn more.",
+    },
+    {
+        question: "What steps do you take to make sure temperature requirements are met?",
+        answer: "Ensuring the success of temperature-controlled transportation hinges on meticulous planning and attention to detail. Oversights in pre-cooling requirements, washout protocols, or equipment specifications can lead to delays or even shipment failure. At TRAFFIX, our team of seasoned logistics professionals takes a proactive approach. We meticulously examine every aspect of your shipment, ensuring all details are addressed to optimize its success. Explore our article outlining the critical questions we ask for every temperature-controlled shipment. Contact us today to book your next shipment!",
+    },
+    {
+        question: "What happens if I have a claim?",
+        answer: "Even the most meticulously planned loads can encounter unforeseen circumstances. While breakdowns, accidents, or extreme weather are rare, TRAFFIX’ team of temperature controlled trucking experts are prepared to deal with the uncontrollable. Our team’s thorough documentation, accurate temperature data, and efficient claims team streamlines the claims process for our clients. Our goal is to minimize disruptions to your business and ensure you receive quick reimbursement.",
+    },
+    {
+        question: "What areas do you cover with your temperature-controlled services?",
+        answer: "TRAFFIX offers comprehensive temperature-controlled transportation services across Canada, the USA, and Mexico. Leverage our elite carrier network alongside our team of seasoned professionals, each with a minimum of five years of temperature-controlled trucking expertise. Contact us today to book your next shipment!",
+    },
+    {
+        question: "What temperatures does TRAFFIX ship?",
+        answer: "TRAFFIX ships freight in the following temperature ranges: Ambient/Room Temperature Shipments Sometimes referred to as protect from freeze (15 to 25 Degrees C / 59 to 77 Degrees F) Refrigerated/Cold Shipping (2 to 8 Degrees C / 35 to 46 Degrees F) Frozen Shipments (-10 to -25 Degrees C / 14 to -13 Degrees F)",
+    },
+    {
+        question: "What are the critical touch points that pose the greatest risk of temperature deviation in shipping?",
+        answer: "Proper documentation, temperature monitoring, and attention to detail are essential when managing temperature-controlled shipments. This is where experience becomes invaluable. The highest risk of temperature deviation occurs during loading and unloading, as well as at cross-docking and warehousing facilities. For highly sensitive products like produce, even a single-degree fluctuation can have significant consequences, making it crucial to maintain precise temperature control at every stage of the journey.",
+    },
+    {
+        question: "What is freeze protection service?",
+        answer: "Freeze protection, also known as “protect from freeze” service, involves using a heated trailer to prevent freezable freight from freezing in extremely cold temperatures. Common items requiring freeze protection include bottled beverages, which can burst if the liquid expands when frozen. Surprisingly, chocolate is also frequently shipped with freeze protection, as freezing can cause the cocoa butter to separate, creating a white discoloration. While this doesn’t affect the safety of the chocolate, it can make the product appear unappealing. Contact our team today to book your protect-from-freeze shipment.",
+    }
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
+    );
+}
 
 function WhatsIncludedSection() {
     return (
@@ -230,6 +295,7 @@ export default function TemperatureControlledPage() {
       <WhatsIncludedSection />
       <ExperiencedPartnerSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
