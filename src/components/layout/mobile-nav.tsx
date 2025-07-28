@@ -18,7 +18,7 @@ interface MobileNavProps {
 }
 
 const shipperSolutions = [
-  { href: '#', label: 'Full Truckload (FTL)', icon: Truck },
+  { href: '/shippers/ftl', label: 'Full Truckload (FTL)', icon: Truck },
   { href: '#', label: 'Less-than-Truckload (LTL)', icon: Boxes },
   { href: '#', label: 'Flatbed', icon: Truck },
   { href: '#', label: 'Temperature Controlled', icon: Thermometer },
