@@ -3,6 +3,7 @@ import { Button } from '@/components/ui/button';
 import { ArrowRight, Boxes, Check } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
+import { SVGProps } from 'react';
 
 
 const includedItems = [
@@ -31,6 +32,77 @@ const includedItems = [
     description: 'Controlling inbound shipping costs is challenging when vendors choose the carrier. By adding TRAFFIX to your purchase order, we ensure a preferred carrier delivers your freight, putting control back in your hands.',
   },
 ]
+
+const benefits = [
+    {
+        icon: (props: SVGProps<SVGSVGElement>) => (
+            <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M16 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                <circle cx="8.5" cy="7" r="4"></circle>
+                <path d="M18 18h6v-3a3 3 0 0 0-3-3h-3a3 3 0 0 0-3 3v3h6z"></path>
+                <path d="M21 12V9a3 3 0 0 0-3-3h-1"></path>
+            </svg>
+        ),
+        title: 'Collaborative Partnership',
+        description: "At TRAFFIX, we foster partnerships through collaborative efforts. Our team leverages its expertise to meticulously audit your LTL supply chain and serves as your trusted advisor in pursuit of optimization."
+    },
+    {
+        icon: (props: SVGProps<SVGSVGElement>) => (
+            <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M14 17.6V5.4A2.4 2.4 0 0 0 11.6 3H5.4A2.4 2.4 0 0 0 3 5.4v13.2A2.4 2.4 0 0 0 5.4 21h6.2a2.4 2.4 0 0 0 2.4-2.4Z"></path>
+                <path d="M14 17.6a2.4 2.4 0 0 1 2.4-2.4h2.2a2.4 2.4 0 0 1 2.4 2.4v3.2a2.4 2.4 0 0 1-2.4 2.4H8"></path>
+                <circle cx="7.5" cy="16.5" r="1.5"></circle>
+                <circle cx="16.5" cy="16.5" r="1.5"></circle>
+            </svg>
+        ),
+        title: 'The Right Capacity',
+        description: 'Choosing the cheapest option can be costly in LTL shipping. Our role includes managing carrier relationships, negotiating for you, and ensuring the right carrier for each load.'
+    },
+    {
+        icon: (props: SVGProps<SVGSVGElement>) => (
+            <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 2L9 9l-7 1 5 5-1 7 6-3 6 3-1-7 5-5-7-1z"></path>
+                <path d="M12 22a7 7 0 0 0 7-7c0-2-1-3-3-4"></path>
+                <path d="M12 22a7 7 0 0 1-7-7c0-2 1-3 3-4"></path>
+            </svg>
+        ),
+        title: 'Expertise',
+        description: 'Each member of our dedicated LTL team brings a minimum of 5 years of experience, ensuring a proactive and consultative approach to LTL freight management.'
+    },
+    {
+        icon: (props: SVGProps<SVGSVGElement>) => (
+            <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 8V5a2 2 0 0 0-4 0v3"></path>
+                <path d="M12 18a6 6 0 1 0-12 0Z"></path>
+                <path d="M12 18h7a4 4 0 0 0 4-4V7a2 2 0 0 0-2-2h-1"></path>
+            </svg>
+        ),
+        title: '24/7-365 Support',
+        description: 'Whether you need a tracking update, or need a shipment expedited, our dedicated team is available to assist regardless of the day or time.'
+    },
+    {
+        icon: (props: SVGProps<SVGSVGElement>) => (
+            <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <circle cx="11" cy="11" r="8"></circle>
+                <path d="m21 21-4.3-4.3"></path>
+                <path d="M11 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6z"></path>
+            </svg>
+        ),
+        title: 'Visibility',
+        description: 'In LTL transportation, tracking, invoicing, and accessorial visibility are crucial. With the TRAFFIX Shipping App, you gain total visibility over your entire LTL supply chain.'
+    },
+    {
+        icon: (props: SVGProps<SVGSVGElement>) => (
+            <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+                <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"></path>
+                <path d="m9 12 2 2 4-4"></path>
+            </svg>
+        ),
+        title: 'Integrity',
+        description: "We're not focused on quick, one-time transactions. Our goal is to establish lasting partnerships built on trust, reliability, transparent communication, expert advice, and a dedication to delivering high-performance results."
+    },
+]
+
 
 function WhatsIncludedSection() {
   return (
@@ -94,6 +166,26 @@ function ChoosingCarrierSection() {
       </div>
     </section>
   )
+}
+
+function BenefitsSection() {
+    return (
+        <section className="bg-black text-white py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16 max-w-7xl mx-auto">
+                    {benefits.map((benefit) => (
+                        <div key={benefit.title}>
+                            <div className="flex items-center gap-4">
+                                <benefit.icon className="w-12 h-12 text-primary flex-shrink-0" />
+                                <h3 className="text-xl font-bold text-primary">{benefit.title}</h3>
+                            </div>
+                            <p className="mt-4 text-gray-400">{benefit.description}</p>
+                        </div>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
 }
 
 function SocSection() {
@@ -166,6 +258,7 @@ export default function LtlPage() {
       </div>
       <WhatsIncludedSection />
       <ChoosingCarrierSection />
+      <BenefitsSection />
       <SocSection />
     </>
   );
