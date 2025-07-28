@@ -1,8 +1,9 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, Truck } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, Truck } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { SVGProps } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const includedItems = [
   {
@@ -100,6 +101,59 @@ const benefits = [
         description: "We're not focused on one-time transactions. We aim to establish lasting partnerships built on trust, reliability, communication, expert advice, and dedication to delivering high-performance results."
     },
 ]
+
+const faqItems = [
+    {
+        question: "What countries do you serve?",
+        answer: "TRAFFIX provides over-the-road transportation services across Canada, the USA, and Mexico. Contact Us today to start building your over-the-road solutions!",
+    },
+    {
+        question: "Do you own your own assets?",
+        answer: "TRAFFIX has a small fleet of trucks and trailers located in Canada. Our fleet operates domestically within Canada and cross-border between the USA and Canada.",
+    },
+    {
+        question: "Do you ship hazardous freight?",
+        answer: "Yes, TRAFFIX has a network of haz-certified premium carriers. TRAFFIX does NOT transport Class 1 (Explosives), Class 2.1 (Flammable Gasses), Class 2.3 (Toxic Gasses), Class 5.1 (Oxidizing Substances), Class 6.1 (Toxic Substances), Class 7 (Radioactive Materials), or Packing Group I.",
+    },
+    {
+        question: "How many trucks do you have in your network?",
+        answer: "In today’s transportation market, where fraud and theft are significant concerns, TRAFFIX prioritizes having the right capacity over the most capacity. With over 45 years of experience, we’ve developed a meticulous vetting process overseen by our expert risk management team. This ensures that we provide our clients with extensive capacity across North America, partnering only with premium carriers who have proven track records. Contact us today to discover how we can secure the right capacity for your transportation needs.",
+    },
+    {
+        question: "Is TRAFFIX CTPAT certified?",
+        answer: "TRAFFIX goes beyond just having a CTPAT (Customs Trade Partnership Against Terrorism) certification; we also hold FAST (Free and Secure Trade), and PIP (Partners in Protection) certifications, and are fully bonded and insured. This comprehensive accreditation makes us the perfect choice as your cross-border partner. Contact us today to learn more!",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
+                    FREQUENTLY ASKED QUESTIONS
+                </h2>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+            </div>
+        </section>
+    );
+}
+
 
 function WhatsIncludedSection() {
   return (
@@ -220,6 +274,7 @@ export default function FtlPage() {
       <WhatsIncludedSection />
       <WhyTraffixSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
