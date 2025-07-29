@@ -1,5 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, ChevronRight } from 'lucide-react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
+import { ArrowRight, Check, ChevronRight, ChevronDown } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
@@ -114,6 +115,67 @@ const benefits = [
         description: "We don't focus on one-time transactions. Instead, our goal is to establish lasting partnerships built on trust, reliability, communication, and delivering high-performance results."
     },
 ]
+
+const faqItems = [
+    {
+        question: "In what countries can you provide expedited service?",
+        answer: "TRAFFIX offers expedited services within and between the United States and Canada. To learn more or to book your expedited shipment, contact us today.",
+    },
+    {
+        question: "Can I follow my freight in transit?",
+        answer: "Yes, we often have clients who choose to meet our drivers at pickup and follow behind the freight in transit. Some clients prefer to add air tags to their freight so they can track it en route. To book your expedited shipment or learn more, please contact us.",
+    },
+    {
+        question: "What airports do you service?",
+        answer: "TRAFFIX offers airport pickup service at all airports in the USA and select airports in Canada. Contact our team to learn more.",
+    },
+    {
+        question: "What weight and dimensions can you haul with expedited?",
+        answer: "TRAFFIX offers expedited services for shipments up to 12 pallets (or 24 double stacked) and up to 10,000lbs. To book your expedited shipment, contact us today.",
+    },
+    {
+        question: "What is the max cargo value I can ship with expedited?",
+        answer: "We offer standard cargo insurance for freight valued up to $250,000; however, if you have expedited shipments that exceed $250,000, you will need to authorize TRAFFIX to purchase additional insurance on your behalf. Additional insurance policies are obtained at the shipper’s expense. Contact us to learn more.",
+    },
+    {
+        question: "Can you move furniture and do residential deliveries?",
+        answer: "Yes, we handle furniture shipments and provide residential delivery. However, we do not offer inside delivery to residences. Contact us to learn more.",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                </Reveal>
+                <Reveal>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+                </Reveal>
+            </div>
+        </section>
+    );
+}
+
 
 function WhatsIncludedSection() {
     return (
@@ -294,6 +356,7 @@ export default function ExpeditedPage() {
       <SuccessWithExpeditedSection />
       <JitInventorySection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
