@@ -4,6 +4,7 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
 import { SVGProps } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const DrayageIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
@@ -114,7 +115,63 @@ const benefits = [
         title: 'Integrity',
         description: "We're not focused on quick, one-time transactions. Our goal is to establish lasting partnerships built on trust, reliability, transparent communication, expert advice, and a dedication to delivering high-performance results."
     },
-]
+];
+
+const faqItems = [
+    {
+        question: "Do you work with all ports and rails?",
+        answer: "Yes, TRAFFIX is your single-source solution for drayage services to/from all ports and rail terminals in the United States and Canada. To learn more, contact us today.",
+    },
+    {
+        question: "Do you offer all-in rates?",
+        answer: "Yes, to the best of our ability, we tailor pricing to meet our customer’s needs. For reasons beyond our control, some drayage fees and accessorials cannot be included with all-in rates. Contact our drayage services team to learn more.",
+    },
+    {
+        question: "Do you pay port fees on a customer’s behalf?",
+        answer: "Yes, for an administrative fee, we can pay port fees and steamship charges upfront on your behalf. Contact our drayage solutions team to learn more.",
+    },
+    {
+        question: "Can you provide dedicated pools of private chassis?",
+        answer: "Yes, for an upfront fee, you can purchase a dedicated pool of private chassis for your exclusive use. Contact our drayage solutions team to learn more.",
+    },
+    {
+        question: "Do you offer specialized drayage services and/or equipment?",
+        answer: "Yes, TRAFFIX provides specialized drayage services including overweight and hazardous shipments. For heavier containers, TRAFFIX offers access to triaxle chassis, expediting pickups independent of port schedules. Contact our drayage team to learn more.",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                </Reveal>
+                <Reveal>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+                </Reveal>
+            </div>
+        </section>
+    );
+}
 
 function WhatsIncludedSection() {
     return (
@@ -253,6 +310,7 @@ export default function DrayagePage() {
       <WhatsIncludedSection />
       <InsAndOutsSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
