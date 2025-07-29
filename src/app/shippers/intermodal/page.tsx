@@ -1,9 +1,10 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, ChevronRight, Train } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, ChevronRight, Train } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
 import { SVGProps } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const IntermodalIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
@@ -117,6 +118,62 @@ const includedItems = [
         description: 'Reduce your carbon footprint by up to 75% by switching from truckload to intermodal on qualifying lanes.',
     },
 ];
+
+const faqItems = [
+    {
+        question: "Can I track my shipment if I choose intermodal?",
+        answer: "Certainly! Your dedicated team has real-time access to monitor your intermodal container’s journey. While you can contact us anytime for updates, we’ll collaborate to establish tailored tracking reports at agreed upon intervals, saving you time. Reach out today for details on our customized intermodal solutions!",
+    },
+    {
+        question: "How much can I expect to save by switching from OTR to intermodal?",
+        answer: "With the right market conditions, intermodal can save shippers between 20%-50% on average when compared to OTR.",
+    },
+    {
+        question: "How do transit times compare to OTR?",
+        answer: "On lanes ranging from 800 to 1,500 miles, shipping intermodal will add 1 – 2 days of transit time. For lanes over 1,500 miles, intermodal will take 2-3 days longer in transit. Contact our team today to learn about transit times on your shipping lanes.",
+    },
+    {
+        question: "What type of intermodal service does TRAFFIX offer?",
+        answer: "TRAFFIX’ intermodal team will build customized, full-service solutions based on your needs. Whether you are shipping from port-to-port, door-to-door, or anything in between, TRAFFIX’ comprehensive service offering has you covered from pickup to delivery. Contact us today to learn more.",
+    },
+    {
+        question: "Where does the TRAFFIX intermodal network extend?",
+        answer: "TRAFFIX works with all Class 1 railroads across Canada, the USA, and Mexico. Contact our team today to learn more!",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                </Reveal>
+                <Reveal>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+                </Reveal>
+            </div>
+        </section>
+    );
+}
 
 function WhatsIncludedSection() {
     return (
@@ -297,6 +354,7 @@ export default function IntermodalPage() {
       <StartShippingSection />
       <SwitchToIntermodalSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
