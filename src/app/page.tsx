@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight } from 'lucide-react';
+import { ArrowRight, ChevronRight } from 'lucide-react';
 import { Reveal } from '@/components/animations/reveal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
@@ -14,45 +14,64 @@ const Section = ({ children, className }: { children: React.ReactNode, className
   </section>
 );
 
+const heroStats = [
+    { number: "1", text: "45 YEARS OF EXPERTISE" },
+    { number: "2", text: "THE RIGHT CAPACITY" },
+    { number: "3", text: "TECHNOLOGY-ENABLED SOLUTIONS" },
+];
+
 export default function Home() {
   return (
     <>
-      <section className="relative h-screen flex items-center justify-center text-center bg-black">
-        <div className="absolute inset-0 bg-black/60 z-10" />
-        <Image
-          src="https://placehold.co/1920x1080/000000/FFC700"
-          alt="Background video placeholder"
-          data-ai-hint="abstract technology"
-          fill
-          className="object-cover"
-          priority
-        />
-        <div className="relative z-20 container mx-auto px-4 sm:px-6 lg:px-8">
-          <Reveal>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-white tracking-tight">
-              Driving Growth Through
-            </h1>
-          </Reveal>
-          <Reveal delay={0.1}>
-            <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-primary tracking-tight mt-2">
-              Innovative Solutions
-            </h1>
-          </Reveal>
-          <Reveal delay={0.2}>
-            <p className="mt-6 max-w-2xl mx-auto text-lg sm:text-xl text-neutral-300">
-              We are a full-service digital agency that helps brands to grow at scale. We build amazing products, create beautiful experiences and make our clients successful.
-            </p>
-          </Reveal>
-          <Reveal delay={0.3}>
-            <div className="mt-10 flex justify-center gap-4">
-              <Button asChild size="lg" className="bg-primary text-primary-foreground hover:bg-primary/90">
-                <Link href="/services">Our Services</Link>
+      <section className="relative h-screen bg-black text-white flex flex-col justify-between">
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="https://placehold.co/1920x1080"
+            alt="Two engineers discussing plans in a warehouse"
+            data-ai-hint="engineers planning"
+            fill
+            className="object-cover"
+            priority
+          />
+          <div className="absolute inset-0 bg-black/70" />
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex items-center pt-20">
+          <div className="max-w-3xl">
+            <Reveal>
+              <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight uppercase">
+                Custom Solutions for Complex<br />
+                <span className="text-primary">Supply Chains</span>
+              </h1>
+            </Reveal>
+            <Reveal delay={0.1}>
+              <p className="mt-6 text-lg md:text-xl max-w-xl text-gray-300">
+                TRAFFIX' solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+              </p>
+            </Reveal>
+            <Reveal delay={0.2}>
+              <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-6 py-3 font-bold text-base group">
+                <Link href="/contact">
+                  SHIP WITH US <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
               </Button>
-              <Button asChild size="lg" variant="outline" className="border-primary text-primary hover:bg-primary/10">
-                <Link href="/contact">Contact Us <ArrowRight className="ml-2 h-5 w-5" /></Link>
-              </Button>
-            </div>
-          </Reveal>
+            </Reveal>
+          </div>
+        </div>
+        
+        <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 pb-10">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            {heroStats.map((stat, index) => (
+              <Reveal key={stat.text} delay={index * 0.1}>
+                <div className="flex items-center gap-4">
+                  <div className="bg-primary text-black rounded-full w-10 h-10 flex items-center justify-center font-bold text-xl flex-shrink-0">
+                    {stat.number}
+                  </div>
+                  <h3 className="text-white font-bold text-lg leading-tight">{stat.text}</h3>
+                </div>
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
 
