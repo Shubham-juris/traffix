@@ -105,12 +105,10 @@ export function Header() {
               </Button>
             </div>
             <div className="lg:hidden flex items-center">
-              {isClient && (
-                <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
-                  <Menu className="h-6 w-6" />
-                  <span className="sr-only">Open menu</span>
-                </Button>
-              )}
+              <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
+                <Menu className="h-6 w-6" />
+                <span className="sr-only">Open menu</span>
+              </Button>
             </div>
           </div>
         </div>
