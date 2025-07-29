@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -98,7 +99,7 @@ export function Header() {
                 <Link href="/contact" className="flex items-center">Ask an Expert <div className="ml-2 bg-primary rounded-full p-1 "><ChevronRight className="h-4 w-4 text-black"/></div></Link>
               </Button>
             </div>
-            <div className="lg:hidden">
+            <div className="lg:hidden flex items-center">
               <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
                 <Menu className="h-6 w-6" />
                 <span className="sr-only">Open menu</span>
