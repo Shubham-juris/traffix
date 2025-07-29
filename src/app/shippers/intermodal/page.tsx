@@ -120,6 +120,47 @@ function StartShippingSection() {
     );
 }
 
+function SwitchToIntermodalSection() {
+    return (
+        <section className="bg-black text-white py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                     <Reveal>
+                        <div>
+                            <Image
+                                src="https://placehold.co/800x600"
+                                alt="Yellow freight train on tracks"
+                                data-ai-hint="freight train"
+                                width={800}
+                                height={600}
+                                className="rounded-lg shadow-2xl filter grayscale"
+                            />
+                        </div>
+                    </Reveal>
+                    <Reveal>
+                        <div className="max-w-md">
+                            <p className="text-lg text-gray-400">When should you</p>
+                            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                                Switch to<br />
+                                <span className="text-primary">Intermodal?</span>
+                            </h2>
+                            <p className="mt-6 text-base text-gray-300">
+                                Transportation procurement faces challenges with fluctuating over-the-road (OTR) rates due to supply and demand. Intermodal offers a more sustainable solution, optimized capacity, and reduced freight spend amid these challenges.
+                            </p>
+                            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                                <Link href="#">
+                                    READ MORE <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </Reveal>
+                </div>
+                <div className="mt-20 border-t border-primary"></div>
+            </div>
+        </section>
+    );
+}
+
 export default function IntermodalPage() {
   return (
     <>
@@ -162,6 +203,7 @@ export default function IntermodalPage() {
       </div>
       <WhatsIncludedSection />
       <StartShippingSection />
+      <SwitchToIntermodalSection />
     </>
   );
 }
