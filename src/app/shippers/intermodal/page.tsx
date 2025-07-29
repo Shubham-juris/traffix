@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight, Train } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight, Train } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
@@ -12,7 +12,7 @@ const IntermodalIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M16.5 19.5h-9" />
         <path d="M16.5 19.5v1.5h-9v-1.5" />
         <path d="M4 11.5v-4a2 2 0 0 1 2-2h12a2 2 0 0 1 2 2v4" />
-        <path d="M20 12.5v4a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2v-4" />
+        <path d="M20 12.5v4a2 2 0 0 1-2-2H6a2 2 0 0 1-2-2v-4" />
         <path d="M20 11.5H4" />
         <path d="M10 14h4" />
         <path d="M14 9.5a1.5 1.5 0 0 0-1.5-1.5h-1A1.5 1.5 0 0 0 10 9.5" />
@@ -20,6 +20,64 @@ const IntermodalIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M14 10.5a1 1 0 1 1-2 0 1 1 0 0 1 2 0z" />
     </svg>
 )
+
+const includedItems = [
+    {
+        title: 'Dedicated Team',
+        description: "Unlike many other intermodal marketing companies (IMCs), TRAFFIX' intermodal service is delivered by dedicated account managers, ensuring you feel valued and supported regardless of your volume.",
+    },
+    {
+        title: 'Comprehensive Service Offering',
+        description: 'TRAFFIX offers a true IMC operating model with full control of drayage and railroad movements to ensure superior service and cost control.',
+    },
+    {
+        title: 'Customized Solutions',
+        description: "We don't believe in a one-size-fits-all approach. Our dedicated team is committed to crafting flexible, customized supply chain solutions tailored specifically to your individual needs.",
+    },
+    {
+        title: 'Leverage our Relationships',
+        description: 'TRAFFIX maintains direct relationships with all Class 1 railroads, enabling us to collaborate closely with them to establish tailored requirements on your behalf.',
+    },
+    {
+        title: 'Predictable Pricing',
+        description: 'Lock in long-term rates offering more price stability than other modes of transportation.',
+    },
+    {
+        title: 'Sustainability',
+        description: 'Reduce your carbon footprint by up to 75% by switching from truckload to intermodal on qualifying lanes.',
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                    <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                        What's Included
+                    </h2>
+                </Reveal>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+                    {includedItems.map((item, index) => (
+                        <Reveal key={item.title} delay={index * 0.1}>
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0">
+                                    <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                                        <Check className="h-5 w-5 text-black" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                                    <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                                </div>
+                            </div>
+                        </Reveal>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
 
 export default function IntermodalPage() {
   return (
@@ -61,6 +119,7 @@ export default function IntermodalPage() {
             </div>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
