@@ -20,7 +20,6 @@ const navLinks = [
   { href: '/careers', label: 'Carriers' },
   { href: '/services', label: 'Solutions' },
   { href: '/about', label: 'Company' },
-  { href: '/news', label: 'Resources' },
 ];
 
 function TraffixLogo() {
@@ -34,6 +33,7 @@ function TraffixLogo() {
 export function Header() {
   const [scrolled, setScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [shipperMenuOpen, setShipperMenuOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -62,14 +62,18 @@ export function Header() {
             <nav className="hidden lg:flex items-center space-x-8">
               {navLinks.map((link) => (
                 link.hasDropdown ? (
-                  <DropdownMenu key={link.href}>
+                  <DropdownMenu key={link.href} open={shipperMenuOpen} onOpenChange={setShipperMenuOpen}>
                     <DropdownMenuTrigger asChild>
-                       <button className="flex items-center text-sm font-semibold text-foreground hover:text-primary transition-colors">
+                       <button 
+                         onMouseEnter={() => setShipperMenuOpen(true)}
+                         className="flex items-center text-sm font-semibold text-foreground hover:text-primary transition-colors">
                         {link.label}
                         <ChevronDown className="ml-1 h-4 w-4" />
                       </button>
                     </DropdownMenuTrigger>
-                    <DropdownMenuContent className="w-96 p-4">
+                    <DropdownMenuContent 
+                      onMouseLeave={() => setShipperMenuOpen(false)}
+                      className="w-96 p-4">
                       <div className="grid grid-cols-2 gap-4">
                         {shipperSolutions.map(solution => (
                           <DropdownMenuItem key={solution.label} asChild>
@@ -93,17 +97,6 @@ export function Header() {
               <Button asChild variant="link" className="text-primary text-sm font-semibold p-0">
                 <Link href="/contact" className="flex items-center">Ask an Expert <div className="ml-2 bg-primary rounded-full p-1 "><ChevronRight className="h-4 w-4 text-black"/></div></Link>
               </Button>
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button variant="outline" size="sm" className="bg-transparent border-border rounded-md">
-                    En <ChevronDown className="ml-1 h-4 w-4" />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent>
-                  <DropdownMenuItem>English</DropdownMenuItem>
-                  <DropdownMenuItem>Español</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
             </div>
             <div className="lg:hidden">
               <Button onClick={toggleMobileMenu} variant="ghost" size="icon">

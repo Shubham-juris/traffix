@@ -82,9 +82,6 @@ export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
             <Button asChild variant="link" className="w-full justify-start text-primary text-lg p-0" onClick={onClose}>
               <Link href="/contact">Ask an Expert</Link>
             </Button>
-            <Button variant="outline" className="w-full" onClick={onClose}>
-              Language: En
-            </Button>
           </div>
         </nav>
       </div>

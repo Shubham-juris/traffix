@@ -13,7 +13,6 @@ const footerNavLinks = [
     { href: '/careers', label: 'Carriers' },
     { href: '/services', label: 'Solutions' },
     { href: '/about', label: 'Company' },
-    { href: '/news', label: 'Resources' },
     { href: '/contact', label: 'Contact' },
   ];
 
