@@ -1,10 +1,11 @@
 
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, ChevronRight } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
 import { SVGProps } from 'react';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 
 const ArrowsIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="128" height="128" viewBox="0 0 128 128" fill="none">
@@ -131,6 +132,50 @@ const benefits = [
     },
 ];
 
+const faqItems = [
+    {
+        question: "Is TRAFFIX a customs broker?",
+        answer: "No, TRAFFIX is not a customs broker. TRAFFIX will work with any customs broker you choose to ensure your freight has an efficient border crossing. Contact us today to learn more.",
+    },
+    {
+        question: "Is TRAFFIX bonded?",
+        answer: "Yes, TRAFFIX is a bonded 3PL, allowing you to ship between Canada, the USA, and Mexico without paying duties until your freight arrives at a designated point. Contact us today to learn more.",
+    },
+    {
+        question: "What areas of Mexico do you service?",
+        answer: "TRAFFIX provides service coast-to-coast throughout Mexico for shipments crossing the border into either the USA or Canada. Contact us today to learn more.",
+    },
+    {
+        question: "Do you offer warehousing capacity?",
+        answer: "Yes, TRAFFIX offers outsourced warehousing solutions in both Canada and the USA, including bonded storage and cross-dock facilities strategically located near the Mexico-US border. To learn more contact us or visit our warehousing page.",
+    },
+    {
+        question: "Are you CPTAT certified?",
+        answer: "Yes, TRAFFIX is CTPAT certified. We also hold FAST and PIP certifications.",
+    },
+    {
+        question: "Do you own your assets?",
+        answer: "TRAFFIX does operate a fleet of trucks and trailers from our Milton, ON, facility; however, we do not service Mexico cross border shipments with our own assets. Instead, we work with a meticulously vetted network of experienced Mexico cross-border carriers. Contact us today to learn more.",
+    },
+    {
+        question: "Do you offer domestic Mexico?",
+        answer: "TRAFFIX does not currently offer domestic Mexico services.",
+    },
+    {
+        question: "Can you offer Mexico cross-border LTL service?",
+        answer: "Yes, TRAFFIX can offer LTL service crossing the border between Mexico, the USA, and Canada. Contact us today to learn more.",
+    },
+    {
+        question: "Are trailers transloaded at the border?",
+        answer: (
+            <div className="space-y-2">
+                <p>Typically, trailers are transloaded at the border between Mexico and the USA. Our Mexican carrier delivers to one of our vetted cross-dock facilities at the border, where your shipment is then picked up by one of our trusted US partners.</p>
+                <p>For shipments requiring extra care, we offer direct options where the same carrier handles the delivery from start to finish. However, these options are generally more expensive and less available. For more economical and readily available solutions, trust our transload model, where your freight receives meticulous care and attention from our vetted warehousing staff.</p>
+            </div>
+        )
+    }
+];
+
 function ColdChainSection() {
     return (
         <section className="bg-black text-white py-20 sm:py-24">
@@ -227,6 +272,39 @@ function BenefitsSection() {
     )
 }
 
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                </Reveal>
+                <Reveal>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+                </Reveal>
+            </div>
+        </section>
+    );
+}
+
 
 export default function MexicoCrossBorderPage() {
     return (
@@ -274,6 +352,7 @@ export default function MexicoCrossBorderPage() {
             <WhatsIncludedSection />
             <ColdChainSection />
             <BenefitsSection />
+            <FaqSection />
         </>
     );
 }
