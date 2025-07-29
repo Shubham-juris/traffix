@@ -249,18 +249,6 @@ export default function Home() {
 
       <ServicesSection />
       <SolutionsSection />
-      
-      <Section className="bg-card">
-        <Reveal>
-          <div className="text-center">
-            <h2 className="text-3xl sm:text-4xl font-bold">Ready to start a project?</h2>
-            <p className="mt-4 text-lg text-muted-foreground">Let's build something amazing together.</p>
-            <Button asChild size="lg" className="mt-8 bg-primary text-primary-foreground hover:bg-primary/90">
-              <Link href="/contact">Get In Touch</Link>
-            </Button>
-          </div>
-        </Reveal>
-      </Section>
     </>
   );
 }
