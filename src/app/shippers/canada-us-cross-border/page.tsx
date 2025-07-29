@@ -1,45 +1,60 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, Check, ChevronDown, Map } from 'lucide-react';
+import { ArrowRight, Check, ChevronDown, ChevronRight, Map } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
+import { SVGProps } from 'react';
+
+const CrossBorderIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 64 64" fill="none">
+        <path d="M43.7241 18.7241L45.4382 17.01C46.602 15.8462 48.01 15.2643 49.4764 15.2643C50.9428 15.2643 52.3508 15.8462 53.5146 17.01L55.2287 18.7241L56.9428 20.4382C58.1066 21.602 58.6885 23.01 58.6885 24.4764C58.6885 25.9428 58.1066 27.3508 56.9428 28.5146L55.2287 30.2287L49.4764 35.981L43.7241 30.2287L38 35.981L32.2477 30.2287L38 24.4764L43.7241 18.7241Z" stroke="white" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M43.7241 24.4764L49.4764 30.2287" stroke="hsl(var(--primary))" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M19.5 35V49" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M19.5 49L14 43.5" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M19.5 49L25 43.5" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M19.5 35L14 40.5" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+        <path d="M19.5 35L25 40.5" stroke="hsl(var(--primary))" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round"/>
+    </svg>
+)
 
 export default function CanadaUsCrossBorderPage() {
   return (
     <>
-      <div className="relative h-screen bg-black text-white flex items-center">
+      <div className="relative h-screen bg-black text-white flex items-center justify-end">
         <div className="absolute inset-0 z-0">
           <Image
             src="https://placehold.co/1920x1080"
-            alt="Truck crossing the US-Canada border"
-            data-ai-hint="border crossing"
+            alt="Map of Canada and the United States"
+            data-ai-hint="canada us map"
             fill
-            className="object-cover"
+            className="object-cover opacity-30"
           />
-          <div className="absolute inset-0 bg-black/60" />
+           <div className="absolute inset-0 bg-gradient-to-l from-black via-black/80 to-transparent" />
         </div>
         
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-2xl ml-auto text-right">
             <Reveal>
-            <Map className="w-20 h-20 text-primary mb-6" />
+              <CrossBorderIcon className="w-20 h-20 mb-6 inline-block" />
             </Reveal>
             <Reveal delay={0.1}>
             <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
-              Canada-US Cross-Border
+              Canada-US<br/>Cross Border
             </h1>
             </Reveal>
             <Reveal delay={0.2}>
-            <p className="mt-6 text-xl max-w-lg text-gray-300">
-                Seamless shipping between Canada and the United States.
+            <p className="mt-6 text-xl max-w-lg ml-auto text-gray-300">
+                Your bonded partner in Canada-US cross border shipping.
             </p>
             </Reveal>
             <Reveal delay={0.3}>
-            <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group">
+            <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-3 font-bold text-base group">
               <Link href="/contact">
-                GET A QUOTE <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                SHIP WITH US <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
               </Link>
             </Button>
             </Reveal>
+          </div>
         </div>
       </div>
     </>
