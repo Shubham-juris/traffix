@@ -117,6 +117,48 @@ function SuccessWithExpeditedSection() {
   );
 }
 
+function JitInventorySection() {
+  return (
+    <section className="bg-black text-white py-20 sm:py-24">
+      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid md:grid-cols-2 gap-12 items-center">
+          <Reveal>
+            <div className="relative p-2 border border-gray-800 rounded-lg">
+              <Image
+                src="https://placehold.co/800x600"
+                alt="Workers loading a van at a warehouse dock"
+                data-ai-hint="warehouse loading"
+                width={800}
+                height={600}
+                className="rounded-lg"
+              />
+            </div>
+          </Reveal>
+          <Reveal>
+            <div className="max-w-lg">
+              <p className="text-lg text-gray-400">Avoid critical delays</p>
+              <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                Just-In-Time (JIT)<br />
+                Inventory<br />
+                <span className="text-primary">Management</span>
+              </h2>
+              <p className="mt-6 text-base text-gray-300">
+                While JIT offers benefits, it also has risks such as supply chain disruptions, slow response to demand changes, and unexpected delays. Expedited services mitigate these challenges, keeping your supply chain moving efficiently.
+              </p>
+              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                <Link href="#">
+                  READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
+            </div>
+          </Reveal>
+        </div>
+        <div className="mt-20 border-t border-primary"></div>
+      </div>
+    </section>
+  );
+}
+
 export default function ExpeditedPage() {
   return (
     <>
@@ -159,6 +201,7 @@ export default function ExpeditedPage() {
       </div>
       <WhatsIncludedSection />
       <SuccessWithExpeditedSection />
+      <JitInventorySection />
     </>
   );
 }
