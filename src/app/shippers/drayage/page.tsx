@@ -77,6 +77,47 @@ function WhatsIncludedSection() {
     )
 }
 
+function InsAndOutsSection() {
+    return (
+      <section className="bg-black text-white py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <Reveal>
+              <div className="max-w-md">
+                <p className="text-lg text-gray-400">Helping you understand the</p>
+                <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                  Ins and Outs<br />
+                  of <span className="text-primary">Drayage</span>
+                </h2>
+                <p className="mt-6 text-base text-gray-300">
+                  Supply chains involving the use of ocean or rail depend on drayage services to link shippers and receivers to ocean ports and rail terminals. Check our our article to learn more about drayage.
+                </p>
+                <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                  <Link href="#">
+                    READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </div>
+            </Reveal>
+            <Reveal>
+              <div>
+                <Image
+                  src="https://placehold.co/800x600"
+                  alt="Truck with a container ship in the background"
+                  data-ai-hint="truck container ship"
+                  width={800}
+                  height={600}
+                  className="rounded-lg shadow-2xl"
+                />
+              </div>
+            </Reveal>
+          </div>
+          <div className="mt-20 border-t border-primary"></div>
+        </div>
+      </section>
+    );
+  }
+
 export default function DrayagePage() {
   return (
     <>
@@ -118,6 +159,7 @@ export default function DrayagePage() {
         </div>
       </div>
       <WhatsIncludedSection />
+      <InsAndOutsSection />
     </>
   );
 }
