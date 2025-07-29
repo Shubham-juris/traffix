@@ -1,11 +1,13 @@
+
+"use client";
+
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, ChevronRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, Plane, Ship, Train, Map, Globe } from 'lucide-react';
 import { Reveal } from '@/components/animations/reveal';
-import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
-import { SVGProps } from 'react';
+import { SVGProps, useState } from 'react';
 import { shipperSolutions } from '@/lib/data';
 
 const FlatbedIcon = (props: SVGProps<SVGSVGElement>) => (
@@ -14,6 +16,25 @@ const FlatbedIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M15 10h4.5"></path>
     </svg>
 )
+
+const ContainerMgmtIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 9.5h15.2a2.3 2.3 0 0 0 2.3-2.3V5.7a2.3 2.3 0 0 0-2.3-2.3H2Z" /><path d="M20 9.5h-2.5" /><path d="M15 9.5 7.5 17H2" /><path d="M22 9.5V17h-2.5" /><circle cx="4.5" cy="19.5" r="2.5" /><circle cx="17.5" cy="19.5" r="2.5" />
+    </svg>
+);
+
+const MexicoProduceIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M13 3a5.2 5.2 0 0 0-4 1.8 5.2 5.2 0 0 0-4 1.8c-1.5 2.1-1.5 5.1 0 7.2 1.5 2.1 4.5 3.2 7.5 3.2 5.5 0 8.5-3.5 8.5-8.5 0-3.3-1.2-5.7-3.2-7.2" /><path d="M12.5 3.5c-1.4 0-2.5 1-2.5 3" /><path d="M11.5 17c-1.4 0-3 .3-4.5.8" /><path d="M13 18.5c-5.5.5-8.5 1.5-8.5 2.5" /><path d="m14 14.5-4 2 4.5 3.5" /><path d="m17 12-4.5 3-1-3.5" />
+    </svg>
+);
+
+const LtlConsolidationIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M5 9V6.5A2.5 2.5 0 0 1 7.5 4h3" /><path d="M15 4h1.5A2.5 2.5 0 0 1 19 6.5V9" /><path d="M5 15v2.5A2.5 2.5 0 0 0 7.5 20h3" /><path d="M15 20h1.5a2.5 2.5 0 0 0 2.5-2.5V15" /><path d="M12 4v16" /><path d="M9 12H5" /><path d="M19 12h-4" /><path d="M21 17h-8" /><path d="M3 17h4" /><path d="M21 7h-8" /><path d="M3 7h4" />
+    </svg>
+);
+
 
 const serviceIcons: { [key: string]: (props: SVGProps<SVGSVGElement>) => JSX.Element } = {
     'Full Truckload (FTL)': Truck,
@@ -29,6 +50,36 @@ const serviceIcons: { [key: string]: (props: SVGProps<SVGSVGElement>) => JSX.Ele
     'Canada-US Cross-Border': Map,
     'Mexico Cross-Border': Globe,
 }
+
+const solutionsData = [
+    {
+      id: 'dest-container-mgmt',
+      title: 'Destination Container Management',
+      icon: ContainerMgmtIcon,
+      description: "Stop paying excessive demurrage, detention, and per diem charges; increase visibility; and gain flexibility over your ocean containers from port to delivery with our destination container management solution.",
+      image: 'https://placehold.co/600x400',
+      imageHint: "shipping containers",
+      href: '/services',
+    },
+    {
+      id: 'mexico-produce',
+      title: 'Mexico Cross Border Produce Transportation',
+      icon: MexicoProduceIcon,
+      description: "Importing produce from Mexico? Gain peace of mind knowing that your fruits and vegetables are protected from temperature fluctuations with our end-to-end Mexico cross-border produce solution.",
+      image: 'https://placehold.co/600x400',
+      imageHint: "fresh produce",
+      href: '/services',
+    },
+    {
+      id: 'ltl-consolidation',
+      title: 'Long-Haul LTL Consolidation',
+      icon: LtlConsolidationIcon,
+      description: "Looking to reduce costs, shorten transit times, increase distribution flexibility, improve shipment visibility, and enhance customer service? Discover our long-haul LTL consolidation solution.",
+      image: 'https://placehold.co/600x400',
+      imageHint: "forklift loading",
+      href: '/services',
+    },
+  ];
 
 const Section = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <section className={cn("py-20 sm:py-32", className)}>
@@ -79,6 +130,68 @@ function ServicesSection() {
   )
 }
 
+function SolutionsSection() {
+    const [activeSolution, setActiveSolution] = useState(solutionsData[2]);
+
+    return (
+      <Section className="bg-black text-white">
+        <Reveal>
+          <h2 className="text-5xl font-black tracking-tight uppercase mb-16">SOLUTIONS</h2>
+        </Reveal>
+        <div className="grid md:grid-cols-2 gap-16 items-start">
+          <Reveal>
+            <div className="space-y-4">
+              {solutionsData.map((solution, index) => {
+                const Icon = solution.icon;
+                return (
+                  <button
+                    key={solution.id}
+                    onClick={() => setActiveSolution(solution)}
+                    className={cn(
+                      "w-full text-left p-6 border border-gray-800 rounded-lg flex items-center gap-4 transition-all duration-300",
+                      activeSolution.id === solution.id
+                        ? "bg-gray-800 border-primary"
+                        : "hover:bg-gray-900"
+                    )}
+                  >
+                    <Icon className={cn(
+                      "w-8 h-8 transition-colors",
+                      activeSolution.id === solution.id ? "text-primary" : "text-gray-400"
+                    )} />
+                    <span className="text-lg font-semibold">{solution.title}</span>
+                  </button>
+                )
+              })}
+            </div>
+          </Reveal>
+          <Reveal>
+             {activeSolution && (
+                 <div className="flex flex-col items-start">
+                    <div className="relative w-full aspect-video mb-8 rounded-lg overflow-hidden">
+                        <Image
+                        src={activeSolution.image}
+                        alt={activeSolution.title}
+                        data-ai-hint={activeSolution.imageHint}
+                        fill
+                        className="object-cover"
+                        />
+                         <div className="absolute inset-0 bg-gradient-to-t from-black/50 to-transparent" />
+                    </div>
+                    <h3 className="text-3xl font-black mb-4">{activeSolution.title}</h3>
+                    <p className="text-gray-400 mb-6">{activeSolution.description}</p>
+                    <Button asChild variant="outline" className="bg-white text-black hover:bg-gray-200 rounded-full font-bold group">
+                        <Link href={activeSolution.href}>
+                        READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                        </Link>
+                    </Button>
+                </div>
+             )}
+          </Reveal>
+        </div>
+      </Section>
+    );
+}
+
 export default function Home() {
   return (
     <>
@@ -105,7 +218,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-lg md:text-xl max-w-xl text-gray-300">
-                TRAFFIX' solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+                TRAFFIX&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
               </p>
             </Reveal>
             <Reveal delay={0.2}>
@@ -135,6 +248,7 @@ export default function Home() {
       </section>
 
       <ServicesSection />
+      <SolutionsSection />
       
       <Section className="bg-card">
         <Reveal>
