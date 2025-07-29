@@ -60,6 +60,49 @@ const includedItems = [
     },
 ];
 
+function ColdChainSection() {
+    return (
+        <section className="bg-black text-white py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <div className="grid md:grid-cols-2 gap-12 items-center">
+                    <Reveal>
+                        <div className="max-w-md">
+                            <p className="text-lg text-gray-400">Cold chain efficiency</p>
+                            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                                Mexico Cross-Border Produce <br/>
+                                <span className="text-primary">Transportation</span>
+                            </h2>
+                            <p className="mt-6 text-base text-gray-300">
+                                Ensure the freshness and quality of your produce shipments moving between Mexico, the USA, and Canada with our cross-border produce transportation solution.
+                            </p>
+                            <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                                <Link href="/shippers/produce">
+                                    READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                                </Link>
+                            </Button>
+                        </div>
+                    </Reveal>
+                    <Reveal>
+                        <div className="relative">
+                            <Image
+                                src="https://placehold.co/800x600"
+                                alt="Cold storage warehouse for produce"
+                                data-ai-hint="cold storage"
+                                width={800}
+                                height={600}
+                                className="rounded-lg shadow-2xl"
+                            />
+                             <div className="absolute top-1/3 right-1/4 w-20 h-20 bg-primary/80 blur-xl"></div>
+                             <div className="absolute top-1/3 right-1/2 w-20 h-20 bg-primary/80 blur-xl"></div>
+                        </div>
+                    </Reveal>
+                </div>
+                <div className="mt-20 border-t border-primary"></div>
+            </div>
+        </section>
+    )
+}
+
 function WhatsIncludedSection() {
     return (
         <section className="bg-white text-black py-20 sm:py-24">
@@ -135,6 +178,7 @@ export default function MexicoCrossBorderPage() {
                 </div>
             </div>
             <WhatsIncludedSection />
+            <ColdChainSection />
         </>
     );
 }
