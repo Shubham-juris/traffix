@@ -1,4 +1,5 @@
 import { Button } from '@/components/ui/button';
+import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from '@/components/ui/accordion';
 import { ArrowRight, Check, ChevronDown, Warehouse } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
@@ -100,7 +101,89 @@ const benefits = [
         title: 'Integrity',
         description: "We're not focused on one-time transactions. We aim to establish lasting partnerships built on trust, reliability, communication, expert advice, and dedication to delivering high-performance results."
     },
-]
+];
+
+const faqItems = [
+    {
+        question: "Are your warehouses bonded?",
+        answer: "Yes! TRAFFIX offers both bonded and non-bonded warehousing options to meet your individual needs. Contact us today to learn more!",
+    },
+    {
+        question: "What kind of warehouse leasing options do you offer?",
+        answer: "TRAFFIX provides flexible warehouse leasing options tailored to your specific requirements. Whether you need short-term cross-docking, temporary storage for a week to a couple of months, or dedicated space for three months or longer, we can meet your needs. Contact our warehousing team today to discuss leasing options!",
+    },
+    {
+        question: "Where are your warehouses located?",
+        answer: "TRAFFIX offers warehousing space strategically located across the USA and Canada. Additionally, we can source, vet, and manage warehouses in your specific service area as required. Contact us today for our current space availability or to discuss your unique warehousing requirements.",
+    },
+    {
+        question: "What industries do you serve?",
+        answer: "We currently serve clients across industries including solar, furniture, automotive, agricultural equipment, and others. Our services also include temperature-controlled storage for items like produce and pharmaceuticals. TRAFFIX ensures each client is paired with the right warehousing partners for their unique needs. If our current partners don’t meet your requirements, we will source, vet, and manage new facilities that meet our high standards on your behalf. Contact us today for more information!",
+    },
+    {
+        question: "What are your space minimums?",
+        answer: "We conduct a unique analysis of each client’s business needs. By leveraging our existing volume with our warehousing partners, we work to negotiate favorable minimums on your behalf. Contact us today to learn more!",
+    },
+    {
+        question: "What security measures are in place at your warehouses?",
+        answer: "Our partner warehouses feature theft prevention measures like secure, well-lit yards with barbed wire and/or electric fencing, cameras, and guard shacks. All staff undergo thorough background checks for reliable freight handling. We also employ SOPs, including driver verification and photographing all identifiers on the equipment picking up, to ensure only trusted carriers handle your freight. Contact us today for further details!",
+    },
+    {
+        question: "Does TRAFFIX offer a WMS?",
+        answer: (
+            <div className="space-y-4">
+                <p>TRAFFIX offers a user-friendly Warehouse Management System (WMS) designed to enhance efficiency, visibility, and workflow automation. Our WMS empowers businesses to streamline operations and deliver exceptional customer service.</p>
+                <h4 className="font-bold">Key Features:</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                    <li><strong>Inventory Management</strong> – Real-time tracking for accuracy and control</li>
+                    <li><strong>Business Intelligence & Reporting</strong> – Actionable insights for smarter decisions</li>
+                    <li><strong>Shipment Management</strong> – Seamless coordination for on-time deliveries</li>
+                    <li><strong>Cost Controls</strong> – Reduce expenses and improve profitability</li>
+                </ul>
+                <h4 className="font-bold">Designed for Ease & Flexibility:</h4>
+                <ul className="list-disc pl-5 space-y-1 text-gray-700">
+                    <li><strong>Intuitive Interface</strong> – Simple, modern, and easy to navigate</li>
+                    <li><strong>Customizable Roles</strong> – Tailored access levels for your team</li>
+                    <li><strong>Mobility & Scanning</strong> – Enhance productivity with mobile-friendly solutions</li>
+                </ul>
+                <p>Ready to optimize your warehouse operations? Contact us today!</p>
+            </div>
+        ),
+    }
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                </Reveal>
+                <Reveal>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+                </Reveal>
+            </div>
+        </section>
+    );
+}
 
 function BenefitsSection() {
     return (
@@ -280,6 +363,7 @@ export default function WarehousingPage() {
       <WmsSection />
       <OutsourcedWarehousingSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
