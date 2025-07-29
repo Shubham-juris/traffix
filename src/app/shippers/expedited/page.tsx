@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
@@ -17,6 +17,64 @@ const ExpeditedIcon = (props: SVGProps<SVGSVGElement>) => (
         <circle cx="7.5" cy="17.5" r="2.5"></circle>
     </svg>
 )
+
+const includedItems = [
+    {
+        title: 'Quick Turnarounds',
+        description: "Trust TRAFFIX' expedited team to have drivers onsite within an hour of receiving your load details. When equipment requirements change at the last minute, we can pivot quickly to maintain critical timelines.",
+    },
+    {
+        title: 'Airport Pickups',
+        description: "When your shipment lands, TRAFFIX' expedited team ensures a driver is onsite to meet your freight as it is offloaded, minimizing any delay between landing and delivery.",
+    },
+    {
+        title: 'Specialized Delivery Services',
+        description: "When your urgent shipment requires specialized handling, TRAFFIX' expedited team has you covered. Whether it's white glove or inside delivery, we ensure your freight receives the meticulous care it needs.",
+    },
+    {
+        title: 'Accuracy',
+        description: 'Detail is crucial in expedited shipping, particularly during airport pickups. Our rigorously vetted drivers carefully cross-check labels with paperwork to guarantee accurate loading for delivery.',
+    },
+    {
+        title: 'Documentation',
+        description: 'Regardless of its monetary worth, we treat all expedited freight as high-value. Our drivers are trained photograph your freight before loading to ensure it arrives in the same condition it was picked up.',
+    },
+    {
+        title: 'Expedited POD',
+        description: 'We notify you immediately upon delivery and send your proof of delivery (POD) within 30 minutes of the receiver taking possession of your urgent shipments.',
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+      <section className="bg-white text-black py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal>
+            <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                What's Included
+            </h2>
+            </Reveal>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+                {includedItems.map((item, index) => (
+                <Reveal key={item.title} delay={index * 0.1}>
+                    <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                        <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                            <Check className="h-5 w-5 text-black" />
+                        </div>
+                        </div>
+                        <div>
+                        <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                        <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                        </div>
+                    </div>
+                </Reveal>
+                ))}
+            </div>
+        </div>
+      </section>
+    )
+}
 
 export default function ExpeditedPage() {
   return (
@@ -58,6 +116,7 @@ export default function ExpeditedPage() {
             </div>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
