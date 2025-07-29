@@ -31,6 +31,47 @@ const includedItems = [
     },
 ];
 
+function WmsSection() {
+    return (
+      <section className="bg-black text-white py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid md:grid-cols-2 gap-12 items-center">
+            <Reveal>
+              <div className="relative p-2 border border-gray-800 rounded-lg">
+                <Image
+                  src="https://placehold.co/800x600"
+                  alt="Warehouse Management System"
+                  data-ai-hint="warehouse worker"
+                  width={800}
+                  height={600}
+                  className="rounded-lg"
+                />
+              </div>
+            </Reveal>
+            <Reveal>
+              <div>
+                <p className="text-lg text-gray-400">Core Capabilities of TRAFFIX'</p>
+                <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
+                  Warehouse<br />
+                  Managment<br />
+                  <span className="text-primary">System (WMS)</span>
+                </h2>
+                <p className="mt-6 text-base text-gray-300 max-w-md">
+                  TRAFFIX offers a modern, cloud-based WMS designed to enhance efficiency, visibility, and workflow automation. With features like real-time inventory management, business intelligence, shipment tracking, and cost controls, our intuitive system simplifies operations and boosts performance. Customizable roles, a user-friendly interface, and mobile compatibility ensure flexibility and ease of use. Contact us today to learn more!
+                </p>
+                <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                  <Link href="#">
+                    LEARN MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+                  </Link>
+                </Button>
+              </div>
+            </Reveal>
+          </div>
+        </div>
+      </section>
+    );
+}
+
 function WhatsIncludedSection() {
   return (
     <section className="bg-white text-black py-20 sm:py-24">
@@ -101,6 +142,7 @@ export default function WarehousingPage() {
         </div>
       </div>
       <WhatsIncludedSection />
+      <WmsSection />
     </>
   );
 }
