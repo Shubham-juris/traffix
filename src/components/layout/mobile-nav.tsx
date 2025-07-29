@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { X, ChevronDown, Truck, Boxes, Warehouse, Plane, Ship, Train, Globe, Cpu, ShoppingBasket, Thermometer, Map } from 'lucide-react';
+import { X, ChevronDown } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
@@ -10,27 +10,13 @@ import {
   AccordionItem,
   AccordionTrigger,
 } from "@/components/ui/accordion"
+import { shipperSolutions } from '@/lib/data';
 
 interface MobileNavProps {
   isOpen: boolean;
   onClose: () => void;
   navLinks: { href: string; label: string, hasDropdown?: boolean }[];
 }
-
-const shipperSolutions = [
-  { href: '/shippers/ftl', label: 'Full Truckload (FTL)', icon: Truck },
-  { href: '/shippers/ltl', label: 'Less-than-Truckload (LTL)', icon: Boxes },
-  { href: '/shippers/flatbed', label: 'Flatbed', icon: Truck },
-  { href: '/shippers/temperature-controlled', label: 'Temperature Controlled', icon: Thermometer },
-  { href: '/shippers/produce', label: 'Produce', icon: ShoppingBasket },
-  { href: '/shippers/managed-transportation', label: 'Managed Transportation', icon: Cpu },
-  { href: '#', label: 'Warehousing', icon: Warehouse },
-  { href: '#', label: 'Expedited', icon: Plane },
-  { href: '#', label: 'Drayage', icon: Ship },
-  { href: '#', label: 'Intermodal', icon: Train },
-  { href: '#', label: 'Canada-US Cross-Border', icon: Map },
-  { href: '#', label: 'Mexico Cross-Border', icon: Globe },
-];
 
 function TraffixLogo() {
     return (

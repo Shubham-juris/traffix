@@ -1,10 +1,34 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, ChevronRight, Truck, Boxes, Thermometer, ShoppingBasket, Cpu, Warehouse, Plane, Ship, Train, Map, Globe } from 'lucide-react';
 import { Reveal } from '@/components/animations/reveal';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { cn } from '@/lib/utils';
+import { SVGProps } from 'react';
+import { shipperSolutions } from '@/lib/data';
+
+const FlatbedIcon = (props: SVGProps<SVGSVGElement>) => (
+    <svg {...props} xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1" strokeLinecap="round" strokeLinejoin="round">
+        <path d="M2 12h17.6a2.4 2.4 0 0 0 2.4-2.4V8.4A2.4 2.4 0 0 0 19.6 6H15V4h-2v2H4a2 2 0 0 0-2 2v4Z"></path><path d="M22 12v4H15.3a2.7 2.7 0 0 1-2.6-2H2v4h10v2h-4v2h4a2 2 0 0 0 2-2v-2h6v2h-4v2h4a2 2 0 0 0 2-2v-4Z"></path><circle cx="6.5" cy="18.5" r="2.5"></circle><circle cx="17.5" cy="18.5" r="2.5"></circle>
+        <path d="M15 10h4.5"></path>
+    </svg>
+)
+
+const serviceIcons: { [key: string]: (props: SVGProps<SVGSVGElement>) => JSX.Element } = {
+    'Full Truckload (FTL)': Truck,
+    'Less-than-Truckload (LTL)': Boxes,
+    'Flatbed': FlatbedIcon,
+    'Temperature Controlled': Thermometer,
+    'Produce': ShoppingBasket,
+    'Managed Transportation': Cpu,
+    'Warehousing': Warehouse,
+    'Expedited': Plane,
+    'Drayage': Ship,
+    'Intermodal': Train,
+    'Canada-US Cross-Border': Map,
+    'Mexico Cross-Border': Globe,
+}
 
 const Section = ({ children, className }: { children: React.ReactNode, className?: string }) => (
   <section className={cn("py-20 sm:py-32", className)}>
@@ -19,6 +43,41 @@ const heroStats = [
     { number: "2", text: "THE RIGHT CAPACITY" },
     { number: "3", text: "TECHNOLOGY-ENABLED SOLUTIONS" },
 ];
+
+
+function ServicesSection() {
+  return (
+    <Section className="bg-white text-black">
+      <div className="grid md:grid-cols-2 gap-8 items-center mb-16">
+        <Reveal>
+          <h2 className="text-5xl font-black tracking-tight uppercase">Services</h2>
+        </Reveal>
+        <Reveal>
+          <p className="text-lg text-gray-600">
+            TRAFFIX&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+          </p>
+        </Reveal>
+      </div>
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        {shipperSolutions.map((service, index) => {
+           const Icon = serviceIcons[service.label] || Truck;
+          return (
+            <Reveal key={service.label} delay={index * 0.05}>
+              <Link href={service.href} className="group">
+                <div 
+                  className="border border-gray-200 rounded-lg p-6 flex items-center gap-4 h-full hover:bg-primary hover:text-black transition-all duration-300"
+                >
+                  <Icon className="w-10 h-10 text-primary group-hover:text-black transition-colors" />
+                  <span className="font-semibold text-base">{service.label}</span>
+                </div>
+              </Link>
+            </Reveal>
+          )
+        })}
+      </div>
+    </Section>
+  )
+}
 
 export default function Home() {
   return (
@@ -75,35 +134,7 @@ export default function Home() {
         </div>
       </section>
 
-      <Section>
-        <Reveal>
-          <h2 className="text-3xl sm:text-4xl font-bold text-center">What We Do</h2>
-          <p className="mt-4 max-w-2xl mx-auto text-center text-muted-foreground">
-            We provide a wide range of services to help your business succeed in the digital world.
-          </p>
-        </Reveal>
-        <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {[
-            { title: "Web Development", description: "Building robust and scalable web applications." },
-            { title: "UI/UX Design", description: "Creating intuitive and beautiful user experiences." },
-            { title: "Digital Marketing", description: "Driving traffic and conversions through strategic campaigns." },
-            { title: "Branding", description: "Crafting unique brand identities that resonate." },
-            { title: "SEO Optimization", description: "Improving your visibility on search engines." },
-            { title: "Content Creation", description: "Engaging your audience with compelling content." },
-          ].map((service) => (
-            <Reveal key={service.title}>
-              <Card className="h-full bg-card hover:border-primary transition-colors">
-                <CardHeader>
-                  <CardTitle>{service.title}</CardTitle>
-                </CardHeader>
-                <CardContent>
-                  <p className="text-muted-foreground">{service.description}</p>
-                </CardContent>
-              </Card>
-            </Reveal>
-          ))}
-        </div>
-      </Section>
+      <ServicesSection />
       
       <Section className="bg-card">
         <Reveal>
