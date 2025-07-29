@@ -116,6 +116,66 @@ const benefits = [
     },
 ];
 
+const faqItems = [
+    {
+        question: "Is TRAFFIX a customs broker?",
+        answer: "No, TRAFFIX is not a customs broker. TRAFFIX will work with any customs broker you choose to ensure your freight has an efficient border crossing. Contact us today to learn more.",
+    },
+    {
+        question: "Is TRAFFIX bonded?",
+        answer: "Yes, TRAFFIX is a bonded 3PL, allowing you to ship between Canada, the USA, and Mexico without paying duties until your freight arrives at a designated point. Contact us today to learn more.",
+    },
+    {
+        question: "What areas of Canada and the USA do you service?",
+        answer: "TRAFFIX provides service coast-to-coast throughout Canada and the USA. Contact us today to learn more.",
+    },
+    {
+        question: "Do you offer warehousing capacity?",
+        answer: "Yes, TRAFFIX offers outsourced warehousing solutions in both Canada and the USA, including bonded storage facilities and cross-dock locations. To learn more contact us or visit our warehousing page.",
+    },
+    {
+        question: "What kinds of equipment do you offer?",
+        answer: "TRAFFIX’ premium carrier network offers capacity covering a wide variety of equipment types including dry vans, reefers, and open deck equipment. We can also accommodate special requests such as vented trailers, logistics floors, and more. Contact us today to learn more.",
+    },
+    {
+        question: "Are you CPTAT certified?",
+        answer: "Yes, TRAFFIX is CTPAT certified. We also hold FAST and PIP certifications.",
+    },
+];
+
+function FaqSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                    Frequently Asked Questions
+                </h2>
+                </Reveal>
+                <Reveal>
+                <div className="max-w-4xl mx-auto">
+                    <Accordion type="single" collapsible className="w-full space-y-4">
+                        {faqItems.map((item) => (
+                            <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
+                                <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
+                                    {item.question}
+                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
+                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
+                                    </div>
+                                </AccordionTrigger>
+                                <AccordionContent className="p-4 pt-0 text-base text-gray-700">
+                                    {item.answer}
+                                </AccordionContent>
+                            </AccordionItem>
+                        ))}
+                    </Accordion>
+                </div>
+                </Reveal>
+            </div>
+        </section>
+    );
+}
+
 
 function WhatsIncludedSection() {
     return (
@@ -255,6 +315,7 @@ export default function CanadaUsCrossBorderPage() {
       <WhatsIncludedSection />
       <ExperienceSection />
       <BenefitsSection />
+      <FaqSection />
     </>
   );
 }
