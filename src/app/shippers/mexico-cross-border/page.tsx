@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { ArrowRight, ChevronRight } from 'lucide-react';
+import { ArrowRight, Check, ChevronRight } from 'lucide-react';
 import Image from 'next/image';
 import Link from 'next/link';
 import { Reveal } from '@/components/animations/reveal';
@@ -33,6 +33,64 @@ const MexicoIcon = (props: SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
+const includedItems = [
+    {
+        title: 'Communication',
+        description: 'You can rely on your dedicated TRAFFIX team for clear communication through your preferred method: email, phone, or even WhatsApp®.',
+    },
+    {
+        title: 'Streamlined Process',
+        description: 'Moving freight between Mexico and the USA requires a coordinated team effort. Choose TRAFFIX as your sole point of contact and let us handle all the details for you.',
+    },
+    {
+        title: 'Bonded & CTPAT Certified',
+        description: 'Pay duties and taxes at your chosen destination point with TRAFFIX, your bonded and CTPAT certified cross-border partner.',
+    },
+    {
+        title: 'Cross Docking Facilities',
+        description: "Take advantage of TRAFFIX' strategically located cross docking facilities located at the US/Mexico border.",
+    },
+    {
+        title: 'Risk Mitigation',
+        description: "You can relax knowing that TRAFFIX' risk management team and our security procedures protect you from fraudulent carriers.",
+    },
+    {
+        title: 'Customized Solutions',
+        description: "In addition to Mexico cross-border services, TRAFFIX' team of supply chain experts will work closely with you to create tailored logistics solutions that fit your unique requirements.",
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+        <section className="bg-white text-black py-20 sm:py-24">
+            <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+                <Reveal>
+                    <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                        What's Included
+                    </h2>
+                </Reveal>
+                <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+                    {includedItems.map((item, index) => (
+                        <Reveal key={item.title} delay={index * 0.1}>
+                            <div className="flex gap-4">
+                                <div className="flex-shrink-0">
+                                    <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                                        <Check className="h-5 w-5 text-black" />
+                                    </div>
+                                </div>
+                                <div>
+                                    <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                                    <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                                </div>
+                            </div>
+                        </Reveal>
+                    ))}
+                </div>
+            </div>
+        </section>
+    )
+}
+
 export default function MexicoCrossBorderPage() {
     return (
         <>
@@ -50,7 +108,7 @@ export default function MexicoCrossBorderPage() {
 
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 items-center gap-8">
                     <div className="flex justify-center items-center">
-                       <ArrowsIcon className="w-48 h-48 text-primary" />
+                        <ArrowsIcon className="w-48 h-48 text-primary" />
                     </div>
                     <div className="text-left">
                         <Reveal>
@@ -76,6 +134,7 @@ export default function MexicoCrossBorderPage() {
                     </div>
                 </div>
             </div>
+            <WhatsIncludedSection />
         </>
     );
 }
