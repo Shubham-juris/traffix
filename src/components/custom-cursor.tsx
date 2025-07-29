@@ -1,3 +1,4 @@
+
 "use client";
 
 import { useState, useEffect } from 'react';
@@ -6,11 +7,16 @@ import { useIsMobile } from '@/hooks/use-mobile';
 
 export function CustomCursor() {
   const isMobile = useIsMobile();
-  const [position, setPosition] = useState({ x: 0, y: 0 });
+  const [position, setPosition] = useState({ x: -100, y: -100 });
   const [isHovering, setIsHovering] = useState(false);
+  const [isClient, setIsClient] = useState(false);
 
   useEffect(() => {
-    if (isMobile) return;
+    setIsClient(true);
+  }, []);
+
+  useEffect(() => {
+    if (isMobile || !isClient) return;
 
     const onMouseMove = (e: MouseEvent) => {
       setPosition({ x: e.clientX, y: e.clientY });
@@ -34,9 +40,9 @@ export function CustomCursor() {
         el.removeEventListener('mouseleave', onMouseLeave);
       });
     };
-  }, [isMobile]);
+  }, [isMobile, isClient]);
 
-  if (isMobile) {
+  if (!isClient || isMobile) {
     return null;
   }
 
