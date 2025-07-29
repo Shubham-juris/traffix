@@ -17,6 +17,64 @@ const CrossBorderIcon = (props: SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
+const includedItems = [
+    {
+        title: 'Bonded Service',
+        description: 'TRAFFIX is bonded, insured, and holds CTPAT, FAST, and PIP certifications, making us your premier partner for shipping between Canada and the US.',
+    },
+    {
+        title: 'Seasonal Stability',
+        description: 'With TRAFFIX, your team can eliminate struggles with seasonal freight cycles that deplete capacity. With 45+ years of experience in cross-border transportation, we stabilize your supply chain with the right capacity.',
+    },
+    {
+        title: 'Drop Trailers',
+        description: 'TRAFFIX specializes in cross-border drop trailer programs, streamlining your supply chain and reducing fees such as driver detention.',
+    },
+    {
+        title: 'Cost Stabilization',
+        description: 'With over 45 years of experience in Canada-US cross-border shipping, TRAFFIX has forged enduring partnerships with top carriers, enabling us to negotiate competitive pricing contracts, both short and long-term.',
+    },
+    {
+        title: 'On-Time Performance',
+        description: 'Our experienced cross-border team knows how to ensure efficient border crossings for your freight, ensuring on-time delivery, especially to retailers with strict appointment policies.',
+    },
+    {
+        title: 'Risk Mitigation',
+        description: "Amidst a freight market plagued by fraudulent carriers, TRAFFIX' risk management team and stringent security procedures ensure your freight is entrusted to meticulously vetted and reliable carriers.",
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+      <section className="bg-white text-black py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+          <Reveal>
+          <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+            What's Included
+          </h2>
+          </Reveal>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+            {includedItems.map((item, index) => (
+              <Reveal key={item.title} delay={index * 0.1}>
+              <div className="flex gap-4">
+                <div className="flex-shrink-0">
+                  <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                    <Check className="h-5 w-5 text-black" />
+                  </div>
+                </div>
+                <div>
+                  <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                  <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                </div>
+              </div>
+              </Reveal>
+            ))}
+          </div>
+        </div>
+      </section>
+    )
+  }
+
 export default function CanadaUsCrossBorderPage() {
   return (
     <>
@@ -57,6 +115,7 @@ export default function CanadaUsCrossBorderPage() {
           </div>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
