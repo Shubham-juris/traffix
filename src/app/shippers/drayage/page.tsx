@@ -19,6 +19,64 @@ const DrayageIcon = (props: SVGProps<SVGSVGElement>) => (
     </svg>
 )
 
+const includedItems = [
+    {
+        title: 'Reduced Demurrage',
+        description: "TRAFFIX' drayage services team schedules pickup on the day or day following your container's arrival at the port or rail terminal, eliminating unnecessary demurrage fees.",
+    },
+    {
+        title: 'Carrier Management',
+        description: "TRAFFIX serves as your single point of contact for drayage loads at all ports and rail terminals across Canada and the USA, alleviating the burden of managing multiple providers from your team.",
+    },
+    {
+        title: 'Upfront Fee Payment',
+        description: "TRAFFIX can pay port fees and per diem charges on your behalf for a streamlined experience (administrative fees may apply).",
+    },
+    {
+        title: 'Dedicated Chassis Pools',
+        description: "At your request, TRAFFIX can secure a pool of private chassis for your drayage needs, ensuring you have top-quality equipment and capacity when and where you need it.",
+    },
+    {
+        title: 'Transparent Invoicing',
+        description: 'TRAFFIX\' drayage services team is dedicated to "no-surprise" invoicing, ensuring you are informed of all fees upfront before receiving your itemized invoice.',
+    },
+    {
+        title: 'Full Service Solution',
+        description: 'TRAFFIX provides a comprehensive range of over-the-road services, enabling our team to create customized drayage solutions from port to delivery.',
+    },
+];
+
+function WhatsIncludedSection() {
+    return (
+      <section className="bg-white text-black py-20 sm:py-24">
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+            <Reveal>
+            <h2 className="text-4xl sm:text-5xl font-black text-center mb-16 uppercase">
+                What's Included
+            </h2>
+            </Reveal>
+            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12 max-w-7xl mx-auto">
+                {includedItems.map((item, index) => (
+                <Reveal key={item.title} delay={index * 0.1}>
+                    <div className="flex gap-4">
+                        <div className="flex-shrink-0">
+                        <div className="bg-primary rounded-full h-8 w-8 flex items-center justify-center">
+                            <Check className="h-5 w-5 text-black" />
+                        </div>
+                        </div>
+                        <div>
+                        <h3 className="text-lg font-bold text-black">{item.title}</h3>
+                        <p className="mt-2 text-gray-600 text-base">{item.description}</p>
+                        </div>
+                    </div>
+                </Reveal>
+                ))}
+            </div>
+        </div>
+      </section>
+    )
+}
+
 export default function DrayagePage() {
   return (
     <>
@@ -59,6 +117,7 @@ export default function DrayagePage() {
             </div>
         </div>
       </div>
+      <WhatsIncludedSection />
     </>
   );
 }
