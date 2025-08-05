@@ -229,7 +229,7 @@ function InsAndOutsSection() {
             <Reveal>
               <div>
                 <Image
-                  src="https://placehold.co/800x600"
+                  src="/image/Truk.jpg"
                   alt="Truck with a container ship in the background"
                   data-ai-hint="truck container ship"
                   width={800}
@@ -273,7 +273,7 @@ export default function DrayagePage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/Delivery.png"
             alt="Truck with a yellow container on a highway"
             data-ai-hint="truck container"
             fill

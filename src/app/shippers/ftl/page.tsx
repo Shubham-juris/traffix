@@ -221,7 +221,7 @@ function WhyTraffixSection() {
           <Reveal>
           <div>
             <Image
-              src="https://placehold.co/800x600"
+              src="/image/ChallengeAhead.jpg"
               alt="Challenges Ahead Sign"
               data-ai-hint="road sign challenges"
               width={800}
@@ -260,7 +260,7 @@ export default function FtlPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/truck.jpg"
             alt="Truck on a highway"
             data-ai-hint="truck highway"
             fill

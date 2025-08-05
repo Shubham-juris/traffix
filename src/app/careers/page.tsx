@@ -86,7 +86,7 @@ function FinancialResilienceSection() {
           <Reveal>
           <div>
             <Image 
-              src="https://placehold.co/800x600" 
+              src="/image/FINANCIALRESILIENCE.jpg" 
               alt="Financial Resilience"
               data-ai-hint="financial growth"
               width={800}
@@ -141,7 +141,7 @@ function CarrierPaymentSection() {
           <div className="relative">
              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-primary rounded-b-lg"></div>
              <Image 
-                src="https://placehold.co/800x600"
+                src="/image/pay.jpg"
                 alt="Traffix Carrier Payment App on a laptop"
                 data-ai-hint="laptop dashboard"
                 width={800}

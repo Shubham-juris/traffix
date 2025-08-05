@@ -278,7 +278,7 @@ function TransformingLogisticsSection() {
                     <Reveal>
                     <div>
                         <Image
-                            src="https://placehold.co/800x600"
+                            src="/image/Management.jpg"
                             alt="Logistics worker with a futuristic data interface"
                             data-ai-hint="logistics worker dashboard"
                             width={800}
@@ -300,7 +300,7 @@ export default function ManagedTransportationPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/photo.webp"
             alt="Logistics network background"
             data-ai-hint="logistics technology"
             fill

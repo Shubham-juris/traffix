@@ -231,7 +231,7 @@ function StartShippingSection() {
                     <Reveal>
                         <div>
                             <Image
-                                src="https://placehold.co/800x600"
+                                src="/image/schneider.jpg"
                                 alt="Shipping containers stacked at a terminal"
                                 data-ai-hint="shipping containers"
                                 width={800}
@@ -255,7 +255,7 @@ function SwitchToIntermodalSection() {
                      <Reveal>
                         <div>
                             <Image
-                                src="https://placehold.co/800x600"
+                                src="/image/Intermodal-Rail.jpg"
                                 alt="Yellow freight train on tracks"
                                 data-ai-hint="freight train"
                                 width={800}
@@ -316,7 +316,7 @@ export default function IntermodalPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/intermodal.jpg"
             alt="Yellow freight train on tracks"
             data-ai-hint="freight train"
             fill

@@ -233,7 +233,7 @@ function OutsourcedWarehousingSection() {
             <Reveal>
               <div className="relative p-2 border border-gray-800 rounded-lg">
                 <Image
-                  src="https://placehold.co/800x600"
+                  src="/image/warehousing-services.jpg"
                   alt="Outsourced Warehousing"
                   data-ai-hint="warehouse logistics"
                   width={800}
@@ -257,7 +257,7 @@ function WmsSection() {
             <Reveal>
               <div className="relative p-2 border border-gray-800 rounded-lg">
                 <Image
-                  src="https://placehold.co/800x600"
+                  src="/image/warehouse-management.webp"
                   alt="Warehouse Management System"
                   data-ai-hint="warehouse worker"
                   width={800}
@@ -327,7 +327,7 @@ export default function WarehousingPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/warehousing-services.jpg"
             alt="Warehouse interior"
             data-ai-hint="warehouse interior"
             fill

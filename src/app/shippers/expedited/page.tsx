@@ -233,7 +233,7 @@ function SuccessWithExpeditedSection() {
           <Reveal>
             <div>
               <Image
-                src="https://placehold.co/800x600"
+                src="/image/truck.jpg"
                 alt="White van moving fast"
                 data-ai-hint="delivery van"
                 width={800}
@@ -257,7 +257,7 @@ function JitInventorySection() {
           <Reveal>
             <div className="relative p-2 border border-gray-800 rounded-lg">
               <Image
-                src="https://placehold.co/800x600"
+                src="/image/ExpeditedShipping.png"
                 alt="Workers loading a van at a warehouse dock"
                 data-ai-hint="warehouse loading"
                 width={800}
@@ -318,7 +318,7 @@ export default function ExpeditedPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/truck.jpg"
             alt="Delivery van in motion"
             data-ai-hint="delivery van"
             fill

@@ -199,7 +199,7 @@ function ChoosingCarrierSection() {
           <Reveal>
           <div>
             <Image
-              src="https://placehold.co/800x600"
+              src="/image/exp.avif"
               alt="Choosing the right carrier"
               data-ai-hint="warehouse loading"
               width={800}
@@ -254,55 +254,13 @@ function BenefitsSection() {
     )
 }
 
-function SocSection() {
-  return (
-    <section className="bg-black text-white py-20 sm:py-24">
-      <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid md:grid-cols-2 gap-12 items-center">
-          <Reveal>
-          <div className="max-w-lg">
-            <p className="text-lg text-gray-400">Data security and privacy</p>
-            <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
-              SOC <br />
-              <span className="text-primary">Compliant</span>
-            </h2>
-            <p className="mt-6 text-lg text-gray-300">
-              TRAFFIX is SOC compliant demonstrating our commitment to high standards for data security, privacy, and operational controls, giving clients confidence that their data is handled safely and responsibly.
-            </p>
-            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
-              <Link href="#">
-                LEARN MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
-          </div>
-          </Reveal>
-          <Reveal>
-          <div>
-            <Image
-              src="https://placehold.co/600x600"
-              alt="AICPA SOC Logo"
-              data-ai-hint="aicpa logo"
-              width={600}
-              height={600}
-              className="rounded-lg"
-            />
-          </div>
-          </Reveal>
-        </div>
-        <div className="mt-20 border-t border-primary"></div>
-      </div>
-    </section>
-  );
-}
-
-
 export default function LtlPage() {
   return (
     <>
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/Truck.jpg"
             alt="Pallet of yellow boxes"
             data-ai-hint="warehouse pallets"
             fill
@@ -337,7 +295,6 @@ export default function LtlPage() {
       <WhatsIncludedSection />
       <ChoosingCarrierSection />
       <BenefitsSection />
-      <SocSection />
       <FaqSection />
     </>
   );

@@ -9,15 +9,17 @@ const nextConfig: NextConfig = {
     ignoreDuringBuilds: true,
   },
   images: {
-    remotePatterns: [
-      {
-        protocol: 'https',
-        hostname: 'placehold.co',
-        port: '',
-        pathname: '/**',
-      },
-    ],
-  },
+  dangerouslyAllowSVG: true, // ⚠️ Use with caution
+  contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  remotePatterns: [
+    {
+      protocol: 'https',
+      hostname: 'placehold.co',
+      port: '',
+      pathname: '/**',
+    },
+  ],
+}
 };
 
 export default nextConfig;

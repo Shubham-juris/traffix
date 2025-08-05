@@ -239,7 +239,7 @@ function ExperiencedPartnerSection() {
             <Reveal>
             <div>
               <Image
-                src="https://placehold.co/800x600"
+                src="/image/truk.jpg"
                 alt="White truck with yellow refrigeration unit"
                 data-ai-hint="white truck"
                 width={800}
@@ -283,7 +283,7 @@ export default function TemperatureControlledPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/Truck.jpg"
             alt="Refrigerated truck"
             data-ai-hint="refrigerated truck"
             fill

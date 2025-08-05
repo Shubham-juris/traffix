@@ -57,7 +57,7 @@ const solutionsData = [
       title: 'Destination Container Management',
       icon: ContainerMgmtIcon,
       description: "Stop paying excessive demurrage, detention, and per diem charges; increase visibility; and gain flexibility over your ocean containers from port to delivery with our destination container management solution.",
-      image: 'https://placehold.co/600x400',
+      image: '/image/Destination.jpg',
       imageHint: "shipping containers",
       href: '/services',
     },
@@ -66,7 +66,7 @@ const solutionsData = [
       title: 'Mexico Cross Border Produce Transportation',
       icon: MexicoProduceIcon,
       description: "Importing produce from Mexico? Gain peace of mind knowing that your fruits and vegetables are protected from temperature fluctuations with our end-to-end Mexico cross-border produce solution.",
-      image: 'https://placehold.co/600x400',
+      image: '/image/Mexico.jpg',
       imageHint: "fresh produce",
       href: '/services',
     },
@@ -75,7 +75,7 @@ const solutionsData = [
       title: 'Long-Haul LTL Consolidation',
       icon: LtlConsolidationIcon,
       description: "Looking to reduce costs, shorten transit times, increase distribution flexibility, improve shipment visibility, and enhance customer service? Discover our long-haul LTL consolidation solution.",
-      image: 'https://placehold.co/600x400',
+      image: '/image/Shipping.jpg',
       imageHint: "forklift loading",
       href: '/services',
     },
@@ -198,14 +198,14 @@ export default function Home() {
       <section className="relative h-screen bg-black text-white flex flex-col justify-between">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/truck.jpg"
             alt="Two engineers discussing plans in a warehouse"
             data-ai-hint="engineers planning"
             fill
             className="object-cover"
             priority
           />
-          <div className="absolute inset-0 bg-black/70" />
+          <div className="absolute inset-0 bg-black/50" />
         </div>
         
         <div className="relative z-10 container mx-auto px-4 sm:px-6 lg:px-8 flex-grow flex items-center pt-20">

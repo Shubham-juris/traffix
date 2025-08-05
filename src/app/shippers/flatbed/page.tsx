@@ -234,7 +234,7 @@ function ExperienceMattersSection() {
             <Reveal>
             <div>
               <Image
-                src="https://placehold.co/800x600"
+                src="/image/FlatbedBenefits.jpeg"
                 alt="Yellow flatbed truck on a road"
                 data-ai-hint="yellow truck"
                 width={800}
@@ -280,7 +280,7 @@ function ProjectFreightSection() {
             <Reveal>
             <div>
                 <Image
-                src="https://placehold.co/800x600"
+                src="/image/istockphoto.jpg"
                 alt="Oversize load sign on a large vehicle"
                 data-ai-hint="oversize load"
                 width={800}
@@ -319,7 +319,7 @@ export default function FlatbedPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/FlatbedShipping.jpg"
             alt="Flatbed truck"
             data-ai-hint="flatbed truck"
             fill

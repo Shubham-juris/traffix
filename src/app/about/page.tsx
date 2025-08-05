@@ -40,21 +40,21 @@ const ctaCards = [
     {
         title: "SOLUTIONS FOR SHIPPERS",
         description: "Custom Solutions for complex supply chains.",
-        image: "https://placehold.co/600x400",
+        image: "/image/worke.jpg",
         imageHint: "warehouse workers",
         href: "/services"
     },
     {
         title: "WHY HAUL WITH TRAFFIX",
         description: "Join our elite network of carriers. Let's be partners in business.",
-        image: "https://placehold.co/600x400",
+        image: "/image/i.jpg",
         imageHint: "truck driver",
         href: "/careers"
     },
     {
         title: "WHY JOIN OUR TEAM",
         description: "Join our team where transportation experts cultivate high-performance careers.",
-        image: "https://placehold.co/600x400",
+        image: "/image/callgirl.jpg",
         imageHint: "customer service",
         href: "/careers"
     }
@@ -168,7 +168,7 @@ export default function AboutPage() {
                 {/* Background Image */}
                 <div className="absolute inset-0">
                     <Image
-                        src="https://placehold.co/1920x1080"
+                        src="/image/supply.jpg"
                         alt="Business handshake over a logistics background"
                         data-ai-hint="business handshake"
                         fill

@@ -9,7 +9,7 @@ const solutions = [
   {
     title: 'Mexico Cross Border Produce Transportation',
     description: 'Importing produce from Mexico? Gain peace of mind knowing that your fruits and vegetables are protected from temperature fluctuations with our end-to-end Mexico cross-border produce solution.',
-    image: 'https://placehold.co/600x400',
+    image: '/image/Shipping.jpg',
     imageHint: 'warehouse produce',
     icon: Globe,
     highlight: false,
@@ -17,7 +17,7 @@ const solutions = [
   {
     title: 'Destination Container Management',
     description: 'Stop paying excessive demurrage, detention, and per diem charges; increase visibility; and gain flexibility over your ocean containers from port to delivery with our destination container management solution.',
-    image: 'https://placehold.co/600x400',
+    image: '/image/Intermodal-Rail.jpg',
     imageHint: 'shipping container',
     icon: Ship,
     highlight: true,
@@ -25,7 +25,7 @@ const solutions = [
   {
     title: 'Long-Haul LTL Consolidation',
     description: 'Want to optimize your LTL supply chain? Reduce costs, shorten transit times and increase distribution flexibility while enhancing both visibility and customer satisfaction with our long-haul LTL consolidation solution.',
-    image: 'https://placehold.co/600x400',
+    image: '/image/greenloading.jpg',
     imageHint: 'logistics pallets',
     icon: Truck,
     highlight: false,

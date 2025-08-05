@@ -201,7 +201,7 @@ function ColdChainSection() {
                     <Reveal>
                         <div className="relative">
                             <Image
-                                src="https://placehold.co/800x600"
+                                src="/image/Shipping.jpg"
                                 alt="Cold storage warehouse for produce"
                                 data-ai-hint="cold storage"
                                 width={800}
@@ -312,7 +312,7 @@ export default function MexicoCrossBorderPage() {
             <div className="relative h-screen bg-black text-white flex items-center">
                 <div className="absolute inset-0 z-0">
                     <Image
-                        src="https://placehold.co/1920x1080"
+                        src="/image/canada.jpg"
                         alt="Map of Mexico and the southern US"
                         data-ai-hint="mexico us map"
                         fill

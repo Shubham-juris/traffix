@@ -234,7 +234,7 @@ function ExperienceSection() {
             <Reveal>
               <div>
                 <Image
-                  src="https://placehold.co/800x600"
+                  src="/image/image4.jpg"
                   alt="Truck on a highway in a mountainous region"
                   data-ai-hint="truck highway"
                   width={800}
@@ -278,7 +278,7 @@ export default function CanadaUsCrossBorderPage() {
       <div className="relative h-screen bg-black text-white flex items-center justify-end">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/canada.jpg"
             alt="Map of Canada and the United States"
             data-ai-hint="canada us map"
             fill

@@ -227,7 +227,7 @@ function MitigatingRiskSection() {
             <Reveal>
             <div>
               <Image
-                src="https://placehold.co/800x600"
+                src="/image/temp.avif"
                 alt="Thermometer in a box of fresh produce in a warehouse"
                 data-ai-hint="produce thermometer"
                 width={800}
@@ -251,7 +251,7 @@ function BestPracticesSection() {
             <Reveal>
             <div>
                 <Image
-                    src="https://placehold.co/800x600"
+                    src="/image/image3.jpg"
                     alt="Man in hard hat in a produce warehouse"
                     data-ai-hint="produce warehouse"
                     width={800}
@@ -312,7 +312,7 @@ export default function ProducePage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="https://placehold.co/1920x1080"
+            src="/image/image1.jpeg"
             alt="Apples in a crate with a truck in the background"
             data-ai-hint="apples crate"
             fill
