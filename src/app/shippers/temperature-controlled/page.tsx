@@ -283,7 +283,7 @@ export default function TemperatureControlledPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/image/Truck.jpg"
+            src="/image/truck.jpg"
             alt="Refrigerated truck"
             data-ai-hint="refrigerated truck"
             fill
