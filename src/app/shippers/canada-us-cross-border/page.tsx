@@ -159,9 +159,6 @@ function FaqSection() {
                             <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
                                 <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
                                     {item.question}
-                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
-                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
-                                    </div>
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4 pt-0 text-base text-gray-700">
                                     {item.answer}
@@ -275,43 +272,49 @@ function BenefitsSection() {
 export default function CanadaUsCrossBorderPage() {
   return (
     <>
-      <div className="relative h-screen bg-black text-white flex items-center justify-end">
+      <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
             src="/image/canada.jpg"
             alt="Map of Canada and the United States"
             data-ai-hint="canada us map"
             fill
-            className="object-cover opacity-30"
+            className="object-cover"
           />
-           <div className="absolute inset-0 bg-gradient-to-l from-black via-black/80 to-transparent" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
         </div>
-        
+
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-          <div className="max-w-2xl ml-auto text-right">
+          <div className="max-w-xl">
             <Reveal>
-              <CrossBorderIcon className="w-20 h-20 mb-6 inline-block" />
+              <CrossBorderIcon className="w-20 h-20 mb-6 text-primary" />
             </Reveal>
             <Reveal delay={0.1}>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
-              Canada-US<br/>Cross Border
-            </h1>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
+                Canada-US <br /> Cross Border
+              </h1>
             </Reveal>
             <Reveal delay={0.2}>
-            <p className="mt-6 text-xl max-w-lg ml-auto text-gray-300">
+              <p className="mt-6 text-xl max-w-lg text-gray-300">
                 Your bonded partner in Canada-US cross border shipping.
-            </p>
+              </p>
             </Reveal>
             <Reveal delay={0.3}>
-            <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-3 font-bold text-base group">
-              <Link href="/contact">
-                SHIP WITH US <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
+              <Button
+                asChild
+                size="lg"
+                className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group"
+              >
+                <Link href="/contact">
+                  SHIP WITH US{" "}
+                  <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </Reveal>
           </div>
         </div>
       </div>
+
       <WhatsIncludedSection />
       <ExperienceSection />
       <BenefitsSection />

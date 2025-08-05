@@ -181,10 +181,7 @@ function FaqSection() {
                         {faqItems.map((item) => (
                             <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
                                 <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
-                                    {item.question}
-                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
-                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
-                                    </div>
+                                    {item.question}                                    
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4 pt-0 text-base text-gray-700">
                                     {item.answer}
@@ -294,6 +291,7 @@ function TransformingLogisticsSection() {
     );
 }
 
+
 export default function ManagedTransportationPage() {
   return (
     <>
@@ -306,32 +304,40 @@ export default function ManagedTransportationPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/60" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
         </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 flex flex-col items-center text-center">
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-xl">
             <Reveal>
-            <ManagedTransportationIcon className="w-20 h-20 text-primary mb-6" />
+              <ManagedTransportationIcon className="w-20 h-20 text-primary mb-6" />
             </Reveal>
             <Reveal delay={0.1}>
-            <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
-              Managed <br /> Transportation <br /> Solutions (MTS)
-            </h1>
+              <h1 className="text-4xl md:text-6xl font-black tracking-tight uppercase">
+                Managed <br /> Transportation <br /> Solutions (MTS)
+              </h1>
             </Reveal>
             <Reveal delay={0.2}>
-            <p className="mt-6 text-xl max-w-2xl text-gray-300">
+              <p className="mt-6 text-xl max-w-lg text-gray-300">
                 Enabling value-added network strategies to maximize efficiency, reduce risk, and save costs.
-            </p>
+              </p>
             </Reveal>
             <Reveal delay={0.3}>
-            <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group">
-              <Link href="/contact">
-                SHIP WITH US <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
+              <Button
+                asChild
+                size="lg"
+                className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group"
+              >
+                <Link href="/contact">
+                  SHIP WITH US{" "}
+                  <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </Reveal>
+          </div>
         </div>
       </div>
+
       <WhatsIncludedSection />
       <TransformingLogisticsSection />
       <BenefitsSection />

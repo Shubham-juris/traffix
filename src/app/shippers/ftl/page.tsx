@@ -142,9 +142,7 @@ function FaqSection() {
                             <AccordionItem value={item.question} key={item.question} className="bg-gray-100 rounded-lg border-none">
                                 <AccordionTrigger className="w-full text-left p-4 font-bold text-lg hover:no-underline [&[data-state=open]>div]:bg-primary [&[data-state=open]>div>svg]:text-black">
                                     {item.question}
-                                    <div className="bg-black rounded-md p-2 ml-4 transition-colors">
-                                        <ChevronDown className="h-5 w-5 text-primary transition-colors" />
-                                    </div>
+                                    
                                 </AccordionTrigger>
                                 <AccordionContent className="p-4 pt-0 text-base text-gray-700">
                                     {item.answer}
@@ -253,7 +251,6 @@ function WhyTraffixSection() {
     </section>
   )
 }
-
 export default function FtlPage() {
   return (
     <>
@@ -266,34 +263,40 @@ export default function FtlPage() {
             fill
             className="object-cover"
           />
-          <div className="absolute inset-0 bg-black/50" />
+          <div className="absolute inset-0 bg-gradient-to-r from-black/90 via-black/70 to-transparent" />
         </div>
-        
-        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10 grid md:grid-cols-2 items-center">
-          <div className="md:col-start-2 text-left">
+
+        <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+          <div className="max-w-xl">
             <Reveal>
-            <Truck className="w-20 h-20 text-primary mb-6" />
+              <Truck className="w-20 h-20 text-primary mb-6" />
             </Reveal>
             <Reveal delay={0.1}>
-            <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
-              Full Truckload <br /> (FTL)
-            </h1>
+              <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
+                Full Truckload <br /> (FTL)
+              </h1>
             </Reveal>
             <Reveal delay={0.2}>
-            <p className="mt-6 text-xl max-w-lg text-gray-300">
-              Over-the-road (OTR) services customized to meet your transportation needs.
-            </p>
+              <p className="mt-6 text-xl max-w-lg text-gray-300">
+                Over-the-road (OTR) services customized to meet your transportation needs.
+              </p>
             </Reveal>
             <Reveal delay={0.3}>
-            <Button asChild size="lg" className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group">
-              <Link href="/contact">
-                SHIP WITH US <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-              </Link>
-            </Button>
+              <Button
+                asChild
+                size="lg"
+                className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group"
+              >
+                <Link href="/contact">
+                  SHIP WITH US{" "}
+                  <ArrowRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
+                </Link>
+              </Button>
             </Reveal>
           </div>
         </div>
       </div>
+
       <WhatsIncludedSection />
       <WhyTraffixSection />
       <BenefitsSection />
