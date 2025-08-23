@@ -216,11 +216,11 @@ function InsAndOutsSection() {
                 <p className="mt-6 text-base text-gray-300">
                   Supply chains involving the use of ocean or rail depend on drayage services to link shippers and receivers to ocean ports and rail terminals. Check our our article to learn more about drayage.
                 </p>
-                <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                   <Link href="#">
                     READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                   </Link>
-                </Button>
+                </Button> */}
               </div>
             </Reveal>
             <Reveal>

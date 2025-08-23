@@ -236,11 +236,11 @@ function WhyTraffixSection() {
               <p className="mt-6 text-lg text-gray-300">
                 The ability to adapt quickly to changing supply chain demands can make the difference between success or failure.
               </p>
-              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+              {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                 <Link href="#">
                   READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </Reveal>
         </div>

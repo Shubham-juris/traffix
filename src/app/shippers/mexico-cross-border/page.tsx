@@ -190,11 +190,11 @@ function ColdChainSection() {
                             <p className="mt-6 text-base text-gray-300">
                                 Ensure the freshness and quality of your produce shipments moving between Mexico, the USA, and Canada with our cross-border produce transportation solution.
                             </p>
-                            <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                            {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                                 <Link href="/shippers/produce">
                                     READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
-                            </Button>
+                            </Button> */}
                         </div>
                     </Reveal>
                     <Reveal>

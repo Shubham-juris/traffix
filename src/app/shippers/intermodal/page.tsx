@@ -218,11 +218,11 @@ function StartShippingSection() {
                             <p className="mt-6 text-base text-gray-300">
                                 Intermodal combines multiple transport modes including truck, rail, ocean, or air for efficient, cost-effective door-to-door shipping over long distances.
                             </p>
-                            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                            {/* <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                                 <Link href="#">
                                     READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
-                            </Button>
+                            </Button> */}
                         </div>
                     </Reveal>
                     <Reveal>
@@ -271,11 +271,11 @@ function SwitchToIntermodalSection() {
                             <p className="mt-6 text-base text-gray-300">
                                 Transportation procurement faces challenges with fluctuating over-the-road (OTR) rates due to supply and demand. Intermodal offers a more sustainable solution, optimized capacity, and reduced freight spend amid these challenges.
                             </p>
-                            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+                            {/* <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                                 <Link href="#">
                                     READ MORE <ChevronRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                                 </Link>
-                            </Button>
+                            </Button> */}
                         </div>
                     </Reveal>
                 </div>

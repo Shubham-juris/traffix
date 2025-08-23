@@ -219,11 +219,11 @@ function SuccessWithExpeditedSection() {
               <p className="mt-6 text-lg text-gray-300 max-w-md">
                 Prevent stock-outs and line-down scenarios by integrating a dependable expedited transportation provider into your supply chain strategy. Explore more in our Expedited 101 article.
               </p>
-              <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+              {/* <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                 <Link href="#">
                   READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </Reveal>
           <Reveal>
@@ -273,11 +273,11 @@ function JitInventorySection() {
               <p className="mt-6 text-base text-gray-300">
                 While JIT offers benefits, it also has risks such as supply chain disruptions, slow response to demand changes, and unexpected delays. Expedited services mitigate these challenges, keeping your supply chain moving efficiently.
               </p>
-              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+              {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                 <Link href="#">
                   READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
           </Reveal>
         </div>

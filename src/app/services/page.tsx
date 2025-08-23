@@ -11,7 +11,7 @@ const solutions = [
     description: 'Importing produce from Mexico? Gain peace of mind knowing that your fruits and vegetables are protected from temperature fluctuations with our end-to-end Mexico cross-border produce solution.',
     image: '/image/Shipping.jpg',
     imageHint: 'warehouse produce',
-    icon: Globe,
+   
     highlight: false,
   },
   {
@@ -19,7 +19,7 @@ const solutions = [
     description: 'Stop paying excessive demurrage, detention, and per diem charges; increase visibility; and gain flexibility over your ocean containers from port to delivery with our destination container management solution.',
     image: '/image/Intermodal-Rail.jpg',
     imageHint: 'shipping container',
-    icon: Ship,
+    
     highlight: true,
   },
   {
@@ -27,98 +27,96 @@ const solutions = [
     description: 'Want to optimize your LTL supply chain? Reduce costs, shorten transit times and increase distribution flexibility while enhancing both visibility and customer satisfaction with our long-haul LTL consolidation solution.',
     image: '/image/greenloading.jpg',
     imageHint: 'logistics pallets',
-    icon: Truck,
+  
     highlight: false,
   },
   {
     title: 'Cross-Border US-Canada Solutions',
     description: 'Trafiicology Logistics provides seamless and efficient cross-border transportation between the US and Canada.',
-    image: '/image/Shipping.jpg',
+    image: '/image/Management.jpg',
     imageHint: 'cross border trucks',
-    icon: Globe,
+   
     highlight: false,
   },
   {
     title: 'E-commerce Fulfillment',
     description: 'Fast and reliable e-commerce fulfillment with Trafiicology Logistics to meet growing online demands.',
-    image: '/image/Intermodal-Rail.jpg',
+    image: '/image/trm.jpg',
     imageHint: 'ecommerce packages',
-    icon: Ship,
+   
     highlight: true,
   },
   {
     title: 'Temperature Controlled Shipping',
     description: 'Protect sensitive shipments with our temperature-controlled logistics powered by Trafiicology Logistics.',
-    image: '/image/greenloading.jpg',
+    image: '/image/image2.jpg',
     imageHint: 'cold storage trucks',
-    icon: Truck,
+   
     highlight: false,
   },
   {
     title: 'Expedited Freight',
     description: 'Time-critical shipments delivered quickly and securely with Trafiicology Logistics expedited freight solutions.',
-    image: '/image/Shipping.jpg',
+    image: '/image/ExpeditedShipping.png',
     imageHint: 'express delivery',
-    icon: Globe,
+    
     highlight: false,
   },
   {
     title: 'Warehousing Solutions',
     description: 'Scalable warehousing with Trafiicology Logistics to meet seasonal or long-term storage requirements.',
-    image: '/image/Intermodal-Rail.jpg',
+    image: '/image/image4.jpg',
     imageHint: 'warehouse shelves',
-    icon: Ship,
+   
     highlight: true,
   },
   {
     title: 'Intermodal Transportation',
     description: 'Leverage cost-efficient intermodal solutions with Trafiicology Logistics to keep freight moving smoothly.',
-    image: '/image/greenloading.jpg',
+    image: '/image/warehouse-management.webp',
     imageHint: 'rail transport',
-    icon: Truck,
+   
     highlight: false,
   },
   {
     title: 'Managed Transportation',
     description: 'Outsource your supply chain management to Trafiicology Logistics for increased efficiency.',
-    image: '/image/Shipping.jpg',
+    image: '/image/truck.jpg',
     imageHint: 'supply chain team',
-    icon: Globe,
+   
     highlight: false,
   },
   {
     title: 'Retail Distribution',
     description: 'Keep your retail supply chain optimized and efficient with Trafiicology Logistics customized distribution.',
-    image: '/image/Intermodal-Rail.jpg',
+    image: '/image/supply.jpg',
     imageHint: 'retail logistics',
-    icon: Ship,
+   
     highlight: true,
   },
   {
     title: 'Project Cargo Solutions',
     description: 'Handle oversized and complex cargo with Trafiicology Logistics project cargo expertise.',
-    image: '/image/greenloading.jpg',
+    image: '/image/image.webp',
     imageHint: 'heavy lift cargo',
-    icon: Truck,
+   
     highlight: false,
   },
 ];
-
 const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
-  const Icon = solution.icon;
+  
   return (
     <Card className="border border-gray-700 rounded-lg overflow-hidden flex flex-col bg-transparent group transition-all duration-300">
-      <div className="relative">
+      <div className="relative h-64 w-full">
         <Image
           src={solution.image}
           alt={solution.title}
           data-ai-hint={solution.imageHint}
-          width={600}
-          height={400}
-          className="w-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+          fill
+          className="object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300 rounded-t-lg"
         />
         <div className="absolute top-4 right-4 bg-black bg-opacity-70 rounded-full p-2 border border-gray-600">
-          <Icon className="w-6 h-6 text-primary" />
+          
         </div>
       </div>
       <CardContent
@@ -144,10 +142,10 @@ const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
             solution.highlight ? "border-black" : "border-gray-700 group-hover:border-black"
           )}
         ></div>
-        <Link href="#" className="flex justify-between items-center pt-4 font-semibold text-sm hover:underline">
+        {/* <Link href="#" className="flex justify-between items-center pt-4 font-semibold text-sm hover:underline">
           READ MORE
           <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-        </Link>
+        </Link> */}
       </CardContent>
     </Card>
   );

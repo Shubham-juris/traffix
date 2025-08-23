@@ -214,11 +214,11 @@ function MitigatingRiskSection() {
               <p className="mt-6 text-lg text-gray-300 max-w-md">
                 Fresh produce is extremely sensitive to temperature changes, which can cause spoilage. Therefore, documentation and pulping are critical in produce shipping.
               </p>
-              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+              {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                 <Link href="#">
                   READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
             </Reveal>
             <Reveal>
@@ -267,11 +267,11 @@ function BestPracticesSection() {
               <p className="mt-6 text-lg text-gray-300 max-w-md">
                 Meticulous planning and execution is needed to ensure that fruits and vegetables arrive at their destination in optimal condition.
               </p>
-              <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
+              {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                 <Link href="#">
                   READ MORE <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
                 </Link>
-              </Button>
+              </Button> */}
             </div>
             </Reveal>
           </div>

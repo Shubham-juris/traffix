@@ -53,7 +53,7 @@ function WhyHaulSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
         <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
-          WHY HAUL WITH Trafiicology Logistics?
+         Why Choose Trafiicology Logistics?
         </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
@@ -105,11 +105,11 @@ function FinancialResilienceSection() {
             <p className="mt-6 text-lg text-gray-300">
               Learn how working with non-recourse factors and reliable brokers can help you create a financially resilient business.
             </p>
-            <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold">
+            {/* <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold">
               <Link href="#">
                 READ MORE <ArrowRight className="ml-2 h-4 w-4" />
               </Link>
-            </Button>
+            </Button> */}
           </div>
           </Reveal>
         </div>
@@ -211,8 +211,8 @@ export default function TraffixHeroSection() {
             {/* Main Heading */}
             <Reveal>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-8">
-              WHY HAUL<br/>
-              <span className="text-yellow-400">FOR Trafiicology Logistics</span>
+               WHY CHOOSE  <br/>
+              <span className="text-yellow-400">TRAFIICOLOGY LOGISTICS</span>
             </h1>
             </Reveal>
 
@@ -224,12 +224,12 @@ export default function TraffixHeroSection() {
             </Reveal>
 
             {/* CTA Button */}
-            <Reveal delay={0.2}>
+            {/* <Reveal delay={0.2}>
             <button className="bg-yellow-400 text-black px-6 py-3 rounded-full font-bold text-base hover:bg-yellow-300 transition-colors duration-300 flex items-center gap-2 group">
               HAUL WITH US 
               <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform duration-300" />
             </button>
-            </Reveal>
+            </Reveal> */}
           </div>
 
           {/* Stats Section */}
@@ -237,7 +237,7 @@ export default function TraffixHeroSection() {
             <Reveal>
             <div className="text-center">
               <div className="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 mb-2">
-                449K+
+                437K+
               </div>
               <div className="text-lg md:text-xl text-gray-300 font-medium">
                 Loads per Year
@@ -247,7 +247,7 @@ export default function TraffixHeroSection() {
             <Reveal delay={0.1}>
             <div className="text-center">
               <div className="text-4xl md:text-5xl lg:text-6xl font-black text-yellow-400 mb-2">
-                46+
+                26+
               </div>
               <div className="text-lg md:text-xl text-gray-300 font-medium">
                 Years in Business
