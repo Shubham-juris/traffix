@@ -8,7 +8,6 @@ import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
   title: 'Trafiicology Logistics',
-  description: 'Trafiicology Logistics built with Next.js and Tailwind CSS.',
 };
 
 export default function RootLayout({
