@@ -24,8 +24,8 @@ const navLinks = [
 
 function TrafficologyLogo() {
   return (
-    <div className="text-3xl font-black tracking-wider text-white">
-      TRAFFICOLOGY<span className="text-primary">LOGISTICS</span>{" "}
+    <div className="text-2xl sm:text-3xl font-black tracking-wider text-white leading-tight">
+      TRAFIICOLOGY <span className="text-primary">LOGISTICS</span>
     </div>
   );
 }

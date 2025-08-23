@@ -19,11 +19,16 @@ interface MobileNavProps {
 }
 
 function TrafiicologyLogo() {
-    return (
-        <div className="text-2xl font-black tracking-wider text-white leading-tight">
-            TRAFIICOLOGY <span className="text-primary">LOGISTICS</span>
-        </div>
-    )
+  return (
+    <div className="text-white font-black leading-tight tracking-wider">
+      <span className="text-[clamp(1rem,4vw,2rem)] sm:text-[clamp(1.5rem,4vw,2.5rem)]">
+        TRAFIICOLOGY
+      </span>{" "}
+      <span className="text-primary text-[clamp(0.8rem,3vw,1.2rem)] sm:text-[clamp(1rem,3vw,1.5rem)]">
+        LOGISTICS
+      </span>
+    </div>
+  );
 }
 
 export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
@@ -53,33 +58,49 @@ export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
             <span className="sr-only">Close menu</span>
           </Button>
         </div>
+
         <nav className="flex flex-col p-4 space-y-2">
           <Accordion type="single" collapsible className="w-full">
-            {navLinks.map((link) => (
+            {navLinks.map((link) =>
               link.hasDropdown ? (
                 <AccordionItem value={link.label} key={link.href} className="border-b-0">
                   <AccordionTrigger className="py-3 text-lg hover:no-underline hover:text-primary">
                     {link.label}
                   </AccordionTrigger>
                   <AccordionContent className="pl-4 space-y-2">
-                    {shipperSolutions.map(solution => (
-                        <Link key={solution.label} href={solution.href} onClick={onClose} className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors py-2">
-                          <solution.icon className="h-5 w-5 text-primary" />
-                          <span>{solution.label}</span>
-                        </Link>
+                    {shipperSolutions.map((solution) => (
+                      <Link
+                        key={solution.label}
+                        href={solution.href}
+                        onClick={onClose}
+                        className="flex items-center gap-2 text-base text-muted-foreground hover:text-primary transition-colors py-2"
+                      >
+                        <solution.icon className="h-5 w-5 text-primary" />
+                        <span>{solution.label}</span>
+                      </Link>
                     ))}
                   </AccordionContent>
                 </AccordionItem>
               ) : (
-                <Link key={link.href} href={link.href} onClick={onClose} className="text-lg text-foreground hover:text-primary transition-colors py-3 flex items-center w-full">
+                <Link
+                  key={link.href}
+                  href={link.href}
+                  onClick={onClose}
+                  className="text-lg text-foreground hover:text-primary transition-colors py-3 flex items-center w-full"
+                >
                   {link.label}
                 </Link>
               )
-            ))}
+            )}
           </Accordion>
 
           <div className="border-t border-border pt-4 space-y-4">
-            <Button asChild variant="link" className="w-full justify-start text-primary text-lg p-0" onClick={onClose}>
+            <Button
+              asChild
+              variant="link"
+              className="w-full justify-start text-primary text-lg p-0"
+              onClick={onClose}
+            >
               <Link href="/contact">Ask an Expert</Link>
             </Button>
           </div>
