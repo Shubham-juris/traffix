@@ -22,10 +22,10 @@ const navLinks = [
   { href: "/about", label: "Company" },
 ];
 
-function TraffixLogo() {
+function TrafficologyLogo() {
   return (
     <div className="text-3xl font-black tracking-wider text-white">
-      TRAFFI<span className="text-primary">X</span>
+      TRAFFICOLOGY<span className="text-primary">LOGISTICS</span>{" "}
     </div>
   );
 }
@@ -65,7 +65,7 @@ export function Header() {
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
             <Link href="/" className="hover:opacity-80 transition-opacity">
-              <TraffixLogo />
+              <TrafficologyLogo />
             </Link>
             <nav className="hidden lg:flex items-center space-x-10">
               {navLinks.map((link) =>

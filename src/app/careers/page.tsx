@@ -23,11 +23,11 @@ const modes = [
 const whyHaulReasons = [
   {
     title: 'Partners in Business',
-    description: 'TRAFFIX can seamlessly integrate with your business. Leverage our sales team to maximize the use of your available capacity on your preferred lanes.',
+    description: 'Trafiicology Logistics can seamlessly integrate with your business. Leverage our sales team to maximize the use of your available capacity on your preferred lanes.',
   },
   {
     title: 'Expert Team',
-    description: "When challenges arise on the road, it's reassuring to have an expert team on your side. At TRAFFIX, we employ industry professionals with a minimum of 5 years of experience.",
+    description: "When challenges arise on the road, it's reassuring to have an expert team on your side. At Trafiicology Logistics, we employ industry professionals with a minimum of 5 years of experience.",
   },
   {
     title: 'Available 24/7-365',
@@ -39,11 +39,11 @@ const whyHaulReasons = [
   },
   {
     title: 'Delivering Integrity',
-    description: 'At TRAFFIX, we view our carriers as business partners. Our goal is to establish long-term relationships founded on trust, communication, fair business practices, and mutual respect.',
+    description: 'At Trafiicology Logistics, we view our carriers as business partners. Our goal is to establish long-term relationships founded on trust, communication, fair business practices, and mutual respect.',
   },
   {
     title: 'Preferred Lane Volume',
-    description: "TRAFFIX' preferred lane program guarantees high volumes in specific areas. Benefit from our steady inbound and outbound traffic to keep your trucks moving continuously.",
+    description: "Trafiicology Logistics' preferred lane program guarantees high volumes in specific areas. Benefit from our steady inbound and outbound traffic to keep your trucks moving continuously.",
   },
 ]
 
@@ -53,7 +53,7 @@ function WhyHaulSection() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <Reveal>
         <h2 className="text-4xl sm:text-5xl font-black text-center mb-16">
-          WHY HAUL WITH TRAFFIX?
+          WHY HAUL WITH Trafiicology Logistics?
         </h2>
         </Reveal>
         <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-12">
@@ -128,12 +128,12 @@ function CarrierPaymentSection() {
           <div className="max-w-md">
             <p className="text-lg text-gray-400 mb-2">Transparent billing with the</p>
             <h2 className="text-5xl font-black tracking-tight leading-tight">
-              TRAFFIX' <br />
+              Trafiicology Logistics' <br />
               CARRIER <br />
               <span className="text-primary">PAYMENT APP</span>
             </h2>
             <p className="mt-6 text-xl text-gray-300">
-              TRAFFIX' Carrier Payment app provides access to complete billing visibility at your fingertips, 24/7-365. To learn more <Link href="/contact" className="text-primary hover:underline">contact</Link> our app support team today.
+              Trafiicology Logistics' Carrier Payment app provides access to complete billing visibility at your fingertips, 24/7-365. To learn more <Link href="/contact" className="text-primary hover:underline">contact</Link> our app support team today.
             </p>
           </div>
           </Reveal>
@@ -142,7 +142,7 @@ function CarrierPaymentSection() {
              <div className="absolute bottom-0 left-0 w-full h-1/2 bg-primary rounded-b-lg"></div>
              <Image 
                 src="/image/pay.jpg"
-                alt="Traffix Carrier Payment App on a laptop"
+                alt="Trafiicology Logistics Carrier Payment App on a laptop"
                 data-ai-hint="laptop dashboard"
                 width={800}
                 height={600}
@@ -169,7 +169,7 @@ function ModesSection() {
           </Reveal>
           <Reveal>
           <p className="text-lg text-gray-600">
-            Moving 330,000+ shipments across North America annually; haul your next load with TRAFFIX today.
+            Moving 330,000+ shipments across North America annually; haul your next load with Trafiicology Logistics today.
           </p>
           </Reveal>
         </div>
@@ -212,7 +212,7 @@ export default function TraffixHeroSection() {
             <Reveal>
             <h1 className="text-5xl md:text-6xl lg:text-7xl font-black tracking-tight leading-none mb-8">
               WHY HAUL<br/>
-              <span className="text-yellow-400">FOR TRAFFIX</span>
+              <span className="text-yellow-400">FOR Trafiicology Logistics</span>
             </h1>
             </Reveal>
 

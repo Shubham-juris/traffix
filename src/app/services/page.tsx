@@ -30,69 +30,148 @@ const solutions = [
     icon: Truck,
     highlight: false,
   },
+  {
+    title: 'Cross-Border US-Canada Solutions',
+    description: 'Trafiicology Logistics provides seamless and efficient cross-border transportation between the US and Canada.',
+    image: '/image/Shipping.jpg',
+    imageHint: 'cross border trucks',
+    icon: Globe,
+    highlight: false,
+  },
+  {
+    title: 'E-commerce Fulfillment',
+    description: 'Fast and reliable e-commerce fulfillment with Trafiicology Logistics to meet growing online demands.',
+    image: '/image/Intermodal-Rail.jpg',
+    imageHint: 'ecommerce packages',
+    icon: Ship,
+    highlight: true,
+  },
+  {
+    title: 'Temperature Controlled Shipping',
+    description: 'Protect sensitive shipments with our temperature-controlled logistics powered by Trafiicology Logistics.',
+    image: '/image/greenloading.jpg',
+    imageHint: 'cold storage trucks',
+    icon: Truck,
+    highlight: false,
+  },
+  {
+    title: 'Expedited Freight',
+    description: 'Time-critical shipments delivered quickly and securely with Trafiicology Logistics expedited freight solutions.',
+    image: '/image/Shipping.jpg',
+    imageHint: 'express delivery',
+    icon: Globe,
+    highlight: false,
+  },
+  {
+    title: 'Warehousing Solutions',
+    description: 'Scalable warehousing with Trafiicology Logistics to meet seasonal or long-term storage requirements.',
+    image: '/image/Intermodal-Rail.jpg',
+    imageHint: 'warehouse shelves',
+    icon: Ship,
+    highlight: true,
+  },
+  {
+    title: 'Intermodal Transportation',
+    description: 'Leverage cost-efficient intermodal solutions with Trafiicology Logistics to keep freight moving smoothly.',
+    image: '/image/greenloading.jpg',
+    imageHint: 'rail transport',
+    icon: Truck,
+    highlight: false,
+  },
+  {
+    title: 'Managed Transportation',
+    description: 'Outsource your supply chain management to Trafiicology Logistics for increased efficiency.',
+    image: '/image/Shipping.jpg',
+    imageHint: 'supply chain team',
+    icon: Globe,
+    highlight: false,
+  },
+  {
+    title: 'Retail Distribution',
+    description: 'Keep your retail supply chain optimized and efficient with Trafiicology Logistics customized distribution.',
+    image: '/image/Intermodal-Rail.jpg',
+    imageHint: 'retail logistics',
+    icon: Ship,
+    highlight: true,
+  },
+  {
+    title: 'Project Cargo Solutions',
+    description: 'Handle oversized and complex cargo with Trafiicology Logistics project cargo expertise.',
+    image: '/image/greenloading.jpg',
+    imageHint: 'heavy lift cargo',
+    icon: Truck,
+    highlight: false,
+  },
 ];
 
 const SolutionCard = ({ solution }: { solution: (typeof solutions)[0] }) => {
-    const Icon = solution.icon;
-    return (
-        <Card className="border border-gray-700 rounded-lg overflow-hidden flex flex-col bg-transparent group transition-all duration-300">
-            <div className="relative">
-                <Image
-                    src={solution.image}
-                    alt={solution.title}
-                    data-ai-hint={solution.imageHint}
-                    width={600}
-                    height={400}
-                    className="w-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
-                />
-                <div className="absolute top-4 right-4 bg-black bg-opacity-70 rounded-full p-2 border border-gray-600">
-                    <Icon className="w-6 h-6 text-primary" />
-                </div>
-            </div>
-            <CardContent className={cn(
-                "p-6 flex flex-col flex-grow transition-colors duration-300", 
-                solution.highlight 
-                    ? "bg-primary text-primary-foreground hover:bg-primary hover:text-black" 
-                    : "bg-black text-white hover:bg-primary hover:text-black"
-            )}>
-                <h3 className="text-xl font-bold mb-4 flex-grow">{solution.title}</h3>
-                <p className={cn(
-                    "mb-6 flex-grow", 
-                    solution.highlight ? "text-primary-foreground" : "text-gray-400 group-hover:text-black"
-                )}>
-                    {solution.description}
-                </p>
-                <div className={cn("border-t", solution.highlight ? "border-black" : "border-gray-700 group-hover:border-black")}></div>
-                <Link href="#" className="flex justify-between items-center pt-4 font-semibold text-sm hover:underline">
-                    READ MORE
-                    <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-            </CardContent>
-        </Card>
-    )
-}
+  const Icon = solution.icon;
+  return (
+    <Card className="border border-gray-700 rounded-lg overflow-hidden flex flex-col bg-transparent group transition-all duration-300">
+      <div className="relative">
+        <Image
+          src={solution.image}
+          alt={solution.title}
+          data-ai-hint={solution.imageHint}
+          width={600}
+          height={400}
+          className="w-full object-cover filter grayscale group-hover:grayscale-0 transition-all duration-300"
+        />
+        <div className="absolute top-4 right-4 bg-black bg-opacity-70 rounded-full p-2 border border-gray-600">
+          <Icon className="w-6 h-6 text-primary" />
+        </div>
+      </div>
+      <CardContent
+        className={cn(
+          "p-6 flex flex-col flex-grow transition-colors duration-300",
+          solution.highlight
+            ? "bg-primary text-primary-foreground hover:bg-primary hover:text-black"
+            : "bg-black text-white hover:bg-primary hover:text-black"
+        )}
+      >
+        <h3 className="text-xl font-bold mb-4 flex-grow">{solution.title}</h3>
+        <p
+          className={cn(
+            "mb-6 flex-grow",
+            solution.highlight ? "text-primary-foreground" : "text-gray-400 group-hover:text-black"
+          )}
+        >
+          {solution.description}
+        </p>
+        <div
+          className={cn(
+            "border-t",
+            solution.highlight ? "border-black" : "border-gray-700 group-hover:border-black"
+          )}
+        ></div>
+        <Link href="#" className="flex justify-between items-center pt-4 font-semibold text-sm hover:underline">
+          READ MORE
+          <ChevronRight className="w-5 h-5 transition-transform group-hover:translate-x-1" />
+        </Link>
+      </CardContent>
+    </Card>
+  );
+};
 
 export default function ServicesPage() {
   return (
     <div className="bg-black text-white pt-20">
       <section className="py-20 sm:py-28">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-            <header className="text-left mb-16 max-w-4xl">
-                <h1 className="text-5xl sm:text-7xl font-black tracking-tight uppercase">
-                    Solutions
-                </h1>
-                <h1 className="text-5xl sm:text-7xl font-black tracking-tight uppercase text-primary">
-                    For Shippers
-                </h1>
-            </header>
+          <header className="text-left mb-16 max-w-4xl">
+            <h1 className="text-5xl sm:text-7xl font-black tracking-tight uppercase">Solutions</h1>
+            <h1 className="text-5xl sm:text-7xl font-black tracking-tight uppercase text-primary">
+              For Shippers
+            </h1>
+          </header>
 
-            <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
-                {solutions.map((solution, index) => (
-                    <Reveal key={solution.title} delay={index * 0.1}>
-                        <SolutionCard solution={solution} />
-                    </Reveal>
-                ))}
-            </div>
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+            {solutions.map((solution, index) => (
+              <Reveal key={solution.title} delay={index * 0.1}>
+                <SolutionCard solution={solution} />
+              </Reveal>
+            ))}
+          </div>
         </div>
       </section>
     </div>

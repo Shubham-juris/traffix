@@ -1,4 +1,3 @@
-
 "use client";
 
 import Image from 'next/image';
@@ -34,7 +33,6 @@ const LtlConsolidationIcon = (props: SVGProps<SVGSVGElement>) => (
         <path d="M5 9V6.5A2.5 2.5 0 0 1 7.5 4h3" /><path d="M15 4h1.5A2.5 2.5 0 0 1 19 6.5V9" /><path d="M5 15v2.5A2.5 2.5 0 0 0 7.5 20h3" /><path d="M15 20h1.5a2.5 2.5 0 0 0 2.5-2.5V15" /><path d="M12 4v16" /><path d="M9 12H5" /><path d="M19 12h-4" /><path d="M21 17h-8" /><path d="M3 17h4" /><path d="M21 7h-8" /><path d="M3 7h4" />
     </svg>
 );
-
 
 const serviceIcons: { [key: string]: (props: SVGProps<SVGSVGElement>) => JSX.Element } = {
     'Full Truckload (FTL)': Truck,
@@ -105,7 +103,7 @@ function ServicesSection() {
         </Reveal>
         <Reveal>
           <p className="text-lg text-gray-600">
-            TRAFFIX&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+            Trafiicology Logistics&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
           </p>
         </Reveal>
       </div>
@@ -218,7 +216,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-lg md:text-xl max-w-xl text-gray-300">
-                TRAFFIX&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+                Trafiicology Logistics&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
               </p>
             </Reveal>
             <Reveal delay={0.2}>

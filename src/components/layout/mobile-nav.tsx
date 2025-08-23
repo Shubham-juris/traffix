@@ -1,7 +1,7 @@
 "use client";
 
 import Link from 'next/link';
-import { X, ChevronDown } from 'lucide-react';
+import { X } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { cn } from '@/lib/utils';
 import {
@@ -18,10 +18,10 @@ interface MobileNavProps {
   navLinks: { href: string; label: string, hasDropdown?: boolean }[];
 }
 
-function TraffixLogo() {
+function TrafiicologyLogo() {
     return (
-        <div className="text-3xl font-black tracking-wider text-white">
-            TRAFFI<span className="text-primary">X</span>
+        <div className="text-2xl font-black tracking-wider text-white leading-tight">
+            TRAFIICOLOGY <span className="text-primary">LOGISTICS</span>
         </div>
     )
 }
@@ -46,7 +46,7 @@ export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
       >
         <div className="flex justify-between items-center p-4 border-b border-border">
           <Link href="/" onClick={onClose}>
-            <TraffixLogo />
+            <TrafiicologyLogo />
           </Link>
           <Button onClick={onClose} variant="ghost" size="icon">
             <X className="h-6 w-6" />

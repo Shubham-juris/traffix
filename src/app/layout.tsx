@@ -7,8 +7,8 @@ import { CustomCursor } from '@/components/custom-cursor';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Traffix Reimagined',
-  description: 'A clone of Traffix.com built with Next.js and Tailwind CSS.',
+  title: 'Trafiicology Logistics',
+  description: 'Trafiicology Logistics built with Next.js and Tailwind CSS.',
 };
 
 export default function RootLayout({

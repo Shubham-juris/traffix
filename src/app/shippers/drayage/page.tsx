@@ -23,27 +23,27 @@ const DrayageIcon = (props: SVGProps<SVGSVGElement>) => (
 const includedItems = [
     {
         title: 'Reduced Demurrage',
-        description: "TRAFFIX' drayage services team schedules pickup on the day or day following your container's arrival at the port or rail terminal, eliminating unnecessary demurrage fees.",
+        description: "Trafiicology Logistics' drayage services team schedules pickup on the day or day following your container's arrival at the port or rail terminal, eliminating unnecessary demurrage fees.",
     },
     {
         title: 'Carrier Management',
-        description: "TRAFFIX serves as your single point of contact for drayage loads at all ports and rail terminals across Canada and the USA, alleviating the burden of managing multiple providers from your team.",
+        description: "Trafiicology Logistics serves as your single point of contact for drayage loads at all ports and rail terminals across Canada and the USA, alleviating the burden of managing multiple providers from your team.",
     },
     {
         title: 'Upfront Fee Payment',
-        description: "TRAFFIX can pay port fees and per diem charges on your behalf for a streamlined experience (administrative fees may apply).",
+        description: "Trafiicology Logistics can pay port fees and per diem charges on your behalf for a streamlined experience (administrative fees may apply).",
     },
     {
         title: 'Dedicated Chassis Pools',
-        description: "At your request, TRAFFIX can secure a pool of private chassis for your drayage needs, ensuring you have top-quality equipment and capacity when and where you need it.",
+        description: "At your request, Trafiicology Logistics can secure a pool of private chassis for your drayage needs, ensuring you have top-quality equipment and capacity when and where you need it.",
     },
     {
         title: 'Transparent Invoicing',
-        description: 'TRAFFIX\' drayage services team is dedicated to "no-surprise" invoicing, ensuring you are informed of all fees upfront before receiving your itemized invoice.',
+        description: 'Trafiicology Logistics\' drayage services team is dedicated to "no-surprise" invoicing, ensuring you are informed of all fees upfront before receiving your itemized invoice.',
     },
     {
         title: 'Full Service Solution',
-        description: 'TRAFFIX provides a comprehensive range of over-the-road services, enabling our team to create customized drayage solutions from port to delivery.',
+        description: 'Trafiicology Logistics provides a comprehensive range of over-the-road services, enabling our team to create customized drayage solutions from port to delivery.',
     },
 ];
 
@@ -58,7 +58,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "TRAFFIX is committed to your business success, working with you to ensure you receive the best drayage solutions at fair market prices."
+        description: "Trafiicology Logistics is committed to your business success, working with you to ensure you receive the best drayage solutions at fair market prices."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -70,7 +70,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: "TRAFFIX is dedicated to building North America's premier carrier network, ensuring that only the most meticulously vetted drayage carriers handle your cargo."
+        description: "Trafiicology Logistics is dedicated to building North America's premier carrier network, ensuring that only the most meticulously vetted drayage carriers handle your cargo."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -103,7 +103,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: "TRAFFIX' drayage team has advanced visibility into your containers' arrival at ports, as well as their contents, enabling proactive drayage booking and container optimization strategies."
+        description: "Trafiicology Logistics' drayage team has advanced visibility into your containers' arrival at ports, as well as their contents, enabling proactive drayage booking and container optimization strategies."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -120,7 +120,7 @@ const benefits = [
 const faqItems = [
     {
         question: "Do you work with all ports and rails?",
-        answer: "Yes, TRAFFIX is your single-source solution for drayage services to/from all ports and rail terminals in the United States and Canada. To learn more, contact us today.",
+        answer: "Yes, Trafiicology Logistics is your single-source solution for drayage services to/from all ports and rail terminals in the United States and Canada. To learn more, contact us today.",
     },
     {
         question: "Do you offer all-in rates?",
@@ -136,7 +136,7 @@ const faqItems = [
     },
     {
         question: "Do you offer specialized drayage services and/or equipment?",
-        answer: "Yes, TRAFFIX provides specialized drayage services including overweight and hazardous shipments. For heavier containers, TRAFFIX offers access to triaxle chassis, expediting pickups independent of port schedules. Contact our drayage team to learn more.",
+        answer: "Yes, Trafiicology Logistics provides specialized drayage services including overweight and hazardous shipments. For heavier containers, Trafiicology Logistics offers access to triaxle chassis, expediting pickups independent of port schedules. Contact our drayage team to learn more.",
     },
 ];
 
@@ -240,7 +240,7 @@ function InsAndOutsSection() {
         </div>
       </section>
     );
-  }
+}
 
 function BenefitsSection() {
     return (
@@ -285,26 +285,14 @@ export default function DrayagePage() {
               <DrayageIcon className="w-20 h-20 text-primary mb-6" />
             </Reveal>
             <Reveal delay={0.1}>
-              <h1 className="text-5xl md:text-7xl font-black tracking-tight uppercase">
-                Drayage
+              <h1 className="text-4xl sm:text-5xl font-black mb-6 uppercase">
+                Drayage Services by <span className="text-primary">Trafiicology Logistics</span>
               </h1>
             </Reveal>
             <Reveal delay={0.2}>
-              <p className="mt-6 text-xl max-w-lg text-gray-300">
-                Timely retrieval and advancement of your time-sensitive loads.
+              <p className="text-lg sm:text-xl text-gray-300 mb-6">
+                Trafiicology Logistics provides reliable, efficient, and transparent drayage services from port to destination, ensuring your containers arrive safely and on time.
               </p>
-            </Reveal>
-            <Reveal delay={0.3}>
-              <Button
-                asChild
-                size="lg"
-                className="mt-8 bg-primary text-black hover:bg-primary/80 rounded-full px-8 py-4 font-bold text-lg group"
-              >
-                <Link href="/contact">
-                  SHIP WITH US{" "}
-                  <ChevronRight className="ml-2 h-5 w-5 transition-transform group-hover:translate-x-1" />
-                </Link>
-              </Button>
             </Reveal>
           </div>
         </div>

@@ -16,21 +16,21 @@ const timelineEvents = [
     {
         year: "2017",
         title: "OPENS US HEADQUARTERS",
-        description: "In 2017, TRAFFIX, a then $71M company, established its US headquarters in Chicago.",
+        description: "In 2017, Trafficology Logistics, a then $71M company, established its US headquarters in Chicago.",
         image: "https://placehold.co/600x400",
         imageHint: "chicago skyline"
     },
     {
         year: "2018",
         title: "MEXICO EXPANSION",
-        description: "TRAFFIX opened its Mexico operation, expanding its service offering to include Mexico cross border transportation.",
+        description: "Trafficology Logistics opened its Mexico operation, expanding its service offering to include Mexico cross border transportation.",
         image: "https://placehold.co/600x400",
         imageHint: "truck highway"
     },
     {
         year: "2019",
         title: "COURIER SERVICE",
-        description: "As part of its LTL offering, TRAFFIX added courier to its suite of services.",
+        description: "As part of its LTL offering, Trafficology Logistics added courier to its suite of services.",
         image: "https://placehold.co/600x400",
         imageHint: "delivery courier"
     }
@@ -45,7 +45,7 @@ const ctaCards = [
         href: "/services"
     },
     {
-        title: "WHY HAUL WITH TRAFFIX",
+        title: "WHY HAUL WITH TRAFFICOLOGY LOGISTICS",
         description: "Join our elite network of carriers. Let's be partners in business.",
         image: "/image/i.jpg",
         imageHint: "truck driver",
@@ -225,7 +225,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <Reveal>
                     <p className="max-w-6xl mx-auto text-center text-3xl md:text-4xl font-black tracking-wide leading-tight">
-                        SINCE 1979, TRAFFIX' TEAM OF SUPPLY CHAIN EXPERTS HAS BEEN LEVERAGING EXPERIENCE, INDUSTRY-LEADING TECHNOLOGY, AND A TRUSTED CARRIER NETWORK TO TACKLE THE MOST COMPLEX LOGISTICAL CHALLENGES WITH PRECISION AND EXPERTISE.
+                        SINCE 1979, TRAFFICOLOGY LOGISTICS' TEAM OF SUPPLY CHAIN EXPERTS HAS BEEN LEVERAGING EXPERIENCE, INDUSTRY-LEADING TECHNOLOGY, AND A TRUSTED CARRIER NETWORK TO TACKLE THE MOST COMPLEX LOGISTICAL CHALLENGES WITH PRECISION AND EXPERTISE.
                     </p>
                     </Reveal>
                 </div>
