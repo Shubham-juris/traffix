@@ -256,7 +256,7 @@ export default function LtlPage() {
       <div className="relative h-screen bg-black text-white flex items-center">
         <div className="absolute inset-0 z-0">
           <Image
-            src="/image/Truck.jpg"
+            src="/image/truck.jpeg"
             alt="Pallet of yellow boxes"
             data-ai-hint="warehouse pallets"
             fill
