@@ -8,7 +8,10 @@ import { Reveal } from '@/components/animations/reveal';
 
 const FlatbedIcon = (props: SVGProps<SVGSVGElement>) => (
     <svg {...props} xmlns="http://www.w3.org/2000/svg" width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round">
-        <path d="M2 12h17.6a2.4 2.4 0 0 0 2.4-2.4V8.4A2.4 2.4 0 0 0 19.6 6H15V4h-2v2H4a2 2 0 0 0-2 2v4Z"></path><path d="M22 12v4H15.3a2.7 2.7 0 0 1-2.6-2H2v4h10v2h-4v2h4a2 2 0 0 0 2-2v-2h6v2h-4v2h4a2 2 0 0 0 2-2v-4Z"></path><circle cx="6.5" cy="18.5" r="2.5"></circle><circle cx="17.5" cy="18.5" r="2.5"></circle>
+        <path d="M2 12h17.6a2.4 2.4 0 0 0 2.4-2.4V8.4A2.4 2.4 0 0 0 19.6 6H15V4h-2v2H4a2 2 0 0 0-2 2v4Z"></path>
+        <path d="M22 12v4H15.3a2.7 2.7 0 0 1-2.6-2H2v4h10v2h-4v2h4a2 2 0 0 0 2-2v-2h6v2h-4v2h4a2 2 0 0 0 2-2v-4Z"></path>
+        <circle cx="6.5" cy="18.5" r="2.5"></circle>
+        <circle cx="17.5" cy="18.5" r="2.5"></circle>
         <path d="M15 10h4.5"></path>
     </svg>
 )
@@ -51,7 +54,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "TRAFFIX' team of experts are committed to your business success. They apply their years of experience to solving complex challenges and delivering results with customized flatbed solutions."
+        description: "Trafiicology Logistics' team of experts are committed to your business success. They apply their years of experience to solving complex challenges and delivering results with customized flatbed solutions."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -63,7 +66,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'While some brokers prioritize maximum capacity, TRAFFIX prioritizes the right capacity. Experience peace of mind knowing your flatbed freight is handled by our meticulously vetted premium carriers.'
+        description: 'While some brokers prioritize maximum capacity, Trafiicology Logistics prioritizes the right capacity. Experience peace of mind knowing your flatbed freight is handled by our meticulously vetted premium carriers.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -96,7 +99,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'As flatbed delivery often involves job sites or meeting offload crews, we understand how important visibility in transit is. TRAFFIX provides both technology enabled flatbed shipment tracking and customized updates.'
+        description: 'As flatbed delivery often involves job sites or meeting offload crews, we understand how important visibility in transit is. Trafiicology Logistics provides both technology enabled flatbed shipment tracking and customized updates.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -116,16 +119,16 @@ const faqItems = [
         answer: "Selecting the right equipment requires asking the right questions, and our expert team, each with a minimum of 10 years of experience, knows exactly the right questions to ask to determine the best equipment for your needs. For more information, check out our equipment guide or contact our flatbed team today!",
     },
     {
-        question: "What types of freight can TRAFFIX ship?",
-        answer: "If you need it shipped, we can handle it! From lumber to auto-haulers loaded with cars, the TRAFFIX flatbed team has you covered. We commonly transport industrial manufacturing equipment and raw materials, steel, rolled aluminum, agricultural machinery, automobiles, construction equipment and supplies, wire, and tires. Don’t see your commodity listed? No problem! With over 10 years of experience each, our dedicated flatbed experts have the knowledge and expertise to manage your shipments. Contact us today to learn more!",
+        question: "What types of freight can Trafiicology Logistics ship?",
+        answer: "If you need it shipped, we can handle it! From lumber to auto-haulers loaded with cars, the Trafiicology Logistics flatbed team has you covered. We commonly transport industrial manufacturing equipment and raw materials, steel, rolled aluminum, agricultural machinery, automobiles, construction equipment and supplies, wire, and tires. Don’t see your commodity listed? No problem! With over 10 years of experience each, our dedicated flatbed experts have the knowledge and expertise to manage your shipments. Contact us today to learn more!",
     },
     {
         question: "Will you give me a rate, but not give me a truck?",
-        answer: "Unlike other service providers, TRAFFIX focuses on delivering the right capacity, not the most capacity. To provide you with an optimal rate, we start by asking detailed questions about your shipment, including the shipment date. Once we have all the necessary information, we match you with the best carriers and equipment for your needs and will provide a rate after confirming availability on your shipment date. Keep in mind, our meticulously vetted carriers are in high demand, so while we ensure availability at the time of quoting, we cannot guarantee availability if you wait too long to book! Ready to get a rate? Contact us today!",
+        answer: "Unlike other service providers, Trafiicology Logistics focuses on delivering the right capacity, not the most capacity. To provide you with an optimal rate, we start by asking detailed questions about your shipment, including the shipment date. Once we have all the necessary information, we match you with the best carriers and equipment for your needs and will provide a rate after confirming availability on your shipment date. Keep in mind, our meticulously vetted carriers are in high demand, so while we ensure availability at the time of quoting, we cannot guarantee availability if you wait too long to book! Ready to get a rate? Contact us today!",
     },
     {
         question: "What is an over-dimensional shipment?",
-        answer: "Over-dimensional shipments involve freight that exceeds the legal-size requirements for the area you are shipping in. Since regulations for moving over-dimensional freight vary by state and province, it’s crucial to have a knowledgeable team handling your shipment. Ensuring your freight has the needed permits, escorts, safety equipment, and properly trained drivers for the areas where it will be transported is essential. Knowledge and experience are key to successfully moving over-dimensional shipments, which makes partnering with the TRAFFIX Flatbed team so advantageous for your business. To learn more about over-dimensional shipping, check out our equipment guide or contact our team today to book your consultation!",
+        answer: "Over-dimensional shipments involve freight that exceeds the legal-size requirements for the area you are shipping in. Since regulations for moving over-dimensional freight vary by state and province, it’s crucial to have a knowledgeable team handling your shipment. Ensuring your freight has the needed permits, escorts, safety equipment, and properly trained drivers for the areas where it will be transported is essential. Knowledge and experience are key to successfully moving over-dimensional shipments, which makes partnering with the Trafiicology Logistics Flatbed team so advantageous for your business. To learn more about over-dimensional shipping, check out our equipment guide or contact our team today to book your consultation!",
     },
     {
         question: "What is a hot shot?",
@@ -137,11 +140,11 @@ const faqItems = [
     },
     {
         question: "How are flatbed rates calculated?",
-        answer: "Flatbed shipment rates are typically calculated based on several factors that reflect the complexity and requirements of transporting the freight. Factors that influence flatbed rates include: Distance: The longer the haul, the higher the cost. Rates are often calculated per mile, with long-haul shipments benefiting from lower per-mile rates than shorter hauls. Weight and Dimensions: The size and weight of the freight affect the rate. For example, heavier shipments will burn more fuel in transit, thus will be more expensive to transport. Oversized loads may incur additional fees as they may require permits and escorts. These are factors that must be considered when rating a flatbed shipment. Freight Type: The nature of the cargo can influence your rate. Shipments requiring special handling, such as hazardous materials or fragile items, may be rated higher due to added risks and requirements. Equipment Type and Availability: Rates can vary depending on the type of flatbed equipment needed (e.g., standard flatbed, step-deck, or double-drop trailers). The more specialized the equipment, the higher the rate tends to be as those trailers have lower availability. Seasonal capacity restrictions may also influence your rate. Tarps and Additional Services: If the shipment requires tarping, dunnage, or other additional services, these will add to the cost. Extra charges may apply for securing special loads or using equipment like bulkheads. Location and Accessibility: Flatbed rates fluctuate based on the specific equipment required, whether standard flatbeds, step-decks, or double-drop trailers. Specialized trailers often carry higher rates due to limited availability. Additionally, pickup or delivery locations with restricted access, such as high-security sites requiring TWIC card authorization, can further strain capacity and increase rates. Market Conditions: Supply and demand fluctuations, fuel prices, and seasonal trends can affect flatbed rates, leading to higher prices in periods of high demand. At TRAFFIX, our goal is to match your freight with the right capacity, balancing costs and quality to deliver maximum value. Contact us today to learn more.",
+        answer: "Flatbed shipment rates are typically calculated based on several factors that reflect the complexity and requirements of transporting the freight. Factors that influence flatbed rates include: Distance: The longer the haul, the higher the cost. Rates are often calculated per mile, with long-haul shipments benefiting from lower per-mile rates than shorter hauls. Weight and Dimensions: The size and weight of the freight affect the rate. For example, heavier shipments will burn more fuel in transit, thus will be more expensive to transport. Oversized loads may incur additional fees as they may require permits and escorts. These are factors that must be considered when rating a flatbed shipment. Freight Type: The nature of the cargo can influence your rate. Shipments requiring special handling, such as hazardous materials or fragile items, may be rated higher due to added risks and requirements. Equipment Type and Availability: Rates can vary depending on the type of flatbed equipment needed (e.g., standard flatbed, step-deck, or double-drop trailers). The more specialized the equipment, the higher the rate tends to be as those trailers have lower availability. Seasonal capacity restrictions may also influence your rate. Tarps and Additional Services: If the shipment requires tarping, dunnage, or other additional services, these will add to the cost. Extra charges may apply for securing special loads or using equipment like bulkheads. Location and Accessibility: Flatbed rates fluctuate based on the specific equipment required, whether standard flatbeds, step-decks, or double-drop trailers. Specialized trailers often carry higher rates due to limited availability. Additionally, pickup or delivery locations with restricted access, such as high-security sites requiring TWIC card authorization, can further strain capacity and increase rates. Market Conditions: Supply and demand fluctuations, fuel prices, and seasonal trends can affect flatbed rates, leading to higher prices in periods of high demand. At Trafiicology Logistics, our goal is to match your freight with the right capacity, balancing costs and quality to deliver maximum value. Contact us today to learn more.",
     },
     {
         question: "How can I track my flatbed shipment?",
-        answer: "TRAFFIX offers a range of tracking options to suit your needs, including technology-based tracking through MacroPoint, FourKites, Trucker Tools, and Project44; 24/7-365 email or phone updates from our dedicated tracking team; and GPS-enabled tracking devices attached to your freight. During shipment setup, our team will work with you to determine your preferred update frequency and tracking method, ensuring a tailored communication experience. Contact us today to learn more.",
+        answer: "Trafiicology Logistics offers a range of tracking options to suit your needs, including technology-based tracking through MacroPoint, FourKites, Trucker Tools, and Project44; 24/7-365 email or phone updates from our dedicated tracking team; and GPS-enabled tracking devices attached to your freight. During shipment setup, our team will work with you to determine your preferred update frequency and tracking method, ensuring a tailored communication experience. Contact us today to learn more.",
     },
 ];
 
@@ -219,7 +222,7 @@ function ExperienceMattersSection() {
                 <span className="text-primary">Shipping?</span>
               </h2>
               <p className="mt-6 text-lg text-gray-300 max-w-md">
-                Each member of TRAFFIX' flatbed team boasts a minimum of 10 years of experience, equipping them with the depth of knowledge and expertise required to optimize your flatbed shipments.
+                Each member of Trafiicology Logistics' flatbed team boasts a minimum of 10 years of experience, equipping them with the depth of knowledge and expertise required to optimize your flatbed shipments.
               </p>
               <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                 <Link href="#">
@@ -294,7 +297,7 @@ function ProjectFreightSection() {
               <span className="text-primary">Freight</span>
             </h2>
             <p className="mt-6 text-lg text-gray-300 max-w-md">
-              Project freight is one of the most intricate types of transportation, and our team's extensive experience and dedication to delivering high-performance results makes TRAFFIX your premier choice for project freight solutions.
+              Project freight is one of the most intricate types of transportation, and our team's extensive experience and dedication to delivering high-performance results makes Trafiicology Logistics your premier choice for project freight solutions.
             </p>
             <Button asChild variant="secondary" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold">
               <Link href="#">

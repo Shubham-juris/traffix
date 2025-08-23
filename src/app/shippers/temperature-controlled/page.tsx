@@ -29,11 +29,11 @@ const includedItems = [
     },
     {
         title: 'Technology',
-        description: "From temperature tracking to shipment visibility, TRAFFIX' team of experts are backed by industry-leading technology.",
+        description: "From temperature tracking to shipment visibility, Trafiicology Logistics' team of experts are backed by industry-leading technology.",
     },
     {
         title: 'Cold Storage',
-        description: 'TRAFFIX streamlines your temperature-controlled shipments between the US and Mexico with our secure cold storage locations at the border.',
+        description: 'Trafiicology Logistics streamlines your temperature-controlled shipments between the US and Mexico with our secure cold storage locations at the border.',
     },
     {
         title: 'Responsive Support',
@@ -41,7 +41,7 @@ const includedItems = [
     },
     {
         title: 'Seamless Claims Process',
-        description: 'When the unexpected happens, TRAFFIX has you covered. Our dedicated team makes the claims process quick and hassle-free.',
+        description: 'When the unexpected happens, Trafiicology Logistics has you covered. Our dedicated team makes the claims process quick and hassle-free.',
     },
 ];
 
@@ -111,34 +111,34 @@ const benefits = [
             </svg>
         ),
         title: 'Integrity',
-        description: "TRAFFIX earns your business through trust, reliability, communication, expert guidance, and a commitment to providing high-quality temperature-controlled shipping solutions at competitive prices."
+        description: "Trafiicology Logistics earns your business through trust, reliability, communication, expert guidance, and a commitment to providing high-quality temperature-controlled shipping solutions at competitive prices."
     },
 ]
 
 const faqItems = [
     {
         question: "What types of temperature-controlled freight do you have experience transporting?",
-        answer: "TRAFFIX has experience transporting temperature-controlled freight from fresh fruits and vegetables to pharmaceuticals. We have extensive experience with food (manufacturing, service, grocery, and retail), consumer goods, and even hazardous chemicals. Contact us today to book your next temperature controlled shipment with TRAFFIX.",
+        answer: "Trafiicology Logistics has experience transporting temperature-controlled freight from fresh fruits and vegetables to pharmaceuticals. We have extensive experience with food (manufacturing, service, grocery, and retail), consumer goods, and even hazardous chemicals. Contact us today to book your next temperature controlled shipment with Trafiicology Logistics.",
     },
     {
         question: "Are you familiar with temperature-controlled delivery to big-box retailers and grocers?",
-        answer: "TRAFFIX’ expert temperature-controlled transportation team understands the precise delivery requirements, appointment systems, and preferred carriers of all major North American retailers and grocers. This specialized knowledge ensures your goods are delivered on-time and in-full, minimizing the risk of fines. Choose TRAFFIX as your partner for temperature-controlled delivery to major retailers and grocers. Contact us today to learn more.",
+        answer: "Trafiicology Logistics’ expert temperature-controlled transportation team understands the precise delivery requirements, appointment systems, and preferred carriers of all major North American retailers and grocers. This specialized knowledge ensures your goods are delivered on-time and in-full, minimizing the risk of fines. Choose Trafiicology Logistics as your partner for temperature-controlled delivery to major retailers and grocers. Contact us today to learn more.",
     },
     {
         question: "What steps do you take to make sure temperature requirements are met?",
-        answer: "Ensuring the success of temperature-controlled transportation hinges on meticulous planning and attention to detail. Oversights in pre-cooling requirements, washout protocols, or equipment specifications can lead to delays or even shipment failure. At TRAFFIX, our team of seasoned logistics professionals takes a proactive approach. We meticulously examine every aspect of your shipment, ensuring all details are addressed to optimize its success. Explore our article outlining the critical questions we ask for every temperature-controlled shipment. Contact us today to book your next shipment!",
+        answer: "Ensuring the success of temperature-controlled transportation hinges on meticulous planning and attention to detail. Oversights in pre-cooling requirements, washout protocols, or equipment specifications can lead to delays or even shipment failure. At Trafiicology Logistics, our team of seasoned logistics professionals takes a proactive approach. We meticulously examine every aspect of your shipment, ensuring all details are addressed to optimize its success. Explore our article outlining the critical questions we ask for every temperature-controlled shipment. Contact us today to book your next shipment!",
     },
     {
         question: "What happens if I have a claim?",
-        answer: "Even the most meticulously planned loads can encounter unforeseen circumstances. While breakdowns, accidents, or extreme weather are rare, TRAFFIX’ team of temperature controlled trucking experts are prepared to deal with the uncontrollable. Our team’s thorough documentation, accurate temperature data, and efficient claims team streamlines the claims process for our clients. Our goal is to minimize disruptions to your business and ensure you receive quick reimbursement.",
+        answer: "Even the most meticulously planned loads can encounter unforeseen circumstances. While breakdowns, accidents, or extreme weather are rare, Trafiicology Logistics’ team of temperature controlled trucking experts are prepared to deal with the uncontrollable. Our team’s thorough documentation, accurate temperature data, and efficient claims team streamlines the claims process for our clients. Our goal is to minimize disruptions to your business and ensure you receive quick reimbursement.",
     },
     {
         question: "What areas do you cover with your temperature-controlled services?",
-        answer: "TRAFFIX offers comprehensive temperature-controlled transportation services across Canada, the USA, and Mexico. Leverage our elite carrier network alongside our team of seasoned professionals, each with a minimum of five years of temperature-controlled trucking expertise. Contact us today to book your next shipment!",
+        answer: "Trafiicology Logistics offers comprehensive temperature-controlled transportation services across Canada, the USA, and Mexico. Leverage our elite carrier network alongside our team of seasoned professionals, each with a minimum of five years of temperature-controlled trucking expertise. Contact us today to book your next shipment!",
     },
     {
-        question: "What temperatures does TRAFFIX ship?",
-        answer: "TRAFFIX ships freight in the following temperature ranges: Ambient/Room Temperature Shipments Sometimes referred to as protect from freeze (15 to 25 Degrees C / 59 to 77 Degrees F) Refrigerated/Cold Shipping (2 to 8 Degrees C / 35 to 46 Degrees F) Frozen Shipments (-10 to -25 Degrees C / 14 to -13 Degrees F)",
+        question: "What temperatures does Trafiicology Logistics ship?",
+        answer: "Trafiicology Logistics ships freight in the following temperature ranges: Ambient/Room Temperature Shipments Sometimes referred to as protect from freeze (15 to 25 Degrees C / 59 to 77 Degrees F) Refrigerated/Cold Shipping (2 to 8 Degrees C / 35 to 46 Degrees F) Frozen Shipments (-10 to -25 Degrees C / 14 to -13 Degrees F)",
     },
     {
         question: "What are the critical touch points that pose the greatest risk of temperature deviation in shipping?",

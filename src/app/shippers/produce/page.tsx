@@ -25,7 +25,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "At TRAFFIX, we prioritize building lasting partnerships. Serving as your trusted guide in produce transportation, our team is dedicated to ensuring your business success."
+        description: "At Trafiicology Logistics, we prioritize building lasting partnerships. Serving as your trusted guide in produce transportation, our team is dedicated to ensuring your business success."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -37,7 +37,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'While some brokers prioritize maximum capacity, TRAFFIX prioritizes the right capacity. Experience peace of mind knowing your produce is handled by our premium carriers.'
+        description: 'While some brokers prioritize maximum capacity, Trafiicology Logistics prioritizes the right capacity. Experience peace of mind knowing your produce is handled by our premium carriers.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -48,7 +48,7 @@ const benefits = [
             </svg>
         ),
         title: 'Expertise',
-        description: "With 45+ years of experience shipping produce across North America, you can trust TRAFFIX' expert team to ensure your produce arrives fresh and on time."
+        description: "With 45+ years of experience shipping produce across North America, you can trust Trafiicology Logistics' expert team to ensure your produce arrives fresh and on time."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -70,7 +70,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. TRAFFIX offers tech tracking and tailored updates to meet your needs.'
+        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. Trafiicology Logistics offers tech tracking and tailored updates to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -95,7 +95,7 @@ const includedItems = [
     },
     {
         title: 'Produce Drayage',
-        description: 'Importing produce from overseas? TRAFFIX has you covered with our temperature-controlled port drayage solutions.',
+        description: 'Importing produce from overseas? Trafiicology Logistics has you covered with our temperature-controlled port drayage solutions.',
     },
     {
         title: 'Cold Cross-Dock',
@@ -103,7 +103,7 @@ const includedItems = [
     },
     {
         title: 'Grocer Preferred',
-        description: 'Delivering produce to major grocers and retailers involves strict requirements including deliveries by appointment. Trust your TRAFFIX team and preferred carriers to meet these demanding requirements.',
+        description: 'Delivering produce to major grocers and retailers involves strict requirements including deliveries by appointment. Trust your Trafiicology Logistics team and preferred carriers to meet these demanding requirements.',
     },
     {
         title: 'Cross-Border Expertise',
@@ -114,27 +114,27 @@ const includedItems = [
 const faqItems = [
     {
         question: "How long have you been moving produce loads?",
-        answer: "TRAFFIX has been moving produce shipments across North America since 1979. In 2009 TRAFFIX merged with Fresh Logistics, a brokerage dedicated exclusively to produce. Today TRAFFIX moves more than 10,000 produce loads a year across Canada, the USA, and Mexico from farms, ports, and wholesalers to grocers and retailers. Contact our team today to book your next produce shipment.",
+        answer: "Trafiicology Logistics has been moving produce shipments across North America since 1979. In 2009 Trafiicology Logistics merged with Fresh Logistics, a brokerage dedicated exclusively to produce. Today Trafiicology Logistics moves more than 10,000 produce loads a year across Canada, the USA, and Mexico from farms, ports, and wholesalers to grocers and retailers. Contact our team today to book your next produce shipment.",
     },
     {
         question: "What areas does your network cover?",
-        answer: "TRAFFIX offers premium capacity for produce shipments across Canada, the USA, and Mexico. If you are importing produce from Mexico, we encourage you to check out our Mexico Cross Border Produce Transportation solution!",
+        answer: "Trafiicology Logistics offers premium capacity for produce shipments across Canada, the USA, and Mexico. If you are importing produce from Mexico, we encourage you to check out our Mexico Cross Border Produce Transportation solution!",
     },
     {
-        question: "Is TRAFFIX CTPAT certified?",
-        answer: "TRAFFIX is a fully insured and bonded broker with CTPAT, PIP, FAST, and Smartway certifications.",
+        question: "Is Trafiicology Logistics CTPAT certified?",
+        answer: "Trafiicology Logistics is a fully insured and bonded broker with CTPAT, PIP, FAST, and Smartway certifications.",
     },
     {
-        question: "Is TRAFFIX bonded?",
-        answer: "Yes, TRAFFIX is a fully insured and bonded broker, making us your ideal partner for shipping produce between Canada, the USA, and Mexico! Contact us today to learn more!",
+        question: "Is Trafiicology Logistics bonded?",
+        answer: "Yes, Trafiicology Logistics is a fully insured and bonded broker, making us your ideal partner for shipping produce between Canada, the USA, and Mexico! Contact us today to learn more!",
     },
     {
-        question: "Does TRAFFIX ship flowers?",
-        answer: "Yes, TRAFFIX works with several flower wholesalers in the USA with shipments destined for Canada. Contact us today to learn more!",
+        question: "Does Trafiicology Logistics ship flowers?",
+        answer: "Yes, Trafiicology Logistics works with several flower wholesalers in the USA with shipments destined for Canada. Contact us today to learn more!",
     },
     {
         question: "Do you have cold storage at the border?",
-        answer: "Yes, TRAFFIX offers cold storage at multiple US-Mexico border crossings, making importing produce from Mexico a seamless process. Contact us today to learn more!",
+        answer: "Yes, Trafiicology Logistics offers cold storage at multiple US-Mexico border crossings, making importing produce from Mexico a seamless process. Contact us today to learn more!",
     },
 ];
 
@@ -302,7 +302,6 @@ function BenefitsSection() {
         </section>
     )
 }
-
 
 export default function ProducePage() {
   return (
