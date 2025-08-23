@@ -14,18 +14,7 @@ export default function ContactPage() {
           <Reveal delay={0.1}>
           <p className="mt-8 text-xl text-gray-300">How can we help you?</p>
           </Reveal>
-          <Reveal delay={0.2}>
-          <div className="mt-4 flex flex-wrap gap-4">
-            <button className="px-4 py-2 text-sm font-bold border border-primary text-primary hover:bg-primary hover:text-black transition-colors rounded-md">
-              START HAULING WITH Trafficology Logistics            </button>
-            <button className="px-4 py-2 text-sm font-bold border border-gray-600 text-gray-300 hover:border-primary hover:text-primary transition-colors rounded-md">
-              CARRIER PAYMENT APP SUPPORT
-            </button>
-            <button className="px-4 py-2 text-sm font-bold border border-gray-600 text-gray-300 hover:border-primary hover:text-primary transition-colors rounded-md">
-              OTHER
-            </button>
-          </div>
-          </Reveal>
+          
         </header>
 
         <main className="max-w-4xl mx-auto">
