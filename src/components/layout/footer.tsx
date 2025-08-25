@@ -14,7 +14,7 @@ const footerNavLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
-function TRAFFICOLOGYLogo() {
+function Trafficologylogo() {
   return (
     <div className="text-3xl font-black tracking-tight text-white">
       TRAFFICOLOGY <span className="text-primary">LOGISTICS</span>
@@ -30,7 +30,7 @@ export function Footer() {
           {/* Sidebar: Logo & Description */}
           <div className="lg:w-1/3 text-center lg:text-left">
             <div className="pb-6 border-b border-border/50">
-              <TRAFFICOLOGYLogo />
+              <Trafficologylogo />
               <p className="text-muted-foreground mt-4 text-base max-w-sm mx-auto lg:mx-0">
                 Reimagining digital experiences.
               </p>
@@ -86,10 +86,10 @@ export function Footer() {
                     <Mail className="h-5 w-5 text-muted-foreground animate-pulse hover:animate-none" />
                   </span>
                   <a
-                    href="mailto:services@TRAFFICOLOGYLOGISTICS.com"
+                    href="mailto:services@trafficologylogistics.com"
                     className="hover:text-primary transition-all duration-300 hover:translate-x-1"
                   >
-                    services@TRAFFICOLOGYLOGISTICS.com
+                    services@trafficologylogistics.com
                   </a>
                 </p>
               </address>
@@ -140,7 +140,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 pt-6 border-t border-border/50 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} TRAFFICOLOGY LOGISTICS. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} Trafficology Logistics. All Rights Reserved.</p>
         </div>
       </div>
     </footer>

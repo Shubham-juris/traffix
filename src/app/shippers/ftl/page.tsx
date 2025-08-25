@@ -9,11 +9,11 @@ import { Reveal } from '@/components/animations/reveal';
 const includedItems = [
   {
     title: 'Multi-Modal Partner',
-    description: 'TRAFFICOLOGY LOGISTICS is equipped to handle all your full truckload requirements and can also serve as your single-source provider of North American OTR solutions.',
+    description: 'Trafficology Logistics is equipped to handle all your full truckload requirements and can also serve as your single-source provider of North American OTR solutions.',
   },
   {
     title: 'Flexibility',
-    description: 'When demand shifts unexpectedly or last-minute changes to your supply chain are needed, TRAFFICOLOGY LOGISTICS is ready to adapt alongside your business.',
+    description: 'When demand shifts unexpectedly or last-minute changes to your supply chain are needed, Trafficology Logistics is ready to adapt alongside your business.',
   },
   {
     title: 'Responsiveness',
@@ -25,7 +25,7 @@ const includedItems = [
   },
   {
     title: 'Expert Problem Solving',
-    description: 'At TRAFFICOLOGY LOGISTICS, we specialize in solving complex problems. Our Net Promoter Score (NPS) feedback indicates this is what our customers appreciate most about working with our team.',
+    description: 'At Trafficology Logistics, we specialize in solving complex problems. Our Net Promoter Score (NPS) feedback indicates this is what our customers appreciate most about working with our team.',
   },
   {
     title: 'Theft Prevention',
@@ -44,7 +44,7 @@ const benefits = [
       </svg>
     ),
     title: 'Collaborative Partnership',
-    description: "TRAFFICOLOGY LOGISTICS' team of experts are committed to the business success of our clients. We apply our years of experience to solving complex challenges and delivering results."
+    description: "Trafficology Logistics' team of experts are committed to the business success of our clients. We apply our years of experience to solving complex challenges and delivering results."
   },
   {
     icon: (props: SVGProps<SVGSVGElement>) => (
@@ -56,7 +56,7 @@ const benefits = [
       </svg>
     ),
     title: 'The Right Capacity',
-    description: 'While some brokers prioritize maximum capacity, TRAFFICOLOGY LOGISTICS prioritizes the right capacity. Experience peace of mind knowing your freight is handled by our meticulously vetted premium carriers.'
+    description: 'While some brokers prioritize maximum capacity, Trafficology Logistics prioritizes the right capacity. Experience peace of mind knowing your freight is handled by our meticulously vetted premium carriers.'
   },
   {
     icon: (props: SVGProps<SVGSVGElement>) => (
@@ -89,7 +89,7 @@ const benefits = [
       </svg>
     ),
     title: 'Visibility',
-    description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. TRAFFICOLOGY LOGISTICS offers tech tracking and tailored updates to meet your needs.'
+    description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. Trafficology Logistics offers tech tracking and tailored updates to meet your needs.'
   },
   {
     icon: (props: SVGProps<SVGSVGElement>) => (
@@ -106,23 +106,23 @@ const benefits = [
 const faqItems = [
   {
     question: "What countries do you serve?",
-    answer: "TRAFFICOLOGY LOGISTICS provides over-the-road transportation services across Canada, the USA, and Mexico. Contact Us today to start building your over-the-road solutions!",
+    answer: "Trafficology Logistics provides over-the-road transportation services across Canada, the USA, and Mexico. Contact Us today to start building your over-the-road solutions!",
   },
   {
     question: "Do you own your own assets?",
-    answer: "TRAFFICOLOGY LOGISTICS has a small fleet of trucks and trailers located in Canada. Our fleet operates domestically within Canada and cross-border between the USA and Canada.",
+    answer: "Trafficology Logistics has a small fleet of trucks and trailers located in Canada. Our fleet operates domestically within Canada and cross-border between the USA and Canada.",
   },
   {
     question: "Do you ship hazardous freight?",
-    answer: "Yes, TRAFFICOLOGY LOGISTICS has a network of haz-certified premium carriers. TRAFFICOLOGY LOGISTICS does NOT transport Class 1 (Explosives), Class 2.1 (Flammable Gasses), Class 2.3 (Toxic Gasses), Class 5.1 (Oxidizing Substances), Class 6.1 (Toxic Substances), Class 7 (Radioactive Materials), or Packing Group I.",
+    answer: "Yes, Trafficology Logistics has a network of haz-certified premium carriers. Trafficology Logistics does NOT transport Class 1 (Explosives), Class 2.1 (Flammable Gasses), Class 2.3 (Toxic Gasses), Class 5.1 (Oxidizing Substances), Class 6.1 (Toxic Substances), Class 7 (Radioactive Materials), or Packing Group I.",
   },
   {
     question: "How many trucks do you have in your network?",
-    answer: "In today’s transportation market, where fraud and theft are significant concerns, TRAFFICOLOGY LOGISTICS prioritizes having the right capacity over the most capacity. With over 45 years of experience, we’ve developed a meticulous vetting process overseen by our expert risk management team. This ensures that we provide our clients with extensive capacity across North America, partnering only with premium carriers who have proven track records. Contact us today to discover how we can secure the right capacity for your transportation needs.",
+    answer: "In today’s transportation market, where fraud and theft are significant concerns, Trafficology Logistics prioritizes having the right capacity over the most capacity. With over 45 years of experience, we’ve developed a meticulous vetting process overseen by our expert risk management team. This ensures that we provide our clients with extensive capacity across North America, partnering only with premium carriers who have proven track records. Contact us today to discover how we can secure the right capacity for your transportation needs.",
   },
   {
-    question: "Is TRAFFICOLOGY LOGISTICS CTPAT certified?",
-    answer: "TRAFFICOLOGY LOGISTICS goes beyond just having a CTPAT (Customs Trade Partnership Against Terrorism) certification; we also hold FAST (Free and Secure Trade), and PIP (Partners in Protection) certifications, and are fully bonded and insured. This comprehensive accreditation makes us the perfect choice as your cross-border partner. Contact us today to learn more!",
+    question: "Is Trafficology Logistics CTPAT certified?",
+    answer: "Trafficology Logistics goes beyond just having a CTPAT (Customs Trade Partnership Against Terrorism) certification; we also hold FAST (Free and Secure Trade), and PIP (Partners in Protection) certifications, and are fully bonded and insured. This comprehensive accreditation makes us the perfect choice as your cross-border partner. Contact us today to learn more!",
   },
 ];
 
@@ -230,7 +230,7 @@ function WhyTraffixSection() {
             <div>
               <p className="text-lg text-gray-400">Flexibility to meet your needs</p>
               <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
-                Why TRAFFICOLOGY LOGISTICS<br />
+                Why Trafficology Logistics<br />
                 <span className="text-primary">for FTL?</span>
               </h2>
               <p className="mt-6 text-lg text-gray-300">

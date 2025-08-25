@@ -45,7 +45,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'Whether selecting the ideal Class 1 railroad for your supply chain or choosing the best drayage carrier, TRAFFICOLOGY LOGISTICS ensures you have the right capacity to meet your needs.'
+        description: 'Whether selecting the ideal Class 1 railroad for your supply chain or choosing the best drayage carrier, Trafficology Logistics ensures you have the right capacity to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -56,7 +56,7 @@ const benefits = [
             </svg>
         ),
         title: 'Expertise',
-        description: 'Trust TRAFFICOLOGY LOGISTICS\' intermodal team, each with 5+ years of experience, to guide your intermodal shipping needs and deliver high-performance results.'
+        description: 'Trust Trafficology Logistics\' intermodal team, each with 5+ years of experience, to guide your intermodal shipping needs and deliver high-performance results.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -95,11 +95,11 @@ const benefits = [
 const includedItems = [
     {
         title: 'Dedicated Team',
-        description: "Unlike many other intermodal marketing companies (IMCs), TRAFFICOLOGY LOGISTICS' intermodal service is delivered by dedicated account managers, ensuring you feel valued and supported regardless of your volume.",
+        description: "Unlike many other intermodal marketing companies (IMCs), Trafficology Logistics' intermodal service is delivered by dedicated account managers, ensuring you feel valued and supported regardless of your volume.",
     },
     {
         title: 'Comprehensive Service Offering',
-        description: 'TRAFFICOLOGY LOGISTICS offers a true IMC operating model with full control of drayage and railroad movements to ensure superior service and cost control.',
+        description: 'Trafficology Logistics offers a true IMC operating model with full control of drayage and railroad movements to ensure superior service and cost control.',
     },
     {
         title: 'Customized Solutions',
@@ -107,7 +107,7 @@ const includedItems = [
     },
     {
         title: 'Leverage our Relationships',
-        description: 'TRAFFICOLOGY LOGISTICS maintains direct relationships with all Class 1 railroads, enabling us to collaborate closely with them to establish tailored requirements on your behalf.',
+        description: 'Trafficology Logistics maintains direct relationships with all Class 1 railroads, enabling us to collaborate closely with them to establish tailored requirements on your behalf.',
     },
     {
         title: 'Predictable Pricing',
@@ -133,12 +133,12 @@ const faqItems = [
         answer: "On lanes ranging from 800 to 1,500 miles, shipping intermodal will add 1 – 2 days of transit time. For lanes over 1,500 miles, intermodal will take 2-3 days longer in transit. Contact our team today to learn about transit times on your shipping lanes.",
     },
     {
-        question: "What type of intermodal service does TRAFFICOLOGY LOGISTICS offer?",
-        answer: "TRAFFICOLOGY LOGISTICS’ intermodal team will build customized, full-service solutions based on your needs. Whether you are shipping from port-to-port, door-to-door, or anything in between, TRAFFICOLOGY LOGISTICS’ comprehensive service offering has you covered from pickup to delivery. Contact us today to learn more.",
+        question: "What type of intermodal service does Trafficology Logistics offer?",
+        answer: "Trafficology Logistics’ intermodal team will build customized, full-service solutions based on your needs. Whether you are shipping from port-to-port, door-to-door, or anything in between, Trafficology Logistics’ comprehensive service offering has you covered from pickup to delivery. Contact us today to learn more.",
     },
     {
-        question: "Where does the TRAFFICOLOGY LOGISTICS intermodal network extend?",
-        answer: "TRAFFICOLOGY LOGISTICS works with all Class 1 railroads across Canada, the USA, and Mexico. Contact our team today to learn more!",
+        question: "Where does the Trafficology Logistics intermodal network extend?",
+        answer: "Trafficology Logistics works with all Class 1 railroads across Canada, the USA, and Mexico. Contact our team today to learn more!",
     },
 ];
 

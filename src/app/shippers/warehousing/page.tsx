@@ -9,11 +9,11 @@ import { SVGProps } from 'react';
 const includedItems = [
     {
         title: 'Integrated LOGISTICS Solutions',
-        description: 'TRAFFICOLOGY LOGISTICS is your single-source solution provider for bonded and non-bonded warehousing, providing comprehensive services such as short-term and long-term storage, drayage, over-the-road (OTR) transportation, and container destuffing/rework.',
+        description: 'Trafficology Logistics is your single-source solution provider for bonded and non-bonded warehousing, providing comprehensive services such as short-term and long-term storage, drayage, over-the-road (OTR) transportation, and container destuffing/rework.',
     },
     {
         title: 'Reduced Minimum Requirements',
-        description: "Leverage TRAFFICOLOGY LOGISTICS' existing relationships and volume to access smaller amounts of warehousing space, eliminating the need to meet higher minimum space requirements.",
+        description: "Leverage Trafficology Logistics' existing relationships and volume to access smaller amounts of warehousing space, eliminating the need to meet higher minimum space requirements.",
     },
     {
         title: 'Damage & Theft Prevention',
@@ -25,11 +25,11 @@ const includedItems = [
     },
     {
         title: 'Market Expansion Support',
-        description: 'As your business expands, TRAFFICOLOGY LOGISTICS will find the right warehouse capacity to meet your needs. Rest assured that all new warehouses must undergo a thorough vetting process to ensure they meet our high quality standards.',
+        description: 'As your business expands, Trafficology Logistics will find the right warehouse capacity to meet your needs. Rest assured that all new warehouses must undergo a thorough vetting process to ensure they meet our high quality standards.',
     },
     {
         title: 'Technology',
-        description: "Utilize TRAFFICOLOGY LOGISTICS' cloud-based warehouse management system (WMS) or integrate with your current system.",
+        description: "Utilize Trafficology Logistics' cloud-based warehouse management system (WMS) or integrate with your current system.",
     },
 ];
 
@@ -44,7 +44,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "TRAFFICOLOGY LOGISTICS' team of experts are committed to the business success of our clients. They apply their years of experience to solving complex challenges and delivering results."
+        description: "Trafficology Logistics' team of experts are committed to the business success of our clients. They apply their years of experience to solving complex challenges and delivering results."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -56,7 +56,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'TRAFFICOLOGY LOGISTICS ensures peace of mind by prioritizing the right capacity over the most capacity, partnering with meticulously vetted carriers and warehouses for secure freight handling.'
+        description: 'Trafficology Logistics ensures peace of mind by prioritizing the right capacity over the most capacity, partnering with meticulously vetted carriers and warehouses for secure freight handling.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -89,7 +89,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. TRAFFICOLOGY LOGISTICS offers tech tracking and tailored updates to meet your needs.'
+        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. Trafficology Logistics offers tech tracking and tailored updates to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -106,19 +106,19 @@ const benefits = [
 const faqItems = [
     {
         question: "Are your warehouses bonded?",
-        answer: "Yes! TRAFFICOLOGY LOGISTICS offers both bonded and non-bonded warehousing options to meet your individual needs. Contact us today to learn more!",
+        answer: "Yes! Trafficology Logistics offers both bonded and non-bonded warehousing options to meet your individual needs. Contact us today to learn more!",
     },
     {
         question: "What kind of warehouse leasing options do you offer?",
-        answer: "TRAFFICOLOGY LOGISTICS provides flexible warehouse leasing options tailored to your specific requirements. Whether you need short-term cross-docking, temporary storage for a week to a couple of months, or dedicated space for three months or longer, we can meet your needs. Contact our warehousing team today to discuss leasing options!",
+        answer: "Trafficology Logistics provides flexible warehouse leasing options tailored to your specific requirements. Whether you need short-term cross-docking, temporary storage for a week to a couple of months, or dedicated space for three months or longer, we can meet your needs. Contact our warehousing team today to discuss leasing options!",
     },
     {
         question: "Where are your warehouses located?",
-        answer: "TRAFFICOLOGY LOGISTICS offers warehousing space strategically located across the USA and Canada. Additionally, we can source, vet, and manage warehouses in your specific service area as required. Contact us today for our current space availability or to discuss your unique warehousing requirements.",
+        answer: "Trafficology Logistics offers warehousing space strategically located across the USA and Canada. Additionally, we can source, vet, and manage warehouses in your specific service area as required. Contact us today for our current space availability or to discuss your unique warehousing requirements.",
     },
     {
         question: "What industries do you serve?",
-        answer: "We currently serve clients across industries including solar, furniture, automotive, agricultural equipment, and others. Our services also include temperature-controlled storage for items like produce and pharmaceuticals. TRAFFICOLOGY LOGISTICS ensures each client is paired with the right warehousing partners for their unique needs. If our current partners don’t meet your requirements, we will source, vet, and manage new facilities that meet our high standards on your behalf. Contact us today for more information!",
+        answer: "We currently serve clients across industries including solar, furniture, automotive, agricultural equipment, and others. Our services also include temperature-controlled storage for items like produce and pharmaceuticals. Trafficology Logistics ensures each client is paired with the right warehousing partners for their unique needs. If our current partners don’t meet your requirements, we will source, vet, and manage new facilities that meet our high standards on your behalf. Contact us today for more information!",
     },
     {
         question: "What are your space minimums?",
@@ -129,10 +129,10 @@ const faqItems = [
         answer: "Our partner warehouses feature theft prevention measures like secure, well-lit yards with barbed wire and/or electric fencing, cameras, and guard shacks. All staff undergo thorough background checks for reliable freight handling. We also employ SOPs, including driver verification and photographing all identifiers on the equipment picking up, to ensure only trusted carriers handle your freight. Contact us today for further details!",
     },
     {
-        question: "Does TRAFFICOLOGY LOGISTICS offer a WMS?",
+        question: "Does Trafficology Logistics offer a WMS?",
         answer: (
             <div className="space-y-4">
-                <p>TRAFFICOLOGY LOGISTICS offers a user-friendly Warehouse Management System (WMS) designed to enhance efficiency, visibility, and workflow automation. Our WMS empowers businesses to streamline operations and deliver exceptional customer service.</p>
+                <p>Trafficology Logistics offers a user-friendly Warehouse Management System (WMS) designed to enhance efficiency, visibility, and workflow automation. Our WMS empowers businesses to streamline operations and deliver exceptional customer service.</p>
                 <h4 className="font-bold">Key Features:</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
                     <li><strong>Inventory Management</strong> – Real-time tracking for accuracy and control</li>
@@ -265,14 +265,14 @@ function WmsSection() {
             </Reveal>
             <Reveal>
               <div>
-                <p className="text-lg text-gray-400">Core Capabilities of TRAFFICOLOGY LOGISTICS'</p>
+                <p className="text-lg text-gray-400">Core Capabilities of Trafficology Logistics'</p>
                 <h2 className="text-4xl sm:text-5xl font-black tracking-tight mt-2 uppercase">
                   Warehouse<br />
                   Managment<br />
                   <span className="text-primary">System (WMS)</span>
                 </h2>
                 <p className="mt-6 text-base text-gray-300 max-w-md">
-                  TRAFFICOLOGY LOGISTICS offers a modern, cloud-based WMS designed to enhance efficiency, visibility, and workflow automation. With features like real-time inventory management, business intelligence, shipment tracking, and cost controls, our intuitive system simplifies operations and boosts performance. Customizable roles, a user-friendly interface, and mobile compatibility ensure flexibility and ease of use. Contact us today to learn more!
+                  Trafficology Logistics offers a modern, cloud-based WMS designed to enhance efficiency, visibility, and workflow automation. With features like real-time inventory management, business intelligence, shipment tracking, and cost controls, our intuitive system simplifies operations and boosts performance. Customizable roles, a user-friendly interface, and mobile compatibility ensure flexibility and ease of use. Contact us today to learn more!
                 </p>
                 <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
                   <Link href="#">

@@ -25,7 +25,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "At TRAFFICOLOGY LOGISTICS, we prioritize building lasting partnerships. Serving as your trusted guide in produce transportation, our team is dedicated to ensuring your business success."
+        description: "At Trafficology Logistics, we prioritize building lasting partnerships. Serving as your trusted guide in produce transportation, our team is dedicated to ensuring your business success."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -37,7 +37,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'While some brokers prioritize maximum capacity, TRAFFICOLOGY LOGISTICS prioritizes the right capacity. Experience peace of mind knowing your produce is handled by our premium carriers.'
+        description: 'While some brokers prioritize maximum capacity, Trafficology Logistics prioritizes the right capacity. Experience peace of mind knowing your produce is handled by our premium carriers.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -48,7 +48,7 @@ const benefits = [
             </svg>
         ),
         title: 'Expertise',
-        description: "With 45+ years of experience shipping produce across North America, you can trust TRAFFICOLOGY LOGISTICS' expert team to ensure your produce arrives fresh and on time."
+        description: "With 45+ years of experience shipping produce across North America, you can trust Trafficology Logistics' expert team to ensure your produce arrives fresh and on time."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -70,7 +70,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. TRAFFICOLOGY LOGISTICS offers tech tracking and tailored updates to meet your needs.'
+        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. Trafficology Logistics offers tech tracking and tailored updates to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -95,7 +95,7 @@ const includedItems = [
     },
     {
         title: 'Produce Drayage',
-        description: 'Importing produce from overseas? TRAFFICOLOGY LOGISTICS has you covered with our temperature-controlled port drayage solutions.',
+        description: 'Importing produce from overseas? Trafficology Logistics has you covered with our temperature-controlled port drayage solutions.',
     },
     {
         title: 'Cold Cross-Dock',
@@ -103,7 +103,7 @@ const includedItems = [
     },
     {
         title: 'Grocer Preferred',
-        description: 'Delivering produce to major grocers and retailers involves strict requirements including deliveries by appointment. Trust your TRAFFICOLOGY LOGISTICS team and preferred carriers to meet these demanding requirements.',
+        description: 'Delivering produce to major grocers and retailers involves strict requirements including deliveries by appointment. Trust your Trafficology Logistics team and preferred carriers to meet these demanding requirements.',
     },
     {
         title: 'Cross-Border Expertise',
@@ -114,27 +114,27 @@ const includedItems = [
 const faqItems = [
     {
         question: "How long have you been moving produce loads?",
-        answer: "TRAFFICOLOGY LOGISTICS has been moving produce shipments across North America since 1979. In 2009 TRAFFICOLOGY LOGISTICS merged with Fresh LOGISTICS, a brokerage dedicated exclusively to produce. Today TRAFFICOLOGY LOGISTICS moves more than 10,000 produce loads a year across Canada, the USA, and Mexico from farms, ports, and wholesalers to grocers and retailers. Contact our team today to book your next produce shipment.",
+        answer: "Trafficology Logistics has been moving produce shipments across North America since 1979. In 2009 Trafficology Logistics merged with Fresh LOGISTICS, a brokerage dedicated exclusively to produce. Today Trafficology Logistics moves more than 10,000 produce loads a year across Canada, the USA, and Mexico from farms, ports, and wholesalers to grocers and retailers. Contact our team today to book your next produce shipment.",
     },
     {
         question: "What areas does your network cover?",
-        answer: "TRAFFICOLOGY LOGISTICS offers premium capacity for produce shipments across Canada, the USA, and Mexico. If you are importing produce from Mexico, we encourage you to check out our Mexico Cross Border Produce Transportation solution!",
+        answer: "Trafficology Logistics offers premium capacity for produce shipments across Canada, the USA, and Mexico. If you are importing produce from Mexico, we encourage you to check out our Mexico Cross Border Produce Transportation solution!",
     },
     {
-        question: "Is TRAFFICOLOGY LOGISTICS CTPAT certified?",
-        answer: "TRAFFICOLOGY LOGISTICS is a fully insured and bonded broker with CTPAT, PIP, FAST, and Smartway certifications.",
+        question: "Is Trafficology Logistics CTPAT certified?",
+        answer: "Trafficology Logistics is a fully insured and bonded broker with CTPAT, PIP, FAST, and Smartway certifications.",
     },
     {
-        question: "Is TRAFFICOLOGY LOGISTICS bonded?",
-        answer: "Yes, TRAFFICOLOGY LOGISTICS is a fully insured and bonded broker, making us your ideal partner for shipping produce between Canada, the USA, and Mexico! Contact us today to learn more!",
+        question: "Is Trafficology Logistics bonded?",
+        answer: "Yes, Trafficology Logistics is a fully insured and bonded broker, making us your ideal partner for shipping produce between Canada, the USA, and Mexico! Contact us today to learn more!",
     },
     {
-        question: "Does TRAFFICOLOGY LOGISTICS ship flowers?",
-        answer: "Yes, TRAFFICOLOGY LOGISTICS works with several flower wholesalers in the USA with shipments destined for Canada. Contact us today to learn more!",
+        question: "Does Trafficology Logistics ship flowers?",
+        answer: "Yes, Trafficology Logistics works with several flower wholesalers in the USA with shipments destined for Canada. Contact us today to learn more!",
     },
     {
         question: "Do you have cold storage at the border?",
-        answer: "Yes, TRAFFICOLOGY LOGISTICS offers cold storage at multiple US-Mexico border crossings, making importing produce from Mexico a seamless process. Contact us today to learn more!",
+        answer: "Yes, Trafficology Logistics offers cold storage at multiple US-Mexico border crossings, making importing produce from Mexico a seamless process. Contact us today to learn more!",
     },
 ];
 

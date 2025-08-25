@@ -103,7 +103,7 @@ function ServicesSection() {
         </Reveal>
         <Reveal>
           <p className="text-lg text-gray-600">
-            TRAFFICOLOGY LOGISTICS&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+            Trafficology Logistics&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
           </p>
         </Reveal>
       </div>
@@ -216,7 +216,7 @@ export default function Home() {
             </Reveal>
             <Reveal delay={0.1}>
               <p className="mt-6 text-lg md:text-xl max-w-xl text-gray-300">
-                TRAFFICOLOGY LOGISTICS&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
+                 Trafficology Logistics&apos; solutions are backed by expertise, the right capacity, and 24/7-365 support. We engineer technology-enabled solutions to tackle the most complex supply chain challenges.
               </p>
             </Reveal>
             <Reveal delay={0.2}>

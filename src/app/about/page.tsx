@@ -134,7 +134,7 @@ export default function AboutPage() {
                 <div className="container mx-auto px-4 sm:px-6 lg:px-8">
                     <Reveal>
                     <p className="max-w-6xl mx-auto text-center text-3xl md:text-4xl font-black tracking-wide leading-tight">
-                        The TRAFFICOLOGY LOGISTICS team leverages deep supply chain expertise, industry-leading technology, and a trusted carrier network to tackle even the most complex LOGISTICS challenges with precision and efficiency.
+                        The Trafficology Logistics team leverages deep supply chain expertise, industry-leading technology, and a trusted carrier network to tackle even the most complex LOGISTICS challenges with precision and efficiency.
                     </p>
                     </Reveal>
                 </div>

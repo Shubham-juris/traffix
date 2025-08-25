@@ -34,7 +34,7 @@ const includedItems = [
     },
     {
         title: 'Network Planning',
-        description: 'TRAFFICOLOGY LOGISTICS customizes solutions tailored to optimize order management, load planning, transportation costs, efficiency, and transit times.',
+        description: 'Trafficology Logistics customizes solutions tailored to optimize order management, load planning, transportation costs, efficiency, and transit times.',
     },
     {
         title: 'Flexible Control',
@@ -42,11 +42,11 @@ const includedItems = [
     },
     {
         title: 'Intimate Scalability',
-        description: 'TRAFFICOLOGY LOGISTICS engineers and implements customized systems and processes designed to help your business scale, while our expert team maintains a strong focus on individualized and detailed aspects.',
+        description: 'Trafficology Logistics engineers and implements customized systems and processes designed to help your business scale, while our expert team maintains a strong focus on individualized and detailed aspects.',
     },
     {
         title: 'The Right Resources',
-        description: 'TRAFFICOLOGY LOGISTICS aims to reduce financial and operational costs by leveraging the three pillars of MTS: technology, our team of experts, and the right capacity.',
+        description: 'Trafficology Logistics aims to reduce financial and operational costs by leveraging the three pillars of MTS: technology, our team of experts, and the right capacity.',
     },
 ];
 
@@ -61,7 +61,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "TRAFFICOLOGY LOGISTICS MTS is an extension of your business, bringing over 45+ years of North American transportation expertise to optimize your supply chain operations."
+        description: "Trafficology Logistics MTS is an extension of your business, bringing over 45+ years of North American transportation expertise to optimize your supply chain operations."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -73,7 +73,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'While some outsourced LOGISTICS providers prioritize maximum capacity, TRAFFICOLOGY LOGISTICS curates the right capacity solutions with our meticulously vetted premium carrier network.'
+        description: 'While some outsourced LOGISTICS providers prioritize maximum capacity, Trafficology Logistics curates the right capacity solutions with our meticulously vetted premium carrier network.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -106,7 +106,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. TRAFFICOLOGY LOGISTICS offers tech tracking and tailored updates to meet your needs.'
+        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. Trafficology Logistics offers tech tracking and tailored updates to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -127,7 +127,7 @@ const faqItems = [
     },
     {
         question: "What managed transportation services do you offer?",
-        answer: "TRAFFICOLOGY LOGISTICS MTS encompasses transportation planning and optimization, carrier procurement and management, shipment execution and tracking, performance analytics and reporting, and freight auditing and payment. For more information on our comprehensive services, contact us today!",
+        answer: "Trafficology Logistics MTS encompasses transportation planning and optimization, carrier procurement and management, shipment execution and tracking, performance analytics and reporting, and freight auditing and payment. For more information on our comprehensive services, contact us today!",
     },
     {
         question: "What operating model best fits my business?",
@@ -136,21 +136,21 @@ const faqItems = [
                 <p>While we don’t believe in one-size-fits-all solutions, here are some general guidelines for determining which operating model is best for your business:</p>
                 <h4 className="font-bold mt-4 mb-2">Full Outsource (4PL)</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                    <li>This is a centralized solution that includes technology, an expertly trained dedicated team, and TRAFFICOLOGY LOGISTICS’ premium capacity.</li>
-                    <li>TRAFFICOLOGY LOGISTICS industry-leading transportation management system (TMS) will be used for all in-scope modes.</li>
-                    <li>TRAFFICOLOGY LOGISTICS will execute and manage all in-scope modes of transportation for you through contracted capacity with carriers from our premium network.</li>
+                    <li>This is a centralized solution that includes technology, an expertly trained dedicated team, and Trafficology Logistics’ premium capacity.</li>
+                    <li>Trafficology Logistics industry-leading transportation management system (TMS) will be used for all in-scope modes.</li>
+                    <li>Trafficology Logistics will execute and manage all in-scope modes of transportation for you through contracted capacity with carriers from our premium network.</li>
                 </ul>
                 <h4 className="font-bold mt-4 mb-2">Managed TMS (4PL)</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                    <li>This is a centralized solution that includes technology, an expertly trained dedicated team, and a combination of your capacity and TRAFFICOLOGY LOGISTICS’ premium capacity.</li>
+                    <li>This is a centralized solution that includes technology, an expertly trained dedicated team, and a combination of your capacity and Trafficology Logistics’ premium capacity.</li>
                     <li>This is an end-to-end supply chain management solution.</li>
-                    <li>TRAFFICOLOGY LOGISTICS will manage all in-scope moves on your behalf through contracted carriers.</li>
+                    <li>Trafficology Logistics will manage all in-scope moves on your behalf through contracted carriers.</li>
                 </ul>
                 <h4 className="font-bold mt-4 mb-2">SaaS Solution</h4>
                 <ul className="list-disc pl-5 space-y-1 text-gray-700">
-                    <li>This is a technology only solution that gives you access to TRAFFICOLOGY LOGISTICS’ cloud-based TMS where you can manage all in-scope modes.</li>
+                    <li>This is a technology only solution that gives you access to Trafficology Logistics’ cloud-based TMS where you can manage all in-scope modes.</li>
                     <li>Your team is in the driver’s seat, executing and managing shipments within the TMS.</li>
-                    <li>Network capacity is contracted and managed by your team; however, you may also access carriers from TRAFFICOLOGY LOGISTICS’ premium network.</li>
+                    <li>Network capacity is contracted and managed by your team; however, you may also access carriers from Trafficology Logistics’ premium network.</li>
                 </ul>
                 <p className="mt-4">We encourage you to book a no-obligation consultation to determine which operating model will produce the best results for your business. Book your consultation today!</p>
             </div>
@@ -158,7 +158,7 @@ const faqItems = [
     },
     {
         question: "Do managed transportation solutions really deliver cost savings?",
-        answer: "Yes, on average, TRAFFICOLOGY LOGISTICS has saved its managed transportation clients 18% – 25% overall in the first year of partnership. Book your no-obligation consultation today to learn more about how TRAFFICOLOGY LOGISTICS’ managed transportation solutions can generate savings for your business!",
+        answer: "Yes, on average, Trafficology Logistics has saved its managed transportation clients 18% – 25% overall in the first year of partnership. Book your no-obligation consultation today to learn more about how Trafficology Logistics’ managed transportation solutions can generate savings for your business!",
     },
     {
         question: "What does the implementation process look like if I am interested?",

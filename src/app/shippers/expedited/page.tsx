@@ -22,15 +22,15 @@ const ExpeditedIcon = (props: SVGProps<SVGSVGElement>) => (
 const includedItems = [
     {
         title: 'Quick Turnarounds',
-        description: "Trust TRAFFICOLOGY LOGISTICS' expedited team to have drivers onsite within an hour of receiving your load details. When equipment requirements change at the last minute, we can pivot quickly to maintain critical timelines.",
+        description: "Trust Trafficology Logistics' expedited team to have drivers onsite within an hour of receiving your load details. When equipment requirements change at the last minute, we can pivot quickly to maintain critical timelines.",
     },
     {
         title: 'Airport Pickups',
-        description: "When your shipment lands, TRAFFICOLOGY LOGISTICS' expedited team ensures a driver is onsite to meet your freight as it is offloaded, minimizing any delay between landing and delivery.",
+        description: "When your shipment lands, Trafficology Logistics' expedited team ensures a driver is onsite to meet your freight as it is offloaded, minimizing any delay between landing and delivery.",
     },
     {
         title: 'Specialized Delivery Services',
-        description: "When your urgent shipment requires specialized handling, TRAFFICOLOGY LOGISTICS' expedited team has you covered. Whether it's white glove or inside delivery, we ensure your freight receives the meticulous care it needs.",
+        description: "When your urgent shipment requires specialized handling, Trafficology Logistics' expedited team has you covered. Whether it's white glove or inside delivery, we ensure your freight receives the meticulous care it needs.",
     },
     {
         title: 'Accuracy',
@@ -57,7 +57,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "TRAFFICOLOGY LOGISTICS' team of expedited experts is committed to your business success, leveraging years of experience to ensure your urgent shipments arrive complete and on schedule."
+        description: "Trafficology Logistics' team of expedited experts is committed to your business success, leveraging years of experience to ensure your urgent shipments arrive complete and on schedule."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -69,7 +69,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: "TRAFFICOLOGY LOGISTICS is committed to assembling North America's premier group of carriers. Trust that your expedited shipment is handled by our rigorously vetted service providers."
+        description: "Trafficology Logistics is committed to assembling North America's premier group of carriers. Trust that your expedited shipment is handled by our rigorously vetted service providers."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -119,7 +119,7 @@ const benefits = [
 const faqItems = [
     {
         question: "In what countries can you provide expedited service?",
-        answer: "TRAFFICOLOGY LOGISTICS offers expedited services within and between the United States and Canada. To learn more or to book your expedited shipment, contact us today.",
+        answer: "Trafficology Logistics offers expedited services within and between the United States and Canada. To learn more or to book your expedited shipment, contact us today.",
     },
     {
         question: "Can I follow my freight in transit?",
@@ -127,15 +127,15 @@ const faqItems = [
     },
     {
         question: "What airports do you service?",
-        answer: "TRAFFICOLOGY LOGISTICS offers airport pickup service at all airports in the USA and select airports in Canada. Contact our team to learn more.",
+        answer: "Trafficology Logistics offers airport pickup service at all airports in the USA and select airports in Canada. Contact our team to learn more.",
     },
     {
         question: "What weight and dimensions can you haul with expedited?",
-        answer: "TRAFFICOLOGY LOGISTICS offers expedited services for shipments up to 12 pallets (or 24 double stacked) and up to 10,000lbs. To book your expedited shipment, contact us today.",
+        answer: "Trafficology Logistics offers expedited services for shipments up to 12 pallets (or 24 double stacked) and up to 10,000lbs. To book your expedited shipment, contact us today.",
     },
     {
         question: "What is the max cargo value I can ship with expedited?",
-        answer: "We offer standard cargo insurance for freight valued up to $250,000; however, if you have expedited shipments that exceed $250,000, you will need to authorize TRAFFICOLOGY LOGISTICS to purchase additional insurance on your behalf. Additional insurance policies are obtained at the shipper’s expense. Contact us to learn more.",
+        answer: "We offer standard cargo insurance for freight valued up to $250,000; however, if you have expedited shipments that exceed $250,000, you will need to authorize Trafficology Logistics to purchase additional insurance on your behalf. Additional insurance policies are obtained at the shipper’s expense. Contact us to learn more.",
     },
     {
         question: "Can you move furniture and do residential deliveries?",

@@ -26,13 +26,13 @@ const solutions = [
     title: 'Long-Haul LTL Consolidation',
     description: 'Want to optimize your LTL supply chain? Reduce costs, shorten transit times and increase distribution flexibility while enhancing both visibility and customer satisfaction with our long-haul LTL consolidation solution.',
     image: '/image/greenloading.jpg',
-    imageHint: 'LOGISTICS pallets',
+    imageHint: ' Logistics pallets',
   
     highlight: false,
   },
   {
     title: 'Cross-Border US-Canada Solutions',
-    description: 'TRAFFICOLOGY LOGISTICS provides seamless and efficient cross-border transportation between the US and Canada.',
+    description: 'Trafficology Logistics provides seamless and efficient cross-border transportation between the US and Canada.',
     image: '/image/Management.jpg',
     imageHint: 'cross border trucks',
    
@@ -40,7 +40,7 @@ const solutions = [
   },
   {
     title: 'E-commerce Fulfillment',
-    description: 'Fast and reliable e-commerce fulfillment with TRAFFICOLOGY LOGISTICS to meet growing online demands.',
+    description: 'Fast and reliable e-commerce fulfillment with Trafficology Logistics to meet growing online demands.',
     image: '/image/trm.jpg',
     imageHint: 'ecommerce packages',
    
@@ -48,7 +48,7 @@ const solutions = [
   },
   {
     title: 'Temperature Controlled Shipping',
-    description: 'Protect sensitive shipments with our temperature-controlled LOGISTICS powered by TRAFFICOLOGY LOGISTICS.',
+    description: 'Protect sensitive shipments with our temperature-controlled LOGISTICS powered by Trafficology Logistics.',
     image: '/image/image2.jpg',
     imageHint: 'cold storage trucks',
    
@@ -56,7 +56,7 @@ const solutions = [
   },
   {
     title: 'Expedited Freight',
-    description: 'Time-critical shipments delivered quickly and securely with TRAFFICOLOGY LOGISTICS expedited freight solutions.',
+    description: 'Time-critical shipments delivered quickly and securely with Trafficology Logistics expedited freight solutions.',
     image: '/image/ExpeditedShipping.png',
     imageHint: 'express delivery',
     
@@ -64,7 +64,7 @@ const solutions = [
   },
   {
     title: 'Warehousing Solutions',
-    description: 'Scalable warehousing with TRAFFICOLOGY LOGISTICS to meet seasonal or long-term storage requirements.',
+    description: 'Scalable warehousing with Trafficology Logistics to meet seasonal or long-term storage requirements.',
     image: '/image/image4.jpg',
     imageHint: 'warehouse shelves',
    
@@ -72,7 +72,7 @@ const solutions = [
   },
   {
     title: 'Intermodal Transportation',
-    description: 'Leverage cost-efficient intermodal solutions with TRAFFICOLOGY LOGISTICS to keep freight moving smoothly.',
+    description: 'Leverage cost-efficient intermodal solutions with Trafficology Logistics to keep freight moving smoothly.',
     image: '/image/warehouse-management.webp',
     imageHint: 'rail transport',
    
@@ -80,7 +80,7 @@ const solutions = [
   },
   {
     title: 'Managed Transportation',
-    description: 'Outsource your supply chain management to TRAFFICOLOGY LOGISTICS for increased efficiency.',
+    description: 'Outsource your supply chain management to Trafficology Logistics for increased efficiency.',
     image: '/image/truck.jpg',
     imageHint: 'supply chain team',
    
@@ -88,7 +88,7 @@ const solutions = [
   },
   {
     title: 'Retail Distribution',
-    description: 'Keep your retail supply chain optimized and efficient with TRAFFICOLOGY LOGISTICS customized distribution.',
+    description: 'Keep your retail supply chain optimized and efficient with Trafficology Logistics customized distribution.',
     image: '/image/supply.jpg',
     imageHint: 'retail LOGISTICS',
    
@@ -96,7 +96,7 @@ const solutions = [
   },
   {
     title: 'Project Cargo Solutions',
-    description: 'Handle oversized and complex cargo with TRAFFICOLOGY LOGISTICS project cargo expertise.',
+    description: 'Handle oversized and complex cargo with Trafficology Logistics project cargo expertise.',
     image: '/image/image.webp',
     imageHint: 'heavy lift cargo',
    
