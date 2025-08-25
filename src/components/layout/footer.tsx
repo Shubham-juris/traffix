@@ -68,17 +68,17 @@ export function Footer() {
                   <span className="p-1.5 border border-border rounded-full">
                     <MapPin className="h-5 w-5 text-muted-foreground animate-pulse hover:animate-none" />
                   </span>
-                  76 Westwinds Crescent NE 1115, Suite 3, Calgary, AB T3J 5H2, Canada
+                  11919 149 Ave SE, Calgary, AB T3S 0A7, Canada
                 </p>
                 <p className="flex items-center justify-center md:justify-start gap-3">
                   <span className="p-1.5 border border-border rounded-full">
                     <Phone className="h-5 w-5 text-muted-foreground animate-pulse hover:animate-none" />
                   </span>
                   <a
-                    href="tel:+14032930412"
+                    href="tel:+1825-883-1328"
                     className="hover:text-primary transition-all duration-300 hover:translate-x-1"
                   >
-                    +1 403-293-0412
+                    +1 825-883-1328
                   </a>
                 </p>
                 <p className="flex items-center justify-center md:justify-start gap-3">
