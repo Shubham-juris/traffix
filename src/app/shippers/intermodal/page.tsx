@@ -228,7 +228,7 @@ function StartShippingSection() {
                     <Reveal>
                         <div>
                             <Image
-                                src="/image/schneider.jpg"
+                                src="/image/Schneider.jpg"
                                 alt="Shipping containers stacked at a terminal"
                                 data-ai-hint="shipping containers"
                                 width={800}
