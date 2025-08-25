@@ -9,15 +9,15 @@ import { Reveal } from '@/components/animations/reveal';
 const includedItems = [
   {
     title: 'Cost Optimization',
-    description: 'At Trafiicology Logistics, we aim to offer competitive rates aligned with the LTL market. More importantly, we focus on delivering value by helping you save time and avoid unnecessary costs.',
+    description: 'At TRAFFICOLOGY LOGISTICS, we aim to offer competitive rates aligned with the LTL market. More importantly, we focus on delivering value by helping you save time and avoid unnecessary costs.',
   },
   {
     title: 'Control Tower Visibility',
-    description: "Whether you're managing one shipping location or many, the Trafiicology Logistics Shipping App offers a comprehensive overview of your entire LTL supply chain operation.",
+    description: "Whether you're managing one shipping location or many, the TRAFFICOLOGY LOGISTICS Shipping App offers a comprehensive overview of your entire LTL supply chain operation.",
   },
   {
     title: 'Customized Reporting',
-    description: 'Trafiicology Logistics provides its LTL clients with top-tier business intelligence (BI) tools, complete with customized dashboards, enabling you to access vital information at the click of a button.',
+    description: 'TRAFFICOLOGY LOGISTICS provides its LTL clients with top-tier business intelligence (BI) tools, complete with customized dashboards, enabling you to access vital information at the click of a button.',
   },
   {
     title: 'Accessorial Management',
@@ -25,11 +25,11 @@ const includedItems = [
   },
   {
     title: 'Carrier Management',
-    description: 'Sometimes choosing the cheapest LTL carrier can end up being costly. Trafiicology Logistics LTL experts understand which carriers are best for each shipment to avoid excessive accessorials and fines.',
+    description: 'Sometimes choosing the cheapest LTL carrier can end up being costly. TRAFFICOLOGY LOGISTICS LTL experts understand which carriers are best for each shipment to avoid excessive accessorials and fines.',
   },
   {
     title: 'Inbound Vendor Management',
-    description: 'Controlling inbound shipping costs is challenging when vendors choose the carrier. By adding Trafiicology Logistics to your purchase order, we ensure a preferred carrier delivers your freight, putting control back in your hands.',
+    description: 'Controlling inbound shipping costs is challenging when vendors choose the carrier. By adding TRAFFICOLOGY LOGISTICS to your purchase order, we ensure a preferred carrier delivers your freight, putting control back in your hands.',
   },
 ]
 
@@ -44,7 +44,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "At Trafiicology Logistics, we foster partnerships through collaborative efforts. Our team leverages its expertise to meticulously audit your LTL supply chain and serves as your trusted advisor in pursuit of optimization."
+        description: "At TRAFFICOLOGY LOGISTICS, we foster partnerships through collaborative efforts. Our team leverages its expertise to meticulously audit your LTL supply chain and serves as your trusted advisor in pursuit of optimization."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -89,7 +89,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'In LTL transportation, tracking, invoicing, and accessorial visibility are crucial. With the Trafiicology Logistics Shipping App, you gain total visibility over your entire LTL supply chain.'
+        description: 'In LTL transportation, tracking, invoicing, and accessorial visibility are crucial. With the TRAFFICOLOGY LOGISTICS Shipping App, you gain total visibility over your entire LTL supply chain.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -106,23 +106,23 @@ const benefits = [
 const faqItems = [
     {
         question: "What areas does your LTL network cover?",
-        answer: "Trafiicology Logistics offers LTL services domestically in Canada and the USA, as well as, cross border between Canada, the USA, and Mexico.",
+        answer: "TRAFFICOLOGY LOGISTICS offers LTL services domestically in Canada and the USA, as well as, cross border between Canada, the USA, and Mexico.",
     },
     {
-        question: "Can the Trafiicology Logistics LTL team really save me money?",
-        answer: "At Trafiicology Logistics LTL, we are committed to offering competitive market rates for your LTL shipping lanes. However, our approach goes beyond mere financial savings, emphasizing the importance of adding value. Through our consultative freight analysis, we assess your purchasing strategies to identify potential savings opportunities. Additionally, we provide insights to enhance your operations, including time-saving measures, process optimization, freight claims reduction, improved on-time delivery performance, and strategies to minimize avoidable accessorials. All findings are presented in a comprehensive report for your review. Contact us today to schedule your consultation.",
+        question: "Can the TRAFFICOLOGY LOGISTICS LTL team really save me money?",
+        answer: "At TRAFFICOLOGY LOGISTICS LTL, we are committed to offering competitive market rates for your LTL shipping lanes. However, our approach goes beyond mere financial savings, emphasizing the importance of adding value. Through our consultative freight analysis, we assess your purchasing strategies to identify potential savings opportunities. Additionally, we provide insights to enhance your operations, including time-saving measures, process optimization, freight claims reduction, improved on-time delivery performance, and strategies to minimize avoidable accessorials. All findings are presented in a comprehensive report for your review. Contact us today to schedule your consultation.",
     },
     {
-        question: "I have my own system. Do I need to use the Trafiicology Logistics Shipping App?",
-        answer: "No, Trafiicology Logistics is pleased to offer flexible API and EDI integrations to your TMS or ERP. Contact us today to learn more.",
+        question: "I have my own system. Do I need to use the TRAFFICOLOGY LOGISTICS Shipping App?",
+        answer: "No, TRAFFICOLOGY LOGISTICS is pleased to offer flexible API and EDI integrations to your TMS or ERP. Contact us today to learn more.",
     },
     {
         question: "How will I access my data and track my shipments?",
-        answer: "The Trafiicology Logistics Shipping App offers comprehensive visibility into your LTL operations. Alongside our Shipping App, qualifying clients will gain access to our cloud-based business intelligence software, featuring a tailored dashboard for one-click access to essential information. Track all your LTL shipments in transit through the Trafiicology Logistics Shipping App, the carrier’s website, or opt for personalized updates from our dedicated tracking team. Contact us to talk to one of our LTL experts today.",
+        answer: "The TRAFFICOLOGY LOGISTICS Shipping App offers comprehensive visibility into your LTL operations. Alongside our Shipping App, qualifying clients will gain access to our cloud-based business intelligence software, featuring a tailored dashboard for one-click access to essential information. Track all your LTL shipments in transit through the TRAFFICOLOGY LOGISTICS Shipping App, the carrier’s website, or opt for personalized updates from our dedicated tracking team. Contact us to talk to one of our LTL experts today.",
     },
     {
-        question: "Does Trafiicology Logistics offer freight bill auditing?",
-        answer: "Certainly! Trafiicology Logistics’ LTL auditors carefully examine each invoice to ensure accurate charges and validate accessorial fees. Our auditing team meticulously verifies reweighs and reclasses, identifying opportunities to enhance operational efficiencies.",
+        question: "Does TRAFFICOLOGY LOGISTICS offer freight bill auditing?",
+        answer: "Certainly! TRAFFICOLOGY LOGISTICS’ LTL auditors carefully examine each invoice to ensure accurate charges and validate accessorial fees. Our auditing team meticulously verifies reweighs and reclasses, identifying opportunities to enhance operational efficiencies.",
     },
 ];
 
@@ -212,7 +212,7 @@ function ChoosingCarrierSection() {
               Right Carrier
             </h2>
             <p className="mt-6 text-lg text-gray-300 max-w-md">
-              Opting for the cheapest provider may not always be the most cost-effective choice. Trafiicology Logistics' LTL experts are available to assist you in selecting the optimal carrier for every shipment.
+              Opting for the cheapest provider may not always be the most cost-effective choice. TRAFFICOLOGY LOGISTICS' LTL experts are available to assist you in selecting the optimal carrier for every shipment.
             </p>
             {/* <Button asChild variant="outline" className="mt-8 bg-white text-black hover:bg-gray-200 rounded-full px-6 py-3 font-bold group">
               <Link href="#">

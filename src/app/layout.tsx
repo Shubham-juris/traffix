@@ -7,7 +7,7 @@ import { CustomCursor } from '@/components/custom-cursor';
 import { cn } from '@/lib/utils';
 
 export const metadata: Metadata = {
-  title: 'Trafiicology Logistics',
+  title: 'TRAFFICOLOGY LOGISTICS',
 };
 
 export default function RootLayout({

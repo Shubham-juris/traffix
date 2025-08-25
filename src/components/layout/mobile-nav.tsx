@@ -18,11 +18,11 @@ interface MobileNavProps {
   navLinks: { href: string; label: string, hasDropdown?: boolean }[];
 }
 
-function TrafiicologyLogo() {
+function TRAFFICOLOGYLogo() {
   return (
     <div className="text-white font-black leading-tight tracking-wider">
       <span className="text-[clamp(1rem,4vw,2rem)] sm:text-[clamp(1.5rem,4vw,2.5rem)]">
-        TRAFIICOLOGY
+        TRAFFICOLOGY
       </span>{" "}
       <span className="text-primary text-[clamp(0.8rem,3vw,1.2rem)] sm:text-[clamp(1rem,3vw,1.5rem)]">
         LOGISTICS
@@ -51,7 +51,7 @@ export function MobileNav({ isOpen, onClose, navLinks }: MobileNavProps) {
       >
         <div className="flex justify-between items-center p-4 border-b border-border">
           <Link href="/" onClick={onClose}>
-            <TrafiicologyLogo />
+            <TRAFFICOLOGYLogo />
           </Link>
           <Button onClick={onClose} variant="ghost" size="icon">
             <X className="h-6 w-6" />

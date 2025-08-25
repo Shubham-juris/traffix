@@ -116,7 +116,7 @@ export function CarrierForm() {
         <Label className="font-bold text-gray-300">Consent*</Label>
         <div className="flex items-start space-x-2">
             <Checkbox id="consent" name="consent" required className="mt-1 border-gray-300" />
-            <Label htmlFor="consent" className="text-sm text-gray-400">By checking this box, I agree to receive marketing emails from Trafiicology Logistics about their latest products, services, and offers. I understand that I can unsubscribe at any time by following the instructions in the emails.*</Label>
+            <Label htmlFor="consent" className="text-sm text-gray-400">By checking this box, I agree to receive marketing emails from TRAFFICOLOGY LOGISTICS about their latest products, services, and offers. I understand that I can unsubscribe at any time by following the instructions in the emails.*</Label>
         </div>
         {state?.errors?.consent && <p className="text-destructive text-sm mt-1">{state.errors.consent[0]}</p>}
       </div>

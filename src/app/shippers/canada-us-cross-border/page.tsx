@@ -21,19 +21,19 @@ const CrossBorderIcon = (props: SVGProps<SVGSVGElement>) => (
 const includedItems = [
     {
         title: 'Bonded Service',
-        description: 'Trafiicology Logistics is bonded, insured, and holds CTPAT, FAST, and PIP certifications, making us your premier partner for shipping between Canada and the US.',
+        description: 'TRAFFICOLOGY LOGISTICS is bonded, insured, and holds CTPAT, FAST, and PIP certifications, making us your premier partner for shipping between Canada and the US.',
     },
     {
         title: 'Seasonal Stability',
-        description: 'With Trafiicology Logistics, your team can eliminate struggles with seasonal freight cycles that deplete capacity. With 45+ years of experience in cross-border transportation, we stabilize your supply chain with the right capacity.',
+        description: 'With TRAFFICOLOGY LOGISTICS, your team can eliminate struggles with seasonal freight cycles that deplete capacity. With 45+ years of experience in cross-border transportation, we stabilize your supply chain with the right capacity.',
     },
     {
         title: 'Drop Trailers',
-        description: 'Trafiicology Logistics specializes in cross-border drop trailer programs, streamlining your supply chain and reducing fees such as driver detention.',
+        description: 'TRAFFICOLOGY LOGISTICS specializes in cross-border drop trailer programs, streamlining your supply chain and reducing fees such as driver detention.',
     },
     {
         title: 'Cost Stabilization',
-        description: 'With over 45 years of experience in Canada-US cross-border shipping, Trafiicology Logistics has forged enduring partnerships with top carriers, enabling us to negotiate competitive pricing contracts, both short and long-term.',
+        description: 'With over 45 years of experience in Canada-US cross-border shipping, TRAFFICOLOGY LOGISTICS has forged enduring partnerships with top carriers, enabling us to negotiate competitive pricing contracts, both short and long-term.',
     },
     {
         title: 'On-Time Performance',
@@ -41,7 +41,7 @@ const includedItems = [
     },
     {
         title: 'Risk Mitigation',
-        description: "Amidst a freight market plagued by fraudulent carriers, Trafiicology Logistics' risk management team and stringent security procedures ensure your freight is entrusted to meticulously vetted and reliable carriers.",
+        description: "Amidst a freight market plagued by fraudulent carriers, TRAFFICOLOGY LOGISTICS' risk management team and stringent security procedures ensure your freight is entrusted to meticulously vetted and reliable carriers.",
     },
 ];
 
@@ -56,7 +56,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "Trafiicology Logistics' team of experts are committed to the success of our clients. They apply their years of experience to solving complex challenges and delivering results."
+        description: "TRAFFICOLOGY LOGISTICS' team of experts are committed to the success of our clients. They apply their years of experience to solving complex challenges and delivering results."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -68,7 +68,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'While some brokers prioritize maximum capacity, Trafiicology Logistics prioritizes the right capacity. Experience peace of mind knowing your freight is handled by our meticulously vetted premium carriers.'
+        description: 'While some brokers prioritize maximum capacity, TRAFFICOLOGY LOGISTICS prioritizes the right capacity. Experience peace of mind knowing your freight is handled by our meticulously vetted premium carriers.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -101,7 +101,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. Trafiicology Logistics offers tech tracking and tailored updates to meet your needs.'
+        description: 'Success in your supply chain relies on timely pickups, deliveries, and real-time visibility. TRAFFICOLOGY LOGISTICS offers tech tracking and tailored updates to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -117,28 +117,28 @@ const benefits = [
 
 const faqItems = [
     {
-        question: "Is Trafiicology Logistics a customs broker?",
-        answer: "No, Trafiicology Logistics is not a customs broker. We will work with any customs broker you choose to ensure your freight has an efficient border crossing. Contact us today to learn more.",
+        question: "Is TRAFFICOLOGY LOGISTICS a customs broker?",
+        answer: "No, TRAFFICOLOGY LOGISTICS is not a customs broker. We will work with any customs broker you choose to ensure your freight has an efficient border crossing. Contact us today to learn more.",
     },
     {
-        question: "Is Trafiicology Logistics bonded?",
-        answer: "Yes, Trafiicology Logistics is a bonded 3PL, allowing you to ship between Canada, the USA, and Mexico without paying duties until your freight arrives at a designated point. Contact us today to learn more.",
+        question: "Is TRAFFICOLOGY LOGISTICS bonded?",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS is a bonded 3PL, allowing you to ship between Canada, the USA, and Mexico without paying duties until your freight arrives at a designated point. Contact us today to learn more.",
     },
     {
         question: "What areas of Canada and the USA do you service?",
-        answer: "Trafiicology Logistics provides service coast-to-coast throughout Canada and the USA. Contact us today to learn more.",
+        answer: "TRAFFICOLOGY LOGISTICS provides service coast-to-coast throughout Canada and the USA. Contact us today to learn more.",
     },
     {
         question: "Do you offer warehousing capacity?",
-        answer: "Yes, Trafiicology Logistics offers outsourced warehousing solutions in both Canada and the USA, including bonded storage facilities and cross-dock locations. To learn more contact us or visit our warehousing page.",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS offers outsourced warehousing solutions in both Canada and the USA, including bonded storage facilities and cross-dock locations. To learn more contact us or visit our warehousing page.",
     },
     {
         question: "What kinds of equipment do you offer?",
-        answer: "Trafiicology Logistics’ premium carrier network offers capacity covering a wide variety of equipment types including dry vans, reefers, and open deck equipment. We can also accommodate special requests such as vented trailers, logistics floors, and more. Contact us today to learn more.",
+        answer: "TRAFFICOLOGY LOGISTICS’ premium carrier network offers capacity covering a wide variety of equipment types including dry vans, reefers, and open deck equipment. We can also accommodate special requests such as vented trailers, LOGISTICS floors, and more. Contact us today to learn more.",
     },
     {
         question: "Are you CPTAT certified?",
-        answer: "Yes, Trafiicology Logistics is CTPAT certified. We also hold FAST and PIP certifications.",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS is CTPAT certified. We also hold FAST and PIP certifications.",
     },
 ];
 

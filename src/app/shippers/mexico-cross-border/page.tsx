@@ -37,27 +37,27 @@ const MexicoIcon = (props: SVGProps<SVGSVGElement>) => (
 const includedItems = [
     {
         title: 'Communication',
-        description: 'You can rely on your dedicated Trafiicology Logistics team for clear communication through your preferred method: email, phone, or even WhatsApp®.',
+        description: 'You can rely on your dedicated TRAFFICOLOGY LOGISTICS team for clear communication through your preferred method: email, phone, or even WhatsApp®.',
     },
     {
         title: 'Streamlined Process',
-        description: 'Moving freight between Mexico and the USA requires a coordinated team effort. Choose Trafiicology Logistics as your sole point of contact and let us handle all the details for you.',
+        description: 'Moving freight between Mexico and the USA requires a coordinated team effort. Choose TRAFFICOLOGY LOGISTICS as your sole point of contact and let us handle all the details for you.',
     },
     {
         title: 'Bonded & CTPAT Certified',
-        description: 'Pay duties and taxes at your chosen destination point with Trafiicology Logistics, your bonded and CTPAT certified cross-border partner.',
+        description: 'Pay duties and taxes at your chosen destination point with TRAFFICOLOGY LOGISTICS, your bonded and CTPAT certified cross-border partner.',
     },
     {
         title: 'Cross Docking Facilities',
-        description: "Take advantage of Trafiicology Logistics' strategically located cross docking facilities located at the US/Mexico border.",
+        description: "Take advantage of TRAFFICOLOGY LOGISTICS' strategically located cross docking facilities located at the US/Mexico border.",
     },
     {
         title: 'Risk Mitigation',
-        description: "You can relax knowing that Trafiicology Logistics' risk management team and our security procedures protect you from fraudulent carriers.",
+        description: "You can relax knowing that TRAFFICOLOGY LOGISTICS' risk management team and our security procedures protect you from fraudulent carriers.",
     },
     {
         title: 'Customized Solutions',
-        description: "In addition to Mexico cross-border services, Trafiicology Logistics' team of supply chain experts will work closely with you to create tailored logistics solutions that fit your unique requirements.",
+        description: "In addition to Mexico cross-border services, TRAFFICOLOGY LOGISTICS' team of supply chain experts will work closely with you to create tailored LOGISTICS solutions that fit your unique requirements.",
     },
 ];
 
@@ -72,7 +72,7 @@ const benefits = [
             </svg>
         ),
         title: 'Collaborative Partnership',
-        description: "Trafiicology Logistics' team of experts, strategically positioned throughout Mexico, are dedicated to leveraging their experience to tackle complex challenges and deliver outstanding results."
+        description: "TRAFFICOLOGY LOGISTICS' team of experts, strategically positioned throughout Mexico, are dedicated to leveraging their experience to tackle complex challenges and deliver outstanding results."
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -84,7 +84,7 @@ const benefits = [
             </svg>
         ),
         title: 'The Right Capacity',
-        description: 'While some brokers prioritize maximum capacity, Trafiicology Logistics prioritizes the right capacity. Experience peace of mind knowing your freight is handled by our meticulously vetted premium carriers.'
+        description: 'While some brokers prioritize maximum capacity, TRAFFICOLOGY LOGISTICS prioritizes the right capacity. Experience peace of mind knowing your freight is handled by our meticulously vetted premium carriers.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -117,7 +117,7 @@ const benefits = [
             </svg>
         ),
         title: 'Visibility',
-        description: 'Success in your supply chain relies on timely pickups, deliveries, and consistent communication in transit. Trafiicology Logistics offers customized updates to meet your needs.'
+        description: 'Success in your supply chain relies on timely pickups, deliveries, and consistent communication in transit. TRAFFICOLOGY LOGISTICS offers customized updates to meet your needs.'
     },
     {
         icon: (props: SVGProps<SVGSVGElement>) => (
@@ -133,36 +133,36 @@ const benefits = [
 
 const faqItems = [
     {
-        question: "Is Trafiicology Logistics a customs broker?",
-        answer: "No, Trafiicology Logistics is not a customs broker. Trafiicology Logistics will work with any customs broker you choose to ensure your freight has an efficient border crossing. Contact us today to learn more.",
+        question: "Is TRAFFICOLOGY LOGISTICS a customs broker?",
+        answer: "No, TRAFFICOLOGY LOGISTICS is not a customs broker. TRAFFICOLOGY LOGISTICS will work with any customs broker you choose to ensure your freight has an efficient border crossing. Contact us today to learn more.",
     },
     {
-        question: "Is Trafiicology Logistics bonded?",
-        answer: "Yes, Trafiicology Logistics is a bonded 3PL, allowing you to ship between Canada, the USA, and Mexico without paying duties until your freight arrives at a designated point. Contact us today to learn more.",
+        question: "Is TRAFFICOLOGY LOGISTICS bonded?",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS is a bonded 3PL, allowing you to ship between Canada, the USA, and Mexico without paying duties until your freight arrives at a designated point. Contact us today to learn more.",
     },
     {
         question: "What areas of Mexico do you service?",
-        answer: "Trafiicology Logistics provides service coast-to-coast throughout Mexico for shipments crossing the border into either the USA or Canada. Contact us today to learn more.",
+        answer: "TRAFFICOLOGY LOGISTICS provides service coast-to-coast throughout Mexico for shipments crossing the border into either the USA or Canada. Contact us today to learn more.",
     },
     {
         question: "Do you offer warehousing capacity?",
-        answer: "Yes, Trafiicology Logistics offers outsourced warehousing solutions in both Canada and the USA, including bonded storage and cross-dock facilities strategically located near the Mexico-US border. To learn more contact us or visit our warehousing page.",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS offers outsourced warehousing solutions in both Canada and the USA, including bonded storage and cross-dock facilities strategically located near the Mexico-US border. To learn more contact us or visit our warehousing page.",
     },
     {
         question: "Are you CPTAT certified?",
-        answer: "Yes, Trafiicology Logistics is CTPAT certified. We also hold FAST and PIP certifications.",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS is CTPAT certified. We also hold FAST and PIP certifications.",
     },
     {
         question: "Do you own your assets?",
-        answer: "Trafiicology Logistics does operate a fleet of trucks and trailers from our Milton, ON, facility; however, we do not service Mexico cross border shipments with our own assets. Instead, we work with a meticulously vetted network of experienced Mexico cross-border carriers. Contact us today to learn more.",
+        answer: "TRAFFICOLOGY LOGISTICS does operate a fleet of trucks and trailers from our Milton, ON, facility; however, we do not service Mexico cross border shipments with our own assets. Instead, we work with a meticulously vetted network of experienced Mexico cross-border carriers. Contact us today to learn more.",
     },
     {
         question: "Do you offer domestic Mexico?",
-        answer: "Trafiicology Logistics does not currently offer domestic Mexico services.",
+        answer: "TRAFFICOLOGY LOGISTICS does not currently offer domestic Mexico services.",
     },
     {
         question: "Can you offer Mexico cross-border LTL service?",
-        answer: "Yes, Trafiicology Logistics can offer LTL service crossing the border between Mexico, the USA, and Canada. Contact us today to learn more.",
+        answer: "Yes, TRAFFICOLOGY LOGISTICS can offer LTL service crossing the border between Mexico, the USA, and Canada. Contact us today to learn more.",
     },
     {
         question: "Are trailers transloaded at the border?",

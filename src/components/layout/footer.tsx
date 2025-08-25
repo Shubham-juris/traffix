@@ -3,7 +3,7 @@ import { Twitter, Linkedin, Facebook, Instagram, MapPin, Phone, Mail } from 'luc
 
 const socialLinks = [
   { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579724252934', name: 'Facebook' },
-  { icon: Instagram, href: 'https://www.instagram.com/trafiicology_logistics/', name: 'Instagram' },
+  { icon: Instagram, href: 'https://www.instagram.com/TRAFFICOLOGY_LOGISTICS/', name: 'Instagram' },
 ];
 
 const footerNavLinks = [
@@ -14,10 +14,10 @@ const footerNavLinks = [
   { href: '/contact', label: 'Contact' },
 ];
 
-function TrafiicologyLogo() {
+function TRAFFICOLOGYLogo() {
   return (
     <div className="text-3xl font-black tracking-tight text-white">
-      TRAFIICOLOGY <span className="text-primary">LOGISTICS</span>
+      TRAFFICOLOGY <span className="text-primary">LOGISTICS</span>
     </div>
   );
 }
@@ -30,7 +30,7 @@ export function Footer() {
           {/* Sidebar: Logo & Description */}
           <div className="lg:w-1/3 text-center lg:text-left">
             <div className="pb-6 border-b border-border/50">
-              <TrafiicologyLogo />
+              <TRAFFICOLOGYLogo />
               <p className="text-muted-foreground mt-4 text-base max-w-sm mx-auto lg:mx-0">
                 Reimagining digital experiences.
               </p>
@@ -86,10 +86,10 @@ export function Footer() {
                     <Mail className="h-5 w-5 text-muted-foreground animate-pulse hover:animate-none" />
                   </span>
                   <a
-                    href="mailto:services@trafiicologylogistics.com"
+                    href="mailto:services@TRAFFICOLOGYLOGISTICS.com"
                     className="hover:text-primary transition-all duration-300 hover:translate-x-1"
                   >
-                    services@trafiicologylogistics.com
+                    services@TRAFFICOLOGYLOGISTICS.com
                   </a>
                 </p>
               </address>
@@ -131,7 +131,7 @@ export function Footer() {
               allowFullScreen={true}
               loading="lazy"
               referrerPolicy="no-referrer-when-downgrade"
-              title="Trafiicology Logistics Location"
+              title="TRAFFICOLOGY LOGISTICS Location"
               className="group-hover:scale-[1.02] transition-transform duration-300"
             ></iframe>
             <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-[12px] pointer-events-none"></div>
@@ -140,7 +140,7 @@ export function Footer() {
 
         {/* Copyright */}
         <div className="mt-12 pt-6 border-t border-border/50 text-center text-muted-foreground text-sm">
-          <p>&copy; {new Date().getFullYear()} Trafiicology Logistics. All Rights Reserved.</p>
+          <p>&copy; {new Date().getFullYear()} TRAFFICOLOGY LOGISTICS. All Rights Reserved.</p>
         </div>
       </div>
     </footer>
