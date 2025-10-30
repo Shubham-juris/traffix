@@ -3,7 +3,7 @@ import { Twitter, Linkedin, Facebook, Instagram, MapPin, Phone, Mail } from 'luc
 
 const socialLinks = [
   { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579724252934', name: 'Facebook' },
-  { icon: Instagram, href: 'https://www.instagram.com/TRAFFICOLOGY_LOGISTICS/', name: 'Instagram' },
+  { icon: Instagram, href: 'https://www.instagram.com/trafiicology_logistics/', name: 'Instagram' },
 ];
 
 const footerNavLinks = [

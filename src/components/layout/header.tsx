@@ -24,8 +24,14 @@ const navLinks = [
 
 function TrafficologyLogo() {
   return (
-    <div className="text-2xl sm:text-3xl font-black tracking-wider text-white leading-tight">
-      TRAFFICOLOGY <span className="text-primary">LOGISTICS</span>
+    <div className="flex items-center space-x-3">
+      <img
+        src="/logo.png" 
+        alt="Trafficology Logistics Logo"
+        className="h-16 w-30 object-cover  "
+      />
+
+    
     </div>
   );
 }
@@ -43,10 +49,7 @@ export function Header() {
 
   useEffect(() => {
     if (typeof window === "undefined") return;
-
-    const handleScroll = () => {
-      setScrolled(window.scrollY > 10);
-    };
+    const handleScroll = () => setScrolled(window.scrollY > 10);
     window.addEventListener("scroll", handleScroll);
     handleScroll();
     return () => window.removeEventListener("scroll", handleScroll);
@@ -64,9 +67,12 @@ export function Header() {
       >
         <div className="container mx-auto px-4 sm:px-6 lg:px-8">
           <div className="flex items-center justify-between h-20">
-            <Link href="/" className="hover:opacity-80 transition-opacity">
+            {/* ✅ Logo */}
+            <Link href="/" className="hover:opacity-90 transition-opacity">
               <TrafficologyLogo />
             </Link>
+
+            {/* ✅ Desktop Navigation */}
             <nav className="hidden lg:flex items-center space-x-10">
               {navLinks.map((link) =>
                 link.hasDropdown ? (
@@ -126,6 +132,8 @@ export function Header() {
                 )
               )}
             </nav>
+
+            {/* ✅ Ask an Expert Button */}
             <div className="hidden lg:flex items-center space-x-6">
               <Button
                 asChild
@@ -140,6 +148,8 @@ export function Header() {
                 </Link>
               </Button>
             </div>
+
+            {/* ✅ Mobile Menu Button */}
             <div className="flex items-center lg:hidden">
               <Button onClick={toggleMobileMenu} variant="ghost" size="icon">
                 <Menu className="h-6 w-6 text-white" />
@@ -149,6 +159,8 @@ export function Header() {
           </div>
         </div>
       </header>
+
+      {/* ✅ Mobile Navigation Drawer */}
       {isClient && (
         <MobileNav
           isOpen={isMobileMenuOpen}
