@@ -2,8 +2,9 @@ import Link from 'next/link';
 import { Twitter, Linkedin, Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 
 const socialLinks = [
-  { icon: Facebook, href: 'https://www.facebook.com/profile.php?id=61579724252934', name: 'Facebook' },
-  { icon: Instagram, href: 'https://www.instagram.com/trafiicology_logistics/', name: 'Instagram' },
+  { icon: Facebook, href: 'https://www.facebook.com/trafficologylogistics', name: 'Facebook' },
+  { icon: Instagram, href: 'https://www.instagram.com/trafficologylogistics/', name: 'Instagram' },
+  { icon: Twitter, href: 'https://x.com/TrafficologyL', name: 'X' },
 ];
 
 const footerNavLinks = [
