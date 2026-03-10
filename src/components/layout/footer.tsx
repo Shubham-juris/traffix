@@ -4,7 +4,7 @@ import { Twitter, Linkedin, Facebook, Instagram, MapPin, Phone, Mail } from 'luc
 const socialLinks = [
   { icon: Facebook, href: 'https://www.facebook.com/trafficologylogistics', name: 'Facebook' },
   { icon: Instagram, href: 'https://www.instagram.com/trafficologylogistics/', name: 'Instagram' },
-  { icon: Twitter, href: 'https://x.com/TrafficologyL', name: 'X' },
+  { icon: Twitter, href: 'https://x.com/TrafficologyL', name: 'X (Twitter)' },
 ];
 
 const footerNavLinks = [
