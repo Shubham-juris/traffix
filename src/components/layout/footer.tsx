@@ -1,11 +1,11 @@
 import Link from 'next/link';
 import { Twitter, Linkedin, Facebook, Instagram, MapPin, Phone, Mail } from 'lucide-react';
 
-const socialLinks = [
-  { icon: Facebook, href: 'https://www.facebook.com/trafficologylogistics', name: 'Facebook' },
-  { icon: Instagram, href: 'https://www.instagram.com/trafficologylogistics/', name: 'Instagram' },
-  { icon: Twitter, href: 'https://x.com/TrafficologyL', name: 'X (Twitter)' },
-]; 
+// const socialLinks = [
+//   { icon: Facebook, href: 'https://www.facebook.com/trafficologylogistics', name: 'Facebook' },
+//   { icon: Instagram, href: 'https://www.instagram.com/trafficologylogistics/', name: 'Instagram' },
+//   { icon: Twitter, href: 'https://x.com/TrafficologyL', name: 'X (Twitter)' },
+// ]; 
 
 const footerNavLinks = [
   { href: '#', label: 'Shippers' },
@@ -101,7 +101,7 @@ export function Footer() {
               <h4 className="font-semibold text-foreground mb-4 text-base relative after:content-[''] after:absolute after:bottom-0 after:left-0 after:w-12 after:h-0.5 after:bg-border">
                 Follow Us
               </h4>
-              <div className="flex justify-center md:justify-start space-x-6 mt-6">
+              {/* <div className="flex justify-center md:justify-start space-x-6 mt-6">
                 {socialLinks.map((social) => (
                   <a
                     key={social.name}
@@ -116,7 +116,43 @@ export function Footer() {
                     </span>
                   </a>
                 ))}
-              </div>
+              </div> */}
+              <div className="flex justify-center md:justify-start space-x-6 mt-6">
+
+  <a
+    href="https://www.facebook.com/trafficologylogistics"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-primary transition-all duration-300"
+  >
+    <span className="p-1.5 border border-border rounded-full">
+      <Facebook className="h-6 w-6" />
+    </span>
+  </a>
+
+  <a
+    href="https://www.instagram.com/trafficologylogistics/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-primary transition-all duration-300"
+  >
+    <span className="p-1.5 border border-border rounded-full">
+      <Instagram className="h-6 w-6" />
+    </span>
+  </a>
+
+  <a
+    href="https://x.com/TrafficologyL"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="text-muted-foreground hover:text-primary transition-all duration-300"
+  >
+    <span className="p-1.5 border border-border rounded-full">
+      <Twitter className="h-6 w-6" />
+    </span>
+  </a>
+
+</div>
             </div>
           </div>
         </div>
