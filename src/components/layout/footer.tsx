@@ -5,7 +5,7 @@ const socialLinks = [
   { icon: Facebook, href: 'https://www.facebook.com/trafficologylogistics', name: 'Facebook' },
   { icon: Instagram, href: 'https://www.instagram.com/trafficologylogistics/', name: 'Instagram' },
   { icon: Twitter, href: 'https://x.com/TrafficologyL', name: 'X (Twitter)' },
-];
+]; 
 
 const footerNavLinks = [
   { href: '#', label: 'Shippers' },
